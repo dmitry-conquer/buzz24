@@ -53,7 +53,7 @@ button {
 .btn-c {
 	background: #FF8A00;
 	color: #FFFFFF;
-	border: none;
+	// border: none;
 	&:hover {
 		background: #FF961B !important;
 		text-shadow: none !important;
@@ -68,7 +68,7 @@ button {
 }
 .btn-w {
 	color: #000000;
-	border: none;
+	// border: none;
 	&:hover {
 		border: 2px solid #FF9A0A;
 		text-shadow: none;
