@@ -1,0 +1,841 @@
+// .qs-datepicker-container {
+// 	margin: 5px;
+// 	font-size: 1rem;
+// 	font-family: sans-serif;
+// 	color: #000;
+// 	position: absolute;
+// 	width: 15.625em;
+// 	display: -webkit-box;
+// 	display: -ms-flexbox;
+// 	display: flex;
+// 	-webkit-box-orient: vertical;
+// 	-webkit-box-direction: normal;
+// 	-ms-flex-direction: column;
+// 	flex-direction: column;
+// 	z-index: 9001;
+// 	-webkit-user-select: none;
+// 	-moz-user-select: none;
+// 	-ms-user-select: none;
+// 	user-select: none;
+// 	//border-radius: 0.26392em;
+// 	overflow: hidden;
+// 	background: #000;
+// 	-webkit-box-shadow: 0 1.25em 1.25em -0.9375em rgba(0, 0, 0, 0.3);
+// 	box-shadow: 0 1.25em 1.25em -0.9375em rgba(0, 0, 0, 0.3);
+// 	border-right: 1px solid #fff;
+// 	border-left: 1px solid #f1ad70;
+// 	padding: 5px;
+// 	&:before,
+// 	&:after {
+// 		content: "";
+// 		width: 100%;
+// 		height: 2px;
+// 		left: 0;
+// 		z-index: 2;
+// 		position: absolute;
+// 		background-image: linear-gradient(to right, #f1ad70 0%, #fffdf2 100%);
+// 	}
+// 	&:before {
+// 		top: 0;
+// 	}
+// 	&:after {
+// 		bottom: 0;
+// 	}
+// }
+// .qs-datepicker-container * {
+// 	-webkit-box-sizing: border-box;
+// 	box-sizing: border-box;
+// }
+// .qs-datepicker-container.qs-centered {
+// 	position: fixed;
+// 	top: 50%;
+// 	left: 50%;
+// 	-webkit-transform: translate(-50%, -50%);
+// 	-ms-transform: translate(-50%, -50%);
+// 	transform: translate(-50%, -50%);
+// }
+// .qs-datepicker-container.qs-hidden {
+// 	display: none;
+// }
+// .qs-datepicker .qs-overlay {
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	background: rgba(0, 0, 0, 0.75);
+// 	color: #fff;
+// 	width: 100%;
+// 	height: 100%;
+// 	padding: 0.5em;
+// 	z-index: 1;
+// 	opacity: 1;
+// 	-webkit-transition: opacity 0.3s;
+// 	transition: opacity 0.3s;
+// 	display: -webkit-box;
+// 	display: -ms-flexbox;
+// 	display: flex;
+// 	-webkit-box-orient: vertical;
+// 	-webkit-box-direction: normal;
+// 	-ms-flex-direction: column;
+// 	flex-direction: column;
+// }
+// .qs-datepicker .qs-overlay.qs-hidden {
+// 	opacity: 0;
+// 	z-index: -1;
+// }
+// .qs-datepicker .qs-overlay .qs-overlay-year {
+// 	background: rgba(0, 0, 0, 0);
+// 	border: none;
+// 	border-bottom: 1px solid #fff;
+// 	border-radius: 0;
+// 	color: #fff;
+// 	font-size: 0.875em;
+// 	padding: 0.25em 0;
+// 	width: 80%;
+// 	text-align: center;
+// 	margin: 0 auto;
+// 	display: block;
+// }
+// .qs-datepicker .qs-overlay .qs-overlay-year::-webkit-inner-spin-button {
+// 	-webkit-appearance: none;
+// }
+// .qs-datepicker .qs-overlay .qs-close {
+// 	padding: 0.5em;
+// 	cursor: pointer;
+// 	position: absolute;
+// 	top: 0;
+// 	right: 0;
+// }
+// .qs-datepicker .qs-overlay .qs-submit {
+// 	border: 1px solid #fff;
+// 	border-radius: 0.26392em;
+// 	padding: 0.5em;
+// 	margin: 0 auto auto;
+// 	cursor: pointer;
+// 	background: hsla(0, 0%, 50.2%, 0.4);
+// }
+// .qs-datepicker .qs-overlay .qs-submit.qs-disabled {
+// 	color: grey;
+// 	border-color: grey;
+// 	cursor: not-allowed;
+// }
+// .qs-datepicker .qs-overlay .qs-overlay-month-container {
+// 	display: -webkit-box;
+// 	display: -ms-flexbox;
+// 	display: flex;
+// 	-ms-flex-wrap: wrap;
+// 	flex-wrap: wrap;
+// 	-webkit-box-flex: 1;
+// 	-ms-flex-positive: 1;
+// 	flex-grow: 1;
+// }
+// .qs-datepicker .qs-overlay .qs-overlay-month {
+// 	display: -webkit-box;
+// 	display: -ms-flexbox;
+// 	display: flex;
+// 	-webkit-box-pack: center;
+// 	-ms-flex-pack: center;
+// 	justify-content: center;
+// 	-webkit-box-align: center;
+// 	-ms-flex-align: center;
+// 	align-items: center;
+// 	width: 33.33333%;
+// 	cursor: pointer;
+// 	opacity: 0.5;
+// 	-webkit-transition: opacity 0.15s;
+// 	transition: opacity 0.15s;
+// }
+// .qs-datepicker .qs-overlay .qs-overlay-month.active,
+// .qs-datepicker .qs-overlay .qs-overlay-month:hover {
+// 	opacity: 1;
+// }
+// .qs-datepicker .qs-controls {
+// 	width: 100%;
+// 	display: -webkit-box;
+// 	display: -ms-flexbox;
+// 	display: flex;
+// 	-webkit-box-pack: justify;
+// 	-ms-flex-pack: justify;
+// 	justify-content: space-between;
+// 	-webkit-box-align: center;
+// 	-ms-flex-align: center;
+// 	align-items: center;
+// 	-webkit-box-flex: 1;
+// 	-ms-flex-positive: 1;
+// 	flex-grow: 1;
+// 	-ms-flex-negative: 0;
+// 	flex-shrink: 0;
+// 	background: #000;
+// 	color: #fff;
+// 	-webkit-filter: blur(0);
+// 	filter: blur(0);
+// 	-webkit-transition: -webkit-filter 0.3s;
+// 	transition: -webkit-filter 0.3s;
+// 	transition: filter 0.3s;
+// 	transition: filter 0.3s, -webkit-filter 0.3s;
+// }
+// .qs-datepicker .qs-controls.qs-blur {
+// 	-webkit-filter: blur(5px);
+// 	filter: blur(5px);
+// }
+// .qs-datepicker .qs-arrow {
+// 	height: 1.5625em;
+// 	width: 1.5625em;
+// 	position: relative;
+// 	cursor: pointer;
+// 	border-radius: 0.26392em;
+// 	-webkit-transition: background 0.15s;
+// 	transition: background 0.15s;
+// }
+// .qs-datepicker .qs-arrow:hover {
+// 	background: rgba(0, 0, 0, 0.1);
+// }
+// .qs-datepicker .qs-arrow:hover.qs-left:after {
+// 	border-right-color: #000;
+// }
+// .qs-datepicker .qs-arrow:hover.qs-right:after {
+// 	border-left-color: #000;
+// }
+// .qs-datepicker .qs-arrow:after {
+// 	content: "";
+// 	border: 0.39062em solid rgba(0, 0, 0, 0);
+// 	position: absolute;
+// 	top: 50%;
+// 	-webkit-transition: border 0.2s;
+// 	transition: border 0.2s;
+// }
+// .qs-datepicker .qs-arrow.qs-left:after {
+// 	border-right-color: grey;
+// 	right: 50%;
+// 	-webkit-transform: translate(25%, -50%);
+// 	-ms-transform: translate(25%, -50%);
+// 	transform: translate(25%, -50%);
+// }
+// .qs-datepicker .qs-arrow.qs-right:after {
+// 	border-left-color: grey;
+// 	left: 50%;
+// 	-webkit-transform: translate(-25%, -50%);
+// 	-ms-transform: translate(-25%, -50%);
+// 	transform: translate(-25%, -50%);
+// }
+// .qs-datepicker .qs-month-year {
+// 	font-weight: 700;
+// 	-webkit-transition: border 0.2s;
+// 	transition: border 0.2s;
+// 	border-bottom: 1px solid rgba(0, 0, 0, 0);
+// 	cursor: pointer;
+// }
+// .qs-datepicker .qs-month-year:hover {
+// 	border-bottom: 1px solid grey;
+// }
+// .qs-datepicker .qs-month-year:active:focus,
+// .qs-datepicker .qs-month-year:focus {
+// 	outline: none;
+// }
+// .qs-datepicker .qs-month {
+// 	padding-right: 0.5ex;
+// }
+// .qs-datepicker .qs-year {
+// 	padding-left: 0.5ex;
+// }
+// .qs-datepicker .qs-squares {
+// 	display: -webkit-box;
+// 	display: -ms-flexbox;
+// 	display: flex;
+// 	color: #fff;
+// 	-ms-flex-wrap: wrap;
+// 	flex-wrap: wrap;
+// 	padding: 0.3125em;
+// 	-webkit-filter: blur(0);
+// 	filter: blur(0);
+// 	-webkit-transition: -webkit-filter 0.3s;
+// 	transition: -webkit-filter 0.3s;
+// 	transition: filter 0.3s;
+// 	transition: filter 0.3s, -webkit-filter 0.3s;
+// }
+// .qs-datepicker .qs-squares.qs-blur {
+// 	-webkit-filter: blur(5px);
+// 	filter: blur(5px);
+// }
+// .qs-datepicker .qs-square {
+// 	width: 14.28571%;
+// 	height: 1.5625em;
+// 	display: -webkit-box;
+// 	display: -ms-flexbox;
+// 	display: flex;
+// 	-webkit-box-align: center;
+// 	-ms-flex-align: center;
+// 	align-items: center;
+// 	-webkit-box-pack: center;
+// 	-ms-flex-pack: center;
+// 	justify-content: center;
+// 	cursor: pointer;
+// 	-webkit-transition: background 0.1s;
+// 	transition: background 0.1s;
+// 	border-radius: 0.26392em;
+// }
+// .qs-datepicker .qs-square.qs-current {
+// 	font-weight: 700;
+// }
+// .qs-datepicker .qs-square.qs-current span {
+// 	text-decoration: underline;
+// }
+// .qs-datepicker .qs-square.qs-active {
+// 	background: #fff;
+// 	color: #000;
+// }
+// .qs-datepicker .qs-square.qs-range-date-start:not(.qs-range-date-6) {
+// 	border-top-right-radius: 0;
+// 	border-bottom-right-radius: 0;
+// }
+// .qs-datepicker .qs-square.qs-range-date-middle {
+// 	background: #d4ebf2;
+// }
+// .qs-datepicker .qs-square.qs-range-date-middle:not(.qs-range-date-0):not(.qs-range-date-6) {
+// 	border-radius: 0;
+// }
+// .qs-datepicker .qs-square.qs-range-date-middle.qs-range-date-0 {
+// 	border-top-right-radius: 0;
+// 	border-bottom-right-radius: 0;
+// }
+// .qs-datepicker .qs-square.qs-range-date-end:not(.qs-range-date-0),
+// .qs-datepicker .qs-square.qs-range-date-middle.qs-range-date-6 {
+// 	border-top-left-radius: 0;
+// 	border-bottom-left-radius: 0;
+// }
+// .qs-datepicker .qs-square.qs-disabled span {
+// 	opacity: 0.2;
+// }
+// .qs-datepicker .qs-square.qs-empty {
+// 	cursor: default;
+// }
+// .qs-datepicker .qs-square.qs-disabled {
+// 	cursor: not-allowed;
+// }
+// .qs-datepicker .qs-square.qs-day {
+// 	cursor: default;
+// 	font-weight: 700;
+// 	color: grey;
+// }
+// .qs-datepicker .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+// 	background: orange;
+// }
+// .qs-datepicker .qs-event {
+// 	position: relative;
+// }
+// .qs-datepicker .qs-event:after {
+// 	content: "";
+// 	position: absolute;
+// 	width: 0.46875em;
+// 	height: 0.46875em;
+// 	border-radius: 50%;
+// 	background: #07f;
+// 	bottom: 0;
+// 	right: 0;
+// }
+// .qs-datepicker .qs-event.qs-disabled:after,
+// .qs-datepicker .qs-event.qs-empty:after {
+// 	background: #cce4ff;
+// }
+
+
+.date-picker {
+	width: 170px;
+	height: 25px;
+	padding: 0;
+	border: 0;
+	line-height: 25px;
+	padding-left: 10px;
+	font-size: 12px;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+	color: #303030;
+	position: relative;
+	z-index: 2;
+}
+
+.date-picker-wrapper {
+	position: absolute;
+	z-index: 160;
+	background: #F8F8F8;
+	border: 1px solid #4E4C4C;
+	padding: 20px 30px;
+	font-size: 11px;
+	line-height: 13px;
+	color: #4F4F4F;
+	-webkit-box-sizing: initial;
+	box-sizing: initial;
+}
+
+.dp-clearfix {
+	clear: both;
+	height: 0;
+	font-size: 0;
+}
+
+.date-picker-wrapper.inline-wrapper {
+	position: relative;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	display: inline-block;
+}
+
+.date-picker-wrapper.single-date {
+	width: auto;
+}
+
+.date-picker-wrapper.no-shortcuts {
+	padding-bottom: 12px;
+}
+
+.date-picker-wrapper.no-topbar {
+	padding-top: 12px;
+}
+
+.date-picker-wrapper .footer {
+	font-size: 11px;
+	padding-top: 3px;
+	background: transparent;
+}
+.date-picker-wrapper .footer::before {
+	background: transparent;
+}
+
+.date-picker-wrapper b {
+	color: #666;
+	font-weight: 700;
+}
+
+.date-picker-wrapper a {
+	color: #6bb4d6;
+	text-decoration: underline;
+}
+
+.date-picker-wrapper .month-name {
+	text-transform: uppercase;
+}
+
+.date-picker-wrapper .select-wrapper {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.date-picker-wrapper .select-wrapper:hover {
+	text-decoration: underline;
+}
+
+.date-picker-wrapper .month-element {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.date-picker-wrapper .select-wrapper select {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	top: -1px;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	text-transform: inherit;
+	color: inherit;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: transparent;
+	border: 0;
+	outline: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+	filter: alpha(opacity=1);
+	opacity: 0.01;
+}
+
+.date-picker-wrapper .month-wrapper {
+	// border: 1px solid #bfbfbf;
+	// border-radius: 3px;
+	// background-color: #fff;
+	// padding: 5px;
+	cursor: default;
+	position: relative;
+	_overflow: hidden;
+}
+
+.date-picker-wrapper .month-wrapper table {
+	width: 190px;
+	float: left;
+}
+
+.date-picker-wrapper .month-wrapper table.month2 {
+	width: 190px;
+	float: left;
+}
+
+.date-picker-wrapper .month-wrapper table th,
+.date-picker-wrapper .month-wrapper table td {
+	vertical-align: middle;
+	text-align: center;
+	line-height: 14px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.date-picker-wrapper .month-wrapper table .day {
+	padding: 5px 0;
+	line-height: 1;
+	font-size: 12px;
+	margin-bottom: 1px;
+	color: #ccc;
+	cursor: default;
+}
+
+.date-picker-wrapper .month-wrapper table div.day.lastMonth,
+.date-picker-wrapper .month-wrapper table div.day.nextMonth {
+	color: #999;
+	cursor: default;
+}
+
+.date-picker-wrapper .month-wrapper table .day.checked {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin: 0 auto;
+	background: #f9be7a;
+}
+
+.date-picker-wrapper .month-wrapper table .week-name {
+	font-size: 8px;
+	line-height: 10px;
+	color: #4F4F4F;
+	text-transform: uppercase;
+	padding: 0px 0px 1px 0px;
+	border-bottom: 1px solid #A2A2A2;
+}
+
+.date-picker-wrapper .month-wrapper table .day.has-tooltip {
+	cursor: help !important;
+}
+
+.date-picker-wrapper .month-wrapper table .day.has-tooltip .tooltip {
+	white-space: nowrap;
+}
+
+.date-picker-wrapper .time label {
+	white-space: nowrap;
+}
+
+.date-picker-wrapper .month-wrapper table .day.toMonth.valid {
+	color: #333;
+	cursor: pointer;
+}
+
+.date-picker-wrapper .month-wrapper table .day.toMonth.hovering {
+	background-color: #cdecfa;
+}
+
+.date-picker-wrapper .month-wrapper table .day.nextMonth,
+.date-picker-wrapper .month-wrapper table .day.lastMonth {
+	display: none;
+}
+
+.date-picker-wrapper .month-wrapper table .day.real-today {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin: 0 auto;
+	width: 20px;
+	height: 20px;
+	background: #FF8A00;
+	background-color: #FFF3E4;
+}
+
+.date-picker-wrapper .month-wrapper table .day.real-today.checked,
+.date-picker-wrapper .month-wrapper table .day.real-today.hovering {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin: 0 auto;
+	background: #FFF3E4;
+}
+
+.date-picker-wrapper table .caption {
+	height: 40px;
+}
+
+.date-picker-wrapper table .caption>th:first-of-type,
+.date-picker-wrapper table .caption>th:last-of-type {
+	width: 27px;
+}
+
+.date-picker-wrapper table .caption .next,
+.date-picker-wrapper table .caption .prev {
+	padding: 0 5px;
+	cursor: pointer;
+}
+
+.date-picker-wrapper table .caption .next:hover,
+.date-picker-wrapper table .caption .prev:hover {
+	background-color: #ccc;
+	color: white;
+}
+
+.date-picker-wrapper .gap {
+	position: relative;
+	z-index: 1;
+	width: 15px;
+	height: 100%;
+	// background-color: red;
+	font-size: 0;
+	line-height: 0;
+	float: left;
+	top: -5px;
+	margin: 0 10px -10px;
+	visibility: hidden;
+	height: 0;
+}
+
+.date-picker-wrapper .gap .gap-lines {
+	height: 100%;
+	overflow: hidden;
+}
+
+.date-picker-wrapper .gap .gap-line {
+	height: 15px;
+	width: 15px;
+	position: relative;
+}
+
+.date-picker-wrapper .gap .gap-line .gap-1 {
+	z-index: 1;
+	height: 0;
+	// border-left: 8px solid white;
+	// border-top: 8px solid #eee;
+	// border-bottom: 8px solid #eee;
+}
+
+.date-picker-wrapper .gap .gap-line .gap-2 {
+	position: absolute;
+	right: 0;
+	top: 0px;
+	z-index: 2;
+	height: 0;
+	// border-left: 8px solid transparent;
+	// border-top: 8px solid white;
+}
+
+.date-picker-wrapper .gap .gap-line .gap-3 {
+	position: absolute;
+	right: 0;
+	top: 8px;
+	z-index: 2;
+	height: 0;
+	// border-left: 8px solid transparent;
+	// border-bottom: 8px solid white;
+}
+
+.date-picker-wrapper .gap .gap-top-mask {
+	width: 6px;
+	height: 1px;
+	position: absolute;
+	top: -1px;
+	left: 1px;
+	background-color: #eee;
+	z-index: 3;
+}
+
+.date-picker-wrapper .gap .gap-bottom-mask {
+	width: 6px;
+	height: 1px;
+	position: absolute;
+	bottom: -1px;
+	left: 7px;
+	background-color: #eee;
+	z-index: 3;
+}
+
+.date-picker-wrapper .selected-days {
+	display: none;
+}
+
+.date-picker-wrapper .drp_top-bar {
+	line-height: 1.4;
+	position: relative;
+	padding: 10px 40px 10px 0;
+}
+
+.date-picker-wrapper .drp_top-bar .error-top,
+.date-picker-wrapper .drp_top-bar .normal-top {
+	display: none;
+}
+
+.date-picker-wrapper .drp_top-bar .default-top {
+	display: block;
+}
+
+.date-picker-wrapper .drp_top-bar.error .default-top {
+	display: none;
+}
+
+.date-picker-wrapper .drp_top-bar.error .error-top {
+	display: block;
+	color: red;
+}
+
+.date-picker-wrapper .drp_top-bar.normal .default-top {
+	display: none;
+}
+
+.date-picker-wrapper .drp_top-bar.normal .normal-top {
+	display: block;
+}
+
+.date-picker-wrapper .drp_top-bar.normal .normal-top .selection-top {
+	color: #333;
+}
+
+.date-picker-wrapper .drp_top-bar .apply-btn {
+	position: absolute;
+	right: 0px;
+	top: 6px;
+	padding: 3px 5px;
+	margin: 0;
+	font-size: 12px;
+	// border-radius: 4px;
+	cursor: pointer;
+	// color: #d9eef7;
+	// border: solid 1px #0076a3;
+	// background: #0095cd;
+	// background: -moz-linear-gradient(top, #00adee, #0078a5);
+	// filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+	// color: white;
+	// line-height: initial;
+}
+
+.date-picker-wrapper .drp_top-bar .apply-btn.disabled {
+	cursor: pointer;
+	// color: #606060;
+	border: none;
+	// background: #fff;
+	// background: -moz-linear-gradient(top, #fff, #ededed);
+	// filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+}
+
+.date-picker-wrapper .time {
+	position: relative;
+}
+
+.date-picker-wrapper.single-month .time {
+	display: block;
+}
+
+.date-picker-wrapper .time input[type=range] {
+	vertical-align: middle;
+	width: 129px;
+	padding: 0;
+	margin: 0;
+	height: 20px;
+}
+
+.date-picker-wrapper .time1 {
+	width: 180px;
+	padding: 0 5px;
+	text-align: center;
+}
+
+/*time styling*/
+.time2 {
+	width: 180px;
+	padding: 0 5px;
+	text-align: center;
+}
+
+.date-picker-wrapper .time1 {
+	float: left;
+}
+
+.date-picker-wrapper .time2 {
+	float: right;
+}
+
+.date-picker-wrapper .hour {
+	text-align: right;
+}
+
+.minute {
+	text-align: right;
+}
+
+.date-picker-wrapper .hide {
+	display: none;
+}
+
+.date-picker-wrapper .first-date-selected,
+.date-picker-wrapper .last-date-selected {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin: 0 auto;
+	background: #FF8A00 !important;
+}
+
+.date-picker-wrapper .date-range-length-tip {
+	position: absolute;
+	margin-top: -4px;
+	margin-left: -8px;
+	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+	display: none;
+	background-color: yellow;
+	padding: 0 6px;
+	border-radius: 2px;
+	font-size: 12px;
+	line-height: 16px;
+	-webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+	-moz-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+	-ms-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+	-o-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+}
+
+.date-picker-wrapper .date-range-length-tip:after {
+	content: '';
+	position: absolute;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid yellow;
+	left: 50%;
+	margin-left: -4px;
+	bottom: -4px;
+}
+
+.date-picker-wrapper.two-months.no-gap .month1 .next,
+.date-picker-wrapper.two-months.no-gap .month2 .prev {
+	display: none;
+}
+
+.date-picker-wrapper .week-number {
+	padding: 5px 0;
+	line-height: 1;
+	font-size: 12px;
+	margin-bottom: 1px;
+	color: #999;
+	cursor: pointer;
+}
+
+.date-picker-wrapper .week-number.week-number-selected {
+	color: #49e;
+	font-weight: bold;
+}

@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Поиск и аренда спецтехники в Украине"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main>
+			<div class="side-button">
+				<div class="side-button__wrap">
+					<button class="side-button__close"><img src="img/main/close.svg" alt="svg"></button>
+					<p class="side-button__text">Быстрый заказ</p>
+					<a href="product.html" class="side-button__link _icon-telegram"></a>
+					<!-- <a href="" class="side-button__link _icon-viber"></a> -->
+				</div>
+			</div>
+			<div class="cookies">
+				<div class="cookies__container">
+					<div class="cookies__body">
+						<p class="cookies__text">Мы используем файлы cookie для оптимизации работы нашего сервиса. Продолжая
+							пользоваться сайтом вы соглашаетесь на их использование.</p>
+						<div class="cookies__buttons">
+							<button type="submit" class="cookies__button btn btn-c cookies__accept">Confirm</button>
+							<a href="" class="cookies__button cookies__button-link btn">Details</a>
+						</div>
+						<button type="submit" class="cookies__button-close btn-close">
+							<span></span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<section class="main">
+				<div class="main__container">
+					<h1 class="main__title">Поиск и аренда спецтехники</h1>
+					<div class="main__wrapper">
+						<div class="main__content">
+							<div data-tabs class="main__tabs tabs">
+								<nav data-tabs-titles class="tabs__navigation">
+									<button type="button" class="tabs__title _tab-active f16"><span class="_icon-truck-2"></span>Подбор
+										техники</button>
+									<button type="button" class="tabs__title f16"><span class="_icon-time_works"></span>Заказать
+										работы</button>
+								</nav>
+								<div data-tabs-body class="tabs__content">
+									<!-- <form action="#" data-dev data-popup-message="#popup" class="tabs__body form"> -->
+									<form action="#" class="tabs__body form">
+										<div class="tabs__top-row">
+											<div class="tabs__icon">
+												<img src="img/main/info.svg" alt="">
+											</div>
+											<p class="tabs__text">Я знаю, что мне нужно и выберу сам. Пример: нужен автокран</p>
+										</div>
+										<div class="tabs__row">
+											<div data-dropdown class="tabs__dropdown dropdown">
+												<button type="button" data-dropdown-button
+													class="tabs__dropdown-button dropdown__button _icon-arrow-1" data-value="">Выберите
+													категорию</button>
+												<div data-dropdown-list class="tabs__list dropdown__list">
+													<div class="category-header__wrapper">
+														<div class="category-header__items">
+															<h6 class="category-header__title _icon-excavator">Землеройная техника</h6>
+															<ul class="category-header__list">
+																<li class="dropdown__item" data-dropdown-item data-value="1">Самосвалы</li>
+																<li class="dropdown__item" data-dropdown-item data-value="2">Экскаваторы</li>
+																<li class="dropdown__item" data-dropdown-item data-value="3">Экскаваторы-погрузчики</li>
+																<li class="dropdown__item" data-dropdown-item data-value="4">Мини-экскаваторы</li>
+																<li class="dropdown__item" data-dropdown-item data-value="5">Бульдозеры</li>
+																<li class="dropdown__item" data-dropdown-item data-value="6">Фронтальные погрузчики</li>
+																<li class="dropdown__item" data-dropdown-item data-value="7">Мини-погрузчики</li>
+															</ul>
+														</div>
+														<div class="category-header__items">
+															<h6 class="category-header__title _icon-crane_truck">Краны и погрузочно-разгрузочная
+																техника</h6>
+															<ul class="category-header__list">
+																<li class="category-header__item">
+																<li class="dropdown__item" data-dropdown-item data-value="8">Автокраны</li>
+																<li class="dropdown__item" data-dropdown-item data-value="9">Телескопические погрузчики
+																</li>
+																<li class="dropdown__item" data-dropdown-item data-value="10">Вилочные
+																	погрузчики</li>
+																<li class="dropdown__item" data-dropdown-item data-value="11">Погрузчики-манипуляторы
+																</li>
+																<li class="dropdown__item" data-dropdown-item data-value="12">Автовышки</li>
+																<li class="dropdown__item" data-dropdown-item data-value="13">Гусеничные
+																	краны</li>
+																<li class="dropdown__item" data-dropdown-item data-value="14">Складская
+																	техника</li>
+															</ul>
+														</div>
+														<div class="category-header__items">
+															<h6 class="category-header__title _icon-bulldozers">Бетон & Дорожностроительная
+																техника</h6>
+															<ul class="category-header__list">
+																<li class="category-header__item">
+																<li class="dropdown__item" data-dropdown-item data-value="15">Экскаваторы</li>
+																<li class="dropdown__item" data-dropdown-item data-value="16">Бульдозеры</li>
+																<li class="dropdown__item" data-dropdown-item data-value="17">Дорожные
+																	катки и асфальтоукладчики</li>
+																<li class="dropdown__item" data-dropdown-item data-value="18">Буровая и
+																	сваебойная техника</li>
+																<li class="dropdown__item" data-dropdown-item data-value="19">Грейдеры</li>
+																<li class="dropdown__item" data-dropdown-item data-value="20">Бетоносмесители
+																	(Бетоновозы и
+																	цементовозы)</li>
+																<li class="dropdown__item" data-dropdown-item data-value="21">Бетононасосы</li>
+															</ul>
+														</div>
+														<div class="category-header__items">
+															<h6 class="category-header__title _icon-truck-1">Коммунально-дорожные машины & Другая
+																техника</h6>
+															<ul class="category-header__list">
+																<li class="category-header__item">
+																<li class="dropdown__item" data-dropdown-item data-value="22">Автоцистерны</li>
+																<li class="dropdown__item" data-dropdown-item data-value="23">Мусоровозы</li>
+																<li class="dropdown__item" data-dropdown-item data-value="24">Эвакуаторы</li>
+																<li class="dropdown__item" data-dropdown-item data-value="25">Коммунально-дорожные
+																	машины</li>
+																<li class="dropdown__item" data-dropdown-item data-value="26">Прицепы и
+																	полуприцепы (16 Тралы и
+																	низкорамные
+																	платформы)</li>
+																<li class="dropdown__item" data-dropdown-item data-value="27">Другая
+																	техника (башенные краны)</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<input type="text" id="select-category" name="select-category" value="" data-dropdown-input
+													class="dropdown__input-hidden">
+											</div>
+											<button type="button" data-popup="#popup-category"
+												class="tabs__row-icon _icon-tow-truck"></button>
+										</div>
+										<div class="tabs__row">
+											<div data-dropdown class="tabs__dropdown dropdown">
+												<button type="button" data-dropdown-button
+													class="tabs__dropdown-button dropdown__button _icon-arrow-1" data-value="">Выберите адрес
+													работ</button>
+												<ul data-dropdown-list class="tabs__list dropdown__list">
+													<li class="dropdown__item" data-dropdown-item data-value="1">Киевская область</li>
+													<li class="dropdown__item" data-dropdown-item data-value="2">Винницкая область</li>
+													<li class="dropdown__item" data-dropdown-item data-value="3">Сумская область</li>
+													<li class="dropdown__item" data-dropdown-item data-value="4">Одесская область</li>
+													<li class="dropdown__item" data-dropdown-item data-value="5">Днепропетровская область</li>
+													<li class="dropdown__item" data-dropdown-item data-value="6">Черниговская область</li>
+													<li class="dropdown__item" data-dropdown-item data-value="7">Харьковская область</li>
+													<li class="dropdown__item" data-dropdown-item data-value="8">Житомирская область</li>
+													<li class="dropdown__item" data-dropdown-item data-value="9">Полтавская область</li>
+												</ul>
+												<input type="text" id="select-location" name="select-location" value="" data-dropdown-input
+													class="dropdown__input-hidden">
+											</div>
+											<button data-popup="#popup-map" type="button" class="tabs__row-icon _icon-location">
+												<img src="img/main/location.svg" alt="">
+											</button>
+										</div>
+										<input data-validate data-required type="text" id="name" name="name" class="tabs__input"
+											placeholder="Ваше имя">
+										<div>
+											<input data-error="Номер телефона должен начинаться с +40, +90, +373, +380" data-validate
+												data-required type="tel" id="tel" name="tel" class="tabs__input phone-mask"
+												placeholder="+__ ___ ___ ____">
+										</div>
+										<button data-popup="#popup" type="submit" class="tabs__button btn btn-c">Заказать</button>
+									</form>
+									<div class="tabs__body">
+										<div class="tabs__top-row">
+											<div class="tabs__icon">
+												<img src="img/main/info.svg" alt="">
+											</div>
+											<p class="tabs__text">Я знаю, что мне нужно и выберу сам. Пример: нужен автокран</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="main__image">
+							<img src="img/main/main-background.svg" alt="Main background" class="main__bg light-theme">
+							<img src="img/main/main-background-mobile.svg" alt="Main background" class="main__bg-mob light-theme">
+							<img src="img/main/main-background-dark-theme.svg" alt="Main background" class="main__bg dark-theme">
+							<img src="img/main/main-background-mobile-dark-theme.svg" alt="Main background"
+								class="main__bg-mob dark-theme">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="statistics">
+				<div class="statistics__container">
+					<div data-watch class="statistics__inner">
+						<div class="statistics__item">
+							<h2 class="statistics__item-title"><span data-digits-counter>24</span>/<span data-digits-counter>7</span>
+							</h2>
+							<div class="statistics__item-subtitle">
+								режим работы
+							</div>
+						</div>
+						<div class="statistics__item">
+							<h2 data-digits-counter class="statistics__item-title">526</h2>
+							<div class="statistics__item-subtitle">
+								среднее время обработки заявки
+							</div>
+						</div>
+						<div class="statistics__item">
+							<h2 data-digits-counter class="statistics__item-title">54</h2>
+							<div class="statistics__item-subtitle">
+								заявок на спецтехнику за сутки
+							</div>
+						</div>
+						<div class="statistics__item">
+							<h2 class="statistics__item-title"><span data-digits-counter>92</span>%</h2>
+							<div class="statistics__item-subtitle">
+								закрытых сделок
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="map">
+				<div class="map__container">
+					<h3 class="map__title">Техника на карте</h3>
+					<div data-tabs class="map__tabs tabs">
+						<nav data-tabs-titles class="tabs__navigation">
+							<button type="button" class="map__tabs-title tabs__title _tab-active f16">Вся техника на карте</button>
+							<button type="button" class="map__tabs-title tabs__title f16">Техника онлайн</button>
+						</nav>
+						<div data-tabs-body class="tabs__content map__content">
+							<div class="tabs__body tabs__body-map">
+								<div id="map_container" class="map__wrapper">
+									<div class="map__image">
+										<img src="img/main/map-background.png" alt="Карта">
+									</div>
+									<div id="map" class="map__iframe">
+										<div id="map__button" class="map__button-wrap">
+											<button id="load_map_button" class="map__button btn btn-w">Взаимодействовать</button>
+										</div>
+									</div>
+									<div class="map__info-wrapper">
+										<div class="map__info-content info-content">
+											<div class="info-content__wrapp">
+												<div class="info-content__body-title">
+													<div class="info-content__title">Аренда бульдозеры</div>
+													<div class="info-content__title-text">г. Яготин</div>
+												</div>
+												<button data-da=".info-content,991.98,4" type="submit" class="info-content__button">
+													<span class="btn-close">
+														<span></span>
+													</span>
+												</button>
+											</div>
+											<div class="info-content__wrapper">
+												<div class="info-content__image">
+													<img class="info-content__img" src="img/catalog/catalog_img-01.png" alt="">
+												</div>
+												<div class="info-content__main">
+													<div class="info-content__header">
+														<div class="info-content__row">
+															<div class="info-content__name info-content__name-type">Тип</div>
+															<div class="info-content__descr-type">Автовышки</div>
+														</div>
+														<div class="info-content__row">
+															<div class="info-content__name info-content__name-brand">Марка</div>
+															<div class="info-content__descr-brand">Автовышки</div>
+														</div>
+													</div>
+													<div class="info-content__footer">
+														<div class="info-content__text info-content__text-1">Грузоподъемность - 100 тонн</div>
+														<div class="info-content__text info-content__text-2">Вылет стрелы - 25 метров</div>
+														<div class="info-content__text info-content__text-3">Тип проходимости - колесный</div>
+														<div class="info-content__text info-content__text-4">Длина гуська - 3 метра</div>
+													</div>
+												</div>
+											</div>
+											<div class="info-content__price">
+												<button type="submit" class="info-content__button-price info-content__button-hour btn">800 грн./
+													час</button>
+												<button type="submit" class="info-content__button-price info-content__button-day btn">6800
+													грн./
+													смена</button>
+												<a href="#" target="_blank"
+													class="info-content__button-price info-content__button-order btn btn-c">Заказать</a>
+											</div>
+										</div>
+										<div class="map__info-content info-content">
+											<div class="info-content__wrapp">
+												<div class="info-content__body-title">
+													<div class="info-content__title">Аренда бульдозеры</div>
+													<div class="info-content__title-text">г. Яготин1</div>
+												</div>
+												<button data-da=".info-content,991.98,4" type="submit" class="info-content__button">
+													<span class="btn-close">
+														<span></span>
+													</span>
+												</button>
+											</div>
+											<div class="info-content__wrapper">
+												<div class="info-content__image">
+													<img class="info-content__img" src="img/catalog/catalog_img-01.png" alt="">
+												</div>
+												<div class="info-content__main">
+													<div class="info-content__header">
+														<div class="info-content__row">
+															<div class="info-content__name info-content__name-type">Тип</div>
+															<div class="info-content__descr-type">Автовышки1</div>
+														</div>
+														<div class="info-content__row">
+															<div class="info-content__name info-content__name-brand">Марка</div>
+															<div class="info-content__descr-brand">Автовышки1</div>
+														</div>
+													</div>
+													<div class="info-content__footer">
+														<div class="info-content__text info-content__text-1">Грузоподъемность - 10 тонн</div>
+														<div class="info-content__text info-content__text-2">Вылет стрелы - 2 метров</div>
+														<div class="info-content__text info-content__text-3">Тип проходимости - колесный</div>
+														<div class="info-content__text info-content__text-4">Длина гуська - 2 метра</div>
+													</div>
+												</div>
+											</div>
+											<div class="info-content__price">
+												<button type="submit" class="info-content__button-price info-content__button-hour btn">700 грн./
+													час</button>
+												<button type="submit" class="info-content__button-price info-content__button-day btn">7800 грн./
+													смена</button>
+												<a href="#" target="_blank"
+													class="info-content__button-price info-content__button-order btn btn-c">Заказать</a>
+											</div>
+										</div>
+										<div class="map__info-content info-content">
+											<div class="info-content__wrapp">
+												<div class="info-content__body-title">
+													<div class="info-content__title">Аренда бульдозеры</div>
+													<div class="info-content__title-text">г. Яготин2</div>
+												</div>
+												<button data-da=".info-content,991.98,4" type="submit" class="info-content__button">
+													<span class="btn-close">
+														<span></span>
+													</span>
+												</button>
+											</div>
+											<div class="info-content__wrapper">
+												<div class="info-content__image">
+													<img class="info-content__img" src="img/catalog/catalog_img-01.png" alt="">
+												</div>
+												<div class="info-content__main">
+													<div class="info-content__header">
+														<div class="info-content__row">
+															<div class="info-content__name info-content__name-type">Тип</div>
+															<div class="info-content__descr-type">Автовышки2</div>
+														</div>
+														<div class="info-content__row">
+															<div class="info-content__name info-content__name-brand">Марка</div>
+															<div class="info-content__descr-brand">Автовышки2</div>
+														</div>
+													</div>
+													<div class="info-content__footer">
+														<div class="info-content__text info-content__text-1">Грузоподъемность - 1020 тонн</div>
+														<div class="info-content__text info-content__text-2">Вылет стрелы - 225 метров</div>
+														<div class="info-content__text info-content__text-3">Тип проходимости - колесный</div>
+														<div class="info-content__text info-content__text-4">Длина гуська - 32 метра</div>
+													</div>
+												</div>
+											</div>
+											<div class="info-content__price">
+												<button type="submit" class="info-content__button-price info-content__button-hour btn">80 грн./
+													час</button>
+												<button type="submit" class="info-content__button-price info-content__button-day btn">650 грн./
+													смена</button>
+												<a href="#" target="_blank"
+													class="info-content__button-price info-content__button-order btn btn-c">Заказать</a>
+											</div>
+										</div>
+										<div class="map__info-content info-content">
+											<div class="info-content__wrapp">
+												<div class="info-content__body-title">
+													<div class="info-content__title">Аренда бульдозеры</div>
+													<div class="info-content__title-text">г. Яготин3</div>
+												</div>
+												<button data-da=".info-content,991.98,4" type="submit" class="info-content__button">
+													<span class="btn-close">
+														<span></span>
+													</span>
+												</button>
+											</div>
+											<div class="info-content__wrapper">
+												<div class="info-content__image">
+													<img class="info-content__img" src="img/catalog/catalog_img-01.png" alt="">
+												</div>
+												<div class="info-content__main">
+													<div class="info-content__header">
+														<div class="info-content__row">
+															<div class="info-content__name info-content__name-type">Тип</div>
+															<div class="info-content__descr-type">Автовышки3</div>
+														</div>
+														<div class="info-content__row">
+															<div class="info-content__name info-content__name-brand">Марка</div>
+															<div class="info-content__descr-brand">Автовышки3</div>
+														</div>
+													</div>
+													<div class="info-content__footer">
+														<div class="info-content__text info-content__text-1">Грузоподъемность - 1030 тонн</div>
+														<div class="info-content__text info-content__text-2">Вылет стрелы - 253 метров</div>
+														<div class="info-content__text info-content__text-3">Тип проходимости - колесный</div>
+														<div class="info-content__text info-content__text-4">Длина гуська - 33 метра</div>
+													</div>
+												</div>
+											</div>
+											<div class="info-content__price">
+												<button type="submit" class="info-content__button-price info-content__button-hour btn">803 грн./
+													час</button>
+												<button type="submit" class="info-content__button-price info-content__button-day btn">6803 грн./
+													смена</button>
+												<a href="#" target="_blank"
+													class="info-content__button-price info-content__button-order btn btn-c">Заказать</a>
+											</div>
+										</div>
+										<div class="map__info-content info-content">
+											<div class="info-content__wrapp">
+												<div class="info-content__body-title">
+													<div class="info-content__title">Аренда бульдозеры</div>
+													<div class="info-content__title-text">г. Яготин4</div>
+												</div>
+												<button data-da=".info-content,991.98,4" type="submit" class="info-content__button">
+													<span class="btn-close">
+														<span></span>
+													</span>
+												</button>
+											</div>
+											<div class="info-content__wrapper">
+												<div class="info-content__image">
+													<img class="info-content__img" src="img/catalog/catalog_img-01.png" alt="">
+												</div>
+												<div class="info-content__main">
+													<div class="info-content__header">
+														<div class="info-content__row">
+															<div class="info-content__name info-content__name-type">Тип</div>
+															<div class="info-content__descr-type">Автовышки4</div>
+														</div>
+														<div class="info-content__row">
+															<div class="info-content__name info-content__name-brand">Марка</div>
+															<div class="info-content__descr-brand">Автовышки4</div>
+														</div>
+													</div>
+													<div class="info-content__footer">
+														<div class="info-content__text info-content__text-1">Грузоподъемность - 400 тонн</div>
+														<div class="info-content__text info-content__text-2">Вылет стрелы - 24 метров</div>
+														<div class="info-content__text info-content__text-3">Тип проходимости - колесный</div>
+														<div class="info-content__text info-content__text-4">Длина гуська - 4 метра</div>
+													</div>
+												</div>
+											</div>
+											<div class="info-content__price">
+												<button type="submit" class="info-content__button-price info-content__button-hour btn">804 грн./
+													час</button>
+												<button type="submit" class="info-content__button-price info-content__button-day btn">6804 грн./
+													смена</button>
+												<a href="#" target="_blank"
+													class="info-content__button-price info-content__button-order btn btn-c">Заказать</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__body tabs__body-map">
+								<p class="tabs__text">Содержимое второго таба</p>
+							</div>
+						</div>
+						<form class="tabs__search-map" data-da=".tabs__body-map,991.98,0">
+							<div data-dropdown class="tabs__search-dropdown tabs__dropdown dropdown">
+								<button type="button" data-dropdown-button
+									class="tabs__dropdown-search tabs__dropdown-button dropdown__button _icon-arrow-1"
+									data-value="">Грузоперевозки</button>
+								<div data-dropdown-list class="tabs__list dropdown__list">
+									<div class="category-header__wrapper">
+										<div class="category-header__items">
+											<h6 class="category-header__title _icon-excavator">Землеройная техника</h6>
+											<ul class="category-header__list">
+												<li class="dropdown__item" data-dropdown-item data-value="1">Самосвалы</li>
+												<li class="dropdown__item" data-dropdown-item data-value="2">Экскаваторы</li>
+												<li class="dropdown__item" data-dropdown-item data-value="3">Экскаваторы-погрузчики</li>
+												<li class="dropdown__item" data-dropdown-item data-value="4">Мини-экскаваторы</li>
+												<li class="dropdown__item" data-dropdown-item data-value="5">Бульдозеры</li>
+												<li class="dropdown__item" data-dropdown-item data-value="6">Фронтальные погрузчики</li>
+												<li class="dropdown__item" data-dropdown-item data-value="7">Мини-погрузчики</li>
+											</ul>
+										</div>
+										<div class="category-header__items">
+											<h6 class="category-header__title _icon-crane_truck">Краны и погрузочно-разгрузочная
+												техника</h6>
+											<ul class="category-header__list">
+												<li class="category-header__item">
+												<li class="dropdown__item" data-dropdown-item data-value="8">Автокраны</li>
+												<li class="dropdown__item" data-dropdown-item data-value="9">Телескопические погрузчики
+												</li>
+												<li class="dropdown__item" data-dropdown-item data-value="10">Вилочные
+													погрузчики</li>
+												<li class="dropdown__item" data-dropdown-item data-value="11">Погрузчики-манипуляторы
+												</li>
+												<li class="dropdown__item" data-dropdown-item data-value="12">Автовышки</li>
+												<li class="dropdown__item" data-dropdown-item data-value="13">Гусеничные
+													краны</li>
+												<li class="dropdown__item" data-dropdown-item data-value="14">Складская
+													техника</li>
+											</ul>
+										</div>
+										<div class="category-header__items">
+											<h6 class="category-header__title _icon-bulldozers">Бетон & Дорожностроительная
+												техника</h6>
+											<ul class="category-header__list">
+												<li class="category-header__item">
+												<li class="dropdown__item" data-dropdown-item data-value="15">Экскаваторы</li>
+												<li class="dropdown__item" data-dropdown-item data-value="16">Бульдозеры</li>
+												<li class="dropdown__item" data-dropdown-item data-value="17">Дорожные
+													катки и асфальтоукладчики</li>
+												<li class="dropdown__item" data-dropdown-item data-value="18">Буровая и
+													сваебойная техника</li>
+												<li class="dropdown__item" data-dropdown-item data-value="19">Грейдеры</li>
+												<li class="dropdown__item" data-dropdown-item data-value="20">Бетоносмесители
+													(Бетоновозы и
+													цементовозы)</li>
+												<li class="dropdown__item" data-dropdown-item data-value="21">Бетононасосы</li>
+											</ul>
+										</div>
+										<div class="category-header__items">
+											<h6 class="category-header__title _icon-truck-1">Коммунально-дорожные машины & Другая
+												техника</h6>
+											<ul class="category-header__list">
+												<li class="category-header__item">
+												<li class="dropdown__item" data-dropdown-item data-value="22">Автоцистерны</li>
+												<li class="dropdown__item" data-dropdown-item data-value="23">Мусоровозы</li>
+												<li class="dropdown__item" data-dropdown-item data-value="24">Эвакуаторы</li>
+												<li class="dropdown__item" data-dropdown-item data-value="25">Коммунально-дорожные
+													машины</li>
+												<li class="dropdown__item" data-dropdown-item data-value="26">Прицепы и
+													полуприцепы (16 Тралы и
+													низкорамные
+													платформы)</li>
+												<li class="dropdown__item" data-dropdown-item data-value="27">Другая
+													техника (башенные краны)</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<input type="text" name="search-map" value="" data-dropdown-input class="dropdown__input-hidden">
+							</div>
+							<button type="submit" class="tabs__search-button btn btn-c">Искать</button>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="technique">
+				<div class="technique__container">
+					<div class="technique__wrapper">
+						<div class="technique__content">
+							<h2 class="technique__title">
+								<span>Техника</span> должна работать
+							</h2>
+							<div class="technique__row">
+								<div class="technique__item">
+									<div class="technique__icon">
+										<img src="img/main/arrow.svg" alt="">
+									</div>
+									<p class="technique__text">Получайте выгодные заказы для вашей техники уже сегодня</p>
+								</div>
+								<div class="technique__item">
+									<div class="technique__icon">
+										<img src="img/main/arrow.svg" alt="">
+									</div>
+									<p class="technique__text">Бесплатная регистрация в 2 шага</p>
+								</div>
+							</div>
+							<a href="" class="technique__button btn btn-w" data-da=".technique__image,991.98,2">Подключить технику</a>
+						</div>
+						<div class="technique__image">
+							<img src="img/main/banner.svg" alt="" class="technique__light-theme">
+							<img src="img/main/banner-dark-theme.svg" alt="" class="technique__dark-theme">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="catalog-section">
+		
+				<div class="catalog-section__container">
+					<div data-tabs class="catalog-section__tabs tabs">
+						<nav data-tabs-titles class="tabs__navigation">
+							<button type="button" class="catalog-section__title tabs__title _tab-active f16">Каталог техники</button>
+							<button type="button" class="catalog-section__title tabs__title f16">Заявки</button>
+						</nav>
+						<div data-tabs-body class="tabs__content">
+							<div class="tabs__body tabs__body-filter">
+								
+								<div  class="catalog-section__filter filter">
+									<button class="open-filter filter__text _icon-filter">Фильтры</button>
+									<div data-da=".sidebar__header,991.98,0" class="filter__header filter__text _icon-filter">Фильтры</div>
+									<div data-dropdown  class="filter__dropdown filter__dropdown-quantity dropdown">
+										<button type="button" data-dropdown-button
+											class="filter__button-dropdown dropdown__button _icon-arrow-1" data-value="">20</button>
+										<ul data-dropdown-list class="dropdown__list">
+											<li data-dropdown-item class="dropdown__item" data-value="1">20</li>
+											<li data-dropdown-item class="dropdown__item" data-value="2">40</li>
+											<li data-dropdown-item class="dropdown__item" data-value="3">60</li>
+											<li data-dropdown-item class="dropdown__item" data-value="4">80</li>
+											<li data-dropdown-item class="dropdown__item" data-value="5">100</li>
+										</ul>
+										<input type="text" name="select-quantity" value="" data-dropdown-input
+											class="dropdown__input-hidden">
+									</div>
+									<div  class="filter__block-search">
+										<div  class="filter__grid" id="filter__grid">
+											<button type="submit" id="grid-rows" class="filter__grid-button _icon-rows"></button>
+											<button type="submit" id="grid-columns" class="filter__grid-button active _icon-columns"></button>
+										</div>
+										<div data-da=".filter,767.98,0" class="filter__form-search">
+											<input type="text" name="search" placeholder="Что найти?" class="filter__search">
+											<button type="submit" class="filter__button-search btn btn-c">Найти</button>
+										</div>
+									</div>
+								</div>
+								<div class="sidebar__items-container sidebar__items-container_aside">
+									<div class="sidebar__selected-items ">
+									</div>
+									<button class="" type="button">
+										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" >
+											<path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+										 </svg>
+									</button>
+								</div>
+								<div class="catalog-section__wrap">
+									<form  class="filter__column sidebar">
+										<div class="sidebar__header">
+											<button class="sidebar__close" type="button">
+												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" >
+													<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+												 </svg>
+											</button>
+										</div>
+										<div class="sidebar__items-container">
+											<div class="sidebar__selected-items">
+											</div>
+											<button class="" type="button">
+												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+												 </svg>
+											</button>
+										</div>
+									
+											<div class="sidebar__groups">
+												<div class="sidebar__group">
+													<h2 class="sidebar__subtitle">Регіон</h2>
+													<ul class="sidebar__list">
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Регіон1</span> <span class="sidebar__item-quantity">(12)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Регіон2</span> <span class="sidebar__item-quantity">(12)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Регіон3</span> <span class="sidebar__item-quantity">(12)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Регіон4</span> <span class="sidebar__item-quantity">(12)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Регіон5</span> <span class="sidebar__item-quantity">(12)</span></span>
+															</label>
+														</li>
+													</ul>
+												</div>
+												<div class="sidebar__group">
+													<h2 class="sidebar__subtitle _icon-excavator">Землеройная техника</h2>
+													<ul class="sidebar__list">
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Самосвалы</span> <span class="sidebar__item-quantity">(4)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Экскаваторы</span> <span class="sidebar__item-quantity">(2)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Экскаваторы-погрузчики</span> <span class="sidebar__item-quantity">(16)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Мини-экскаваторы</span> <span class="sidebar__item-quantity">(6)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Бульдозеры</span> <span class="sidebar__item-quantity">(8)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Фронтальные погрузчики</span> <span class="sidebar__item-quantity">(11)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Мини-погрузчики</span> <span class="sidebar__item-quantity">(2)</span></span>
+															</label>
+														</li>
+													</ul>
+												</div>
+												<div class="sidebar__group">
+													<h2 class="sidebar__subtitle _icon-crane_truck">Краны и погрузочно-разгрузочная техника</h2>
+													<ul class="sidebar__list">
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Автокраны</span> <span class="sidebar__item-quantity">(23)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Телескопические погрузчики</span> <span class="sidebar__item-quantity">(23)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Вилочные погрузчики</span> <span class="sidebar__item-quantity">(23)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Погрузчики-манипуляторы</span> <span class="sidebar__item-quantity">(23)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Автовышки</span> <span class="sidebar__item-quantity">(23)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Гусеничные краны</span> <span class="sidebar__item-quantity">(23)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Складская техника</span> <span class="sidebar__item-quantity">(23)</span></span>
+															</label>
+														</li>
+													</ul>
+												</div>
+												<div class="sidebar__group">
+													<h2 class="sidebar__subtitle _icon-bulldozers">Бетон & Дорожностроительная техника</h2>
+													<ul class="sidebar__list">
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Экскаваторы</span> <span class="sidebar__item-quantity">(17)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Бульдозеры</span> <span class="sidebar__item-quantity">(17)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Дорожные катки и асфальтоукладчики</span> <span class="sidebar__item-quantity">(17)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Буровая и сваебойная техника</span> <span class="sidebar__item-quantity">(17)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Грейдеры</span> <span class="sidebar__item-quantity">(17)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">
+																	Бетоносмесители
+																		(Бетоновозы и
+																		цементовозы)
+																</span><span class="sidebar__item-quantity">(17)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Бетононасосы</span> <span class="sidebar__item-quantity">(17)</span></span>
+															</label>
+														</li>
+													</ul>
+												</div>
+												<div class="sidebar__group">
+													<h2 class="sidebar__subtitle _icon-truck-1">Коммунально-дорожные машины & Другая техника</h2>
+													<ul class="sidebar__list">
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Автоцистерны</span> <span class="sidebar__item-quantity">(9)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Мусоровозы</span> <span class="sidebar__item-quantity">(9)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Эвакуаторы</span> <span class="sidebar__item-quantity">(9)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Коммунально-дорожные машины</span> <span class="sidebar__item-quantity">(9)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">
+																	Прицепы и
+																		полуприцепы (16 Тралы и
+																		низкорамные
+																		платформы)
+																</span> <span class="sidebar__item-quantity">(9)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">
+																	Другая
+																		техника (башенные краны)
+																</span><span class="sidebar__item-quantity">(9)</span></span>
+															</label>
+														</li>
+														<li class="sidebar__item">
+															<label>
+																<input type="checkbox">
+																<span><span class="sidebar__item-text">Бетононасосы</span> <span class="sidebar__item-quantity">(9)</span></span>
+															</label>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="filter__price price">
+												<div class="price__row">
+													<div class="price__text">Цена</div>
+													<div class="price__currencies currencies">
+														<input class="currencies__radio" checked type="radio" id="currencie-1" name="currencie">
+														<label for="currencie-1">usd</label>
+														<input class="currencies__radio" type="radio" id="currencie-2" name="currencie">
+														<label for="currencie-2">euro</label>
+														<input class="currencies__radio" type="radio" id="currencie-3" name="currencie">
+														<label for="currencie-3">hrn</label>
+													</div>
+												</div>
+												<div class="price__range range">
+													<div id="sliderPrice" class="range__slider-price" data-min="0" data-max="10000" data-step="5">
+													</div>
+													<div class="range__inputs">
+														<label class="range__label">
+															<input type="text" class="range__input">
+															<span class="range__text">от</span>
+														</label>
+														<label class="range__label">
+															<input type="text" class="range__input">
+															<span class="range__text">до</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										<button  type="button" class="filter__show btn btn-c">Показать</button>
+										<button  type="button" class="filter__reset">
+											<span class="filter__icon-wrap">
+												<span class="filter__icon">
+													<span></span>
+													<span></span>
+												</span>
+											</span>
+											<span>Сбросить все фильтры</span>
+										</button>
+									</form>
+									<div class="catalog-section__layout">
+										<div class="catalog-section__sort sort-section">
+											<div class="sort-section__title">Фото</div>
+											<div class="sort-section__name">
+												<span>Тип</span>
+												<button type="submit" class="sort-section__button _icon-arrow-6"></button>
+											</div>
+											<div class="sort-section__name">Марка</div>
+											<div class="sort-section__name">
+												<span>Регион</span>
+												<button type="submit" class="sort-section__button _icon-arrow-6"></button>
+											</div>
+											<div class="sort-section__characteristics">Характеристики</div>
+											<div class="sort-section__name-cost">
+												<span>Стоимость</span>
+												<button type="submit" class="sort-section__button _icon-arrow-6"></button>
+											</div>
+										</div>
+										<div data-da=".sort-section,991.98,1" class="sort-section__name-mob">
+											Тип, Марка, Регион,
+											Характеристики
+										</div>
+										<div class="catalog-section__block">
+											<div class="catalog-section__wrapper">
+												<a href="#" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Регион</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Регион</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Регион</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Регион</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Регион</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Регион</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Регион</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Регион</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Регион</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Регион</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Регион</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Регион</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Регион</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Регион</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name">Регион</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__body orders rows">
+								<div class="orders__filter filter-orders">
+									<div data-dropdown class="filter-orders__dropdown dropdown">
+										<button type="button" data-dropdown-button
+											class="tabs__dropdown-button dropdown__button _icon-arrow-1" data-value="">Регион</button>
+										<ul data-dropdown-list class="tabs__list dropdown__list">
+											<li data-dropdown-item data-value="2" class="dropdown__item">Румыния</li>
+											<li data-dropdown-item data-value="3" class="dropdown__item">Турция</li>
+											<li data-dropdown-item data-value="4" class="dropdown__item">Молдавия</li>
+											<li data-dropdown-item data-value="1" class="dropdown__item">Украина</li>
+										</ul>
+										<input type="text" name="orders-location" value="" data-dropdown-input
+											class="dropdown__input-hidden">
+									</div>
+									<div data-dropdown class="filter-orders__dropdown dropdown">
+										<button type="button" data-dropdown-button
+											class="tabs__dropdown-button dropdown__button _icon-arrow-1" data-value="">Выберите
+											категорию</button>
+										<div data-dropdown-list class="tabs__list dropdown__list">
+											<div class="category-header__wrapper">
+												<div class="category-header__items">
+													<ul class="category-header__list">
+														<li class="dropdown__item" data-dropdown-item data-value="0">Вся техника</li>
+													</ul>
+													<h6 class="category-header__title _icon-excavator">Землеройная техника</h6>
+													<ul class="category-header__list">
+														<li class="dropdown__item" data-dropdown-item data-value="1">Самосвалы</li>
+														<li class="dropdown__item" data-dropdown-item data-value="2">Экскаваторы</li>
+														<li class="dropdown__item" data-dropdown-item data-value="3">Экскаваторы-погрузчики</li>
+														<li class="dropdown__item" data-dropdown-item data-value="4">Мини-экскаваторы</li>
+														<li class="dropdown__item" data-dropdown-item data-value="5">Бульдозеры</li>
+														<li class="dropdown__item" data-dropdown-item data-value="6">Фронтальные погрузчики</li>
+														<li class="dropdown__item" data-dropdown-item data-value="7">Мини-погрузчики</li>
+													</ul>
+												</div>
+												<div class="category-header__items">
+													<h6 class="category-header__title _icon-crane_truck">Краны и погрузочно-разгрузочная
+														техника</h6>
+													<ul class="category-header__list">
+														<li class="category-header__item">
+														<li class="dropdown__item" data-dropdown-item data-value="8">Автокраны</li>
+														<li class="dropdown__item" data-dropdown-item data-value="9">Телескопические погрузчики
+														</li>
+														<li class="dropdown__item" data-dropdown-item data-value="10">Вилочные
+															погрузчики</li>
+														<li class="dropdown__item" data-dropdown-item data-value="11">Погрузчики-манипуляторы
+														</li>
+														<li class="dropdown__item" data-dropdown-item data-value="12">Автовышки</li>
+														<li class="dropdown__item" data-dropdown-item data-value="13">Гусеничные
+															краны</li>
+														<li class="dropdown__item" data-dropdown-item data-value="14">Складская
+															техника</li>
+													</ul>
+												</div>
+												<div class="category-header__items">
+													<h6 class="category-header__title _icon-bulldozers">Бетон & Дорожностроительная
+														техника</h6>
+													<ul class="category-header__list">
+														<li class="category-header__item">
+														<li class="dropdown__item" data-dropdown-item data-value="15">Экскаваторы</li>
+														<li class="dropdown__item" data-dropdown-item data-value="16">Бульдозеры</li>
+														<li class="dropdown__item" data-dropdown-item data-value="17">Дорожные
+															катки и асфальтоукладчики</li>
+														<li class="dropdown__item" data-dropdown-item data-value="18">Буровая и
+															сваебойная техника</li>
+														<li class="dropdown__item" data-dropdown-item data-value="19">Грейдеры</li>
+														<li class="dropdown__item" data-dropdown-item data-value="20">Бетоносмесители
+															(Бетоновозы и
+															цементовозы)</li>
+														<li class="dropdown__item" data-dropdown-item data-value="21">Бетононасосы</li>
+													</ul>
+												</div>
+												<div class="category-header__items">
+													<h6 class="category-header__title _icon-truck-1">Коммунально-дорожные машины & Другая
+														техника</h6>
+													<ul class="category-header__list">
+														<li class="category-header__item">
+														<li class="dropdown__item" data-dropdown-item data-value="22">Автоцистерны</li>
+														<li class="dropdown__item" data-dropdown-item data-value="23">Мусоровозы</li>
+														<li class="dropdown__item" data-dropdown-item data-value="24">Эвакуаторы</li>
+														<li class="dropdown__item" data-dropdown-item data-value="25">Коммунально-дорожные
+															машины</li>
+														<li class="dropdown__item" data-dropdown-item data-value="26">Прицепы и
+															полуприцепы (16 Тралы и
+															низкорамные
+															платформы)</li>
+														<li class="dropdown__item" data-dropdown-item data-value="27">Другая
+															техника (башенные краны)</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<input type="text" id="orders-category" name="select-category" value="" data-dropdown-input
+											class="dropdown__input-hidden">
+									</div>
+									<div data-dropdown class="filter-orders__dropdown dropdown">
+										<button type="button" data-dropdown-button
+											class="tabs__dropdown-button dropdown__button _icon-arrow-1" data-value="">Тип оплаты</button>
+										<ul data-dropdown-list class="tabs__list dropdown__list">
+											<li data-dropdown-item data-value="2" class="dropdown__item">Все типы оплаты</li>
+											<li data-dropdown-item data-value="3" class="dropdown__item">Резервирование суммы на карте</li>
+											<li data-dropdown-item data-value="4" class="dropdown__item">Безналичный расчет с НДС</li>
+											<li data-dropdown-item data-value="1" class="dropdown__item">Безналичный расчет без НДС</li>
+											<li data-dropdown-item data-value="1" class="dropdown__item">Наличный расчет</li>
+										</ul>
+										<input type="text" name="orders-payment" value="" data-dropdown-input
+											class="dropdown__input-hidden">
+									</div>
+									<div data-dropdown class="filter-orders__dropdown dropdown">
+										<button type="button" data-dropdown-button
+											class="tabs__dropdown-button dropdown__button _icon-arrow-1" data-value="">Статус</button>
+										<ul data-dropdown-list class="tabs__list dropdown__list">
+											<li data-dropdown-item data-value="2" class="dropdown__item">Все статусы</li>
+											<li data-dropdown-item data-value="3" class="dropdown__item">Все статусы</li>
+											<li data-dropdown-item data-value="4" class="dropdown__item">Все статусы</li>
+										</ul>
+										<input type="text" name="orders-status" value="" data-dropdown-input class="dropdown__input-hidden">
+									</div>
+								</div>
+								<div class="orders__sort sort-orders">
+									<div class="sort-orders__row">
+										<div class="sort-orders__name">Техника</div>
+										<div class="sort-orders__name">Описание работ</div>
+										<div class="sort-orders__name">Регион</div>
+										<div class="sort-orders__name">
+											<span>Дата</span>
+											<button type="submit" class="sort-section__button _icon-arrow-6"></button>
+										</div>
+										<div class="sort-orders__name">Оплата</div>
+										<div class="sort-orders__name-cost">Действие</div>
+									</div>
+									<div data-da=".sort-orders__row,991.98,0" class="sort-orders__name-mob">
+										Техника, Описание работ, Регион, Дата, Оплата
+									</div>
+									<div class="catalog-section__wrapper">
+										<a href="#" class="catalog-section__items">
+											<div class="catalog-section__content">
+												<div class="sort-orders__main">
+													<div class="sort-orders__text">Автовышки</div>
+													<div class="sort-orders__text">Спилить ветки деревьев в селе по 3-м улицам, покрасить заборы
+													</div>
+													<div class="sort-orders__text">г. Яготин</div>
+													<div class="sort-orders__text">18.02.2022</div>
+													<div class="sort-orders__text">Наличный расчет</div>
+												</div>
+												<div class="catalog-section__bottom catalog-section__bottom-orders">
+													<div class="catalog-section__price">8000 грн</div>
+													<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="catalog-section__items">
+											<div class="catalog-section__content">
+												<div class="sort-orders__main">
+													<div class="sort-orders__text">Автовышки</div>
+													<div class="sort-orders__text">Спилить ветки деревьев в селе по 3-м улицам, покрасить заборы
+													</div>
+													<div class="sort-orders__text">г. Яготин</div>
+													<div class="sort-orders__text">18.02.2022</div>
+													<div class="sort-orders__text">Наличный расчет</div>
+												</div>
+												<div class="catalog-section__bottom catalog-section__bottom-orders">
+													<div class="catalog-section__price">8000 грн</div>
+													<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="catalog-section__items">
+											<div class="catalog-section__content">
+												<div class="sort-orders__main">
+													<div class="sort-orders__text">Автовышки</div>
+													<div class="sort-orders__text">Спилить ветки деревьев в селе по 3-м улицам, покрасить заборы
+													</div>
+													<div class="sort-orders__text">г. Яготин</div>
+													<div class="sort-orders__text">18.02.2022</div>
+													<div class="sort-orders__text">Наличный расчет</div>
+												</div>
+												<div class="catalog-section__bottom catalog-section__bottom-orders">
+													<div class="catalog-section__price">8000 грн</div>
+													<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="catalog-section__items">
+											<div class="catalog-section__content">
+												<div class="sort-orders__main">
+													<div class="sort-orders__text">Автовышки</div>
+													<div class="sort-orders__text">Спилить ветки деревьев в селе по 3-м улицам, покрасить заборы
+													</div>
+													<div class="sort-orders__text">г. Яготин</div>
+													<div class="sort-orders__text">18.02.2022</div>
+													<div class="sort-orders__text">Наличный расчет</div>
+												</div>
+												<div class="catalog-section__bottom catalog-section__bottom-orders">
+													<div class="catalog-section__price">8000 грн</div>
+													<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="orders__title f18">ЗАКАЗЫ</div>
+								<div class="orders__sort sort-orders">
+									<div class="sort-orders__row sort-orders__row-orders">
+										<div class="sort-orders__name">Номер заказа</div>
+										<div class="sort-orders__name">Описание работ</div>
+										<div class="sort-orders__name">Дата</div>
+										<div class="sort-orders__name">Оплата</div>
+										<div class="sort-orders__name-cost">Действие</div>
+									</div>
+									<div data-da=".sort-orders__row-orders,991.98,0" class="sort-orders__name-mob">
+										Номер заказа, Описание работ, Дата, Оплата
+									</div>
+									<div class="catalog-section__wrapper">
+										<a href="#" class="catalog-section__items">
+											<div class="catalog-section__content">
+												<div class="sort-orders__main">
+													<div class="sort-orders__text">101-07-ВН</div>
+													<div class="sort-orders__text">Выкопать траншею </div>
+													<div class="sort-orders__text">18.02.2022</div>
+													<div class="sort-orders__text">Безналичный расчет с НДС </div>
+												</div>
+												<div class="catalog-section__bottom catalog-section__bottom-orders">
+													<div class="catalog-section__price">8000 грн</div>
+													<div class="catalog-section__button btn btn-c _icon-arrow-2">Перейти</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a href="#"
+						data-da=".filter,767.98,1"
+							class="catalog-section__button-add btn btn-c"><span>+</span>
+							Добавить технику</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+		<div class="arrow-up _icon-arrow-1"></div>
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_popup_map.htm',{})
+	@@include('html/_popup_category.htm',{})
+	@@include('html/_popup_login.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

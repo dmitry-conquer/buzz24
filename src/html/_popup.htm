@@ -1,0 +1,144 @@
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content popup__form">
+			<div class="popup__row">
+				<div class="popup__steps">
+					<div class="popup__step popup__step-1 f16"><span>1</span>Заказ</div>
+					<div class="popup__step popup__step-2 color f16"><span>2</span>Детали</div>
+					<div class="popup__step popup__step-3 f16"><span>3</span>Способ оплаты</div>
+				</div>
+				<button data-close data-da=".popup__content,767.98,5" type="button" class="popup__close">
+					<span class="popup__button-close btn-close">
+						<span></span>
+					</span>
+				</button>
+			</div>
+			<form action="#" class="popup__form-step popup__form-1">
+				<div class="tabs__top-row">
+					<div class="tabs__icon">
+						<img src="img/main/info.svg" alt="">
+					</div>
+					<p class="tabs__text">Выберите дату предполагаемых работ и опишите задачу, прикрепите фотографии.
+					</p>
+				</div>
+				<div class="popup__body">
+					<div class="popup__date">
+						<input id="daterangepicker1" type="hidden">
+						<div id="daterangepicker1-container" class="embedded-daterangepicker"></div>
+					</div>
+					<div class="popup__descr">
+						<textarea name="descr" placeholder="Описание" class="popup__textarea"></textarea>
+						<div class="popup__upload-file upload-file">
+							<div class="upload-file__icon _icon-clip"></div>
+							<p class="upload-file__text">Прикрепите документы или сделайте фотографии места работ</p>
+							<div class="upload-file__input-body">
+								<input type="file" name="files[]" id="upload-file__input_1" class="upload-file__input"
+									accept=".jpg, .jpeg, .png">
+								<label class="upload-file__label" for="upload-file__input_1">
+									<span class="upload-file__label-text">Прикрепить</span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup__buttons">
+					<button data-close type="button" class="popup__button btn popup__button-prev prev-1">Назад</button>
+					<button type="button" class="popup__button btn btn-c popup__button-next next-1">Далее</button>
+				</div>
+			</form>
+			<form action="#" class="popup__form-step popup__form-2">
+				<div class="tabs__top-row">
+					<div class="tabs__icon">
+						<img src="img/main/info.svg" alt="">
+					</div>
+					<p class="tabs__text">Укажите желаемый бюджет работ или оставьте поле пустым. Бюджет предложат исполнители.
+					</p>
+				</div>
+				<div class="popup__body popup__body-step2">
+					<div class="popup__column">
+						<input type="number" class="popup__budget" placeholder="Бюджет работ">
+						<div class="tabs__top-row">
+							<div class="tabs__icon">
+								<img src="img/main/info.svg" alt="">
+							</div>
+							<p id="text" class="tabs__text">Я знаю, что мне нужно и выберу сам. Пример: нужен автокран</p>
+						</div>
+					</div>
+					<div class="popup__column popup__column-radio">
+						<div class="radio">
+							<h6 class="radio__title">Тип сделки</h6>
+							<div class="radio__item">
+								<input class="radio__input" checked type="radio" id="answer-first-1" name="safe-deal">
+								<label for="answer-first-1" class="radio__label"></label>
+								<p class="radio__label-text"><span
+										data-text="Работа через безопасную сделку обеспечивает финансовые гарантии сторонам. Вы получите качественный и своевременный результат или мы вернем вам деньги."
+										class="radio__label-icon _icon-star"></span>Безопасная сделка</p>
+							</div>
+							<div class="radio__item">
+								<input class="radio__input" type="radio" id="answer-first-2" name="safe-deal">
+								<label for="answer-first-2" class="radio__label"></label>
+								<p class="radio__label-text"><span data-text="Прямые расчеты с исполнителем на свой страх и риск."
+										class="radio__label-icon _icon-attention"></span>Прямой
+									расчет с исполнителем</p>
+							</div>
+						</div>
+						<div class="radio">
+							<h6 class="radio__title">Оплата</h6>
+							<div class="radio__item">
+								<input class="radio__input" checked type="radio" id="answer-second-1" name="pay">
+								<label for="answer-second-1" class="radio__label"></label>
+								<p class="radio__label-text">Резервирование суммы на
+									карте</p>
+							</div>
+							<div class="radio__item">
+								<input class="radio__input" type="radio" id="answer-second-2" name="pay">
+								<label for="answer-second-2" class="radio__label"></label>
+								<p class="radio__label-text">Безналичный расчет с НДС</p>
+							</div>
+							<div class="radio__item">
+								<input class="radio__input" type="radio" id="answer-second-3" name="pay">
+								<label for="answer-second-3" class="radio__label"></label>
+								<p class="radio__label-text">Безналичный расчет без НДС</p>
+							</div>
+							<div class="radio__item">
+								<input class="radio__input" disabled type="radio" id="answer-second-4" name="pay">
+								<label for="answer-second-4" class="radio__label"></label>
+								<p class="radio__label-text">Наличный расчет</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup__buttons">
+					<button type="button" class="popup__button btn popup__button-prev prev-2">Назад</button>
+					<button type="button" class="popup__button btn btn-c popup__button-next next-2">Добавить заказ</button>
+				</div>
+			</form>
+			<form action="#" class="popup__form-step popup__form-3">
+				<div class="popup__successfully successfully">
+					<h5 class="successfully__title">Поиск исполнителя</h5>
+					<p class="successfully__text">Вы успешно разместили заказ на поиск спецтехники:</p>
+					<div class="successfully__body">
+						<div class="successfully__info">
+							<p class="successfully__info-text">Автокраны</p>
+							<p class="successfully__info-text">г. Киев, ул. Софиевская, 24</p>
+							<p class="successfully__info-text">18.03.2022</p>
+							<p class="successfully__info-text">Наличный расчет</p>
+						</div>
+						<div class="successfully__sms">
+							<p class="successfully__sms-text">Пожалуйста, введите код из смс-сообщения:</p>
+							<input type="tel" class="successfully__sms-code" placeholder="_ _ _ _">
+							<button type="submit" class="successfully__button btn btn-c">Подтвердить</button>
+						</div>
+					</div>
+					<div class="successfully__footer">
+						<button type="button" class="popup__button btn popup__button-prev prev-3">Назад</button>
+						<div class="successfully__social _icon-telegram">Для получения счета на оплату просим подключить
+							телеграм-бот
+						</div>
+						<button type="submit" class="successfully__footer-button btn btn-w">Подключить</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

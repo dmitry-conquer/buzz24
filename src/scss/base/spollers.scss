@@ -1,0 +1,119 @@
+// Базові стилі спойлерів
+// Сніппет (HTML): spoller
+[data-spollers] {
+	position: relative;
+}
+[data-spoller] {
+	display: flex;
+	align-items: center;
+	cursor: default;
+	position: relative;
+	outline: none;
+	text-align: left;
+	._spoller-init & {
+		cursor: pointer;
+	}
+}
+// // Блок зі спойлерами
+// .spollers {
+// 	display: grid;
+// 	gap: 15px;
+// }
+// // Спойлер
+// .spollers__item {
+// 	font-size: rem(20);
+// }
+// // Заголовок спойлера
+// .spollers__title {
+// 	width: 100%;
+// 	cursor: default;
+// 	text-align: left;
+// 	border: 1px solid #eee;
+// 	padding: rem(10) rem(15);
+// 	border-radius: rem(5);
+// 	position: relative;
+// 	._spoller-init & {
+// 		cursor: pointer;
+// 		&::before,
+// 		&::after {
+// 			content: "";
+// 			position: absolute;
+// 			right: 10px;
+// 			top: 50%;
+// 			background-color: #000;
+// 			height: 2px;
+// 			width: 15px;
+// 			transition: transform 0.5s ease 0s;
+// 		}
+// 		&::before {
+// 			transform: translate(-75%, -50%) rotate(40deg);
+// 		}
+// 		&::after {
+// 			transform: translate(0, -50%) rotate(-40deg);
+// 		}
+// 		&._spoller-active {
+// 			&::before {
+// 				transform: translateX(-75%) rotate(-40deg);
+// 			}
+// 			&::after {
+// 				transform: rotate(40deg);
+// 			}
+// 		}
+// 		/*
+// 		._spoller-init & {
+// 			position: relative;
+// 			width: 100%;
+// 			text-align: left;
+// 			&::before,
+// 			&::after {
+// 				content: "";
+// 				position: absolute;
+// 				right: 0;
+// 				top: rem(12);
+// 				height: rem(1);
+// 				transition: all 0.3s ease 0s;
+// 				width: rem(10);
+// 				background-color: #000;
+// 			}
+// 			&::before {
+// 				transform: rotate(40deg);
+// 				right: rem(7);
+// 			}
+// 			&::after {
+// 				transform: rotate(-40deg);
+// 			}
+// 		}
+// 		&._spoller-active {
+// 			&::before {
+// 				transform: rotate(-40deg);
+// 			}
+// 			&::after {
+// 				transform: rotate(40deg);
+// 			}
+// 		}
+// 		*/
+// 	}
+// }
+// // Контент спойлера
+.spollers__body {}
+.spollers__arrow {
+	border-style: solid;
+	_border-style: dashed;
+	border-width: 13px;
+	border-color: transparent;
+	border-top-width: 0;
+	border-bottom: 13px solid #FFFFFF;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	top: -12px;
+	left: 44%;
+	.dark-theme & {
+		border-bottom: 13px solid #2D2D2D;
+	}
+	@media (max-width:$mobile) {
+		display: none;
+	}
+}

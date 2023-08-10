@@ -1,0 +1,106 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+button {
+	outline: 0;
+}
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 41px;
+	padding: 10px;
+	text-align: center;
+	font-weight: 700;
+	line-height: math.div(24, 16);
+	color: #FF8A00;
+	background: #FFFFFF;
+	border: 2px solid #FF9A0A;
+	outline: 0;
+	transition: all 0.3s ease 0s;
+	&:hover {
+		text-shadow: 0.6px 0 0 #FF8A00;
+	}
+	.dark-theme & {
+		background: #2D2D2D;
+		color: #FFFFFF;
+		&:hover {
+			text-shadow: 0.6px 0 0 #FFFFFF;
+		}
+		// color: #C6C6C6;
+		// border: 2px solid #C6C6C6;
+	}
+	@media (max-width:rem(1679.98)) {
+		// font-size: 12px;
+		line-height: 11px;
+		min-height: 25px;
+		padding: 5px 10px;
+		border: 0.6px solid #FF8A00;
+	}
+	@media (max-width:rem(1199.98)) {
+		// font-size: 7px;
+		line-height: 9px;
+		min-height: 22px;
+		border: 0.5px solid #FF8A00;
+	}
+	// @media (max-width:$tablet) {
+	// 	font-size: 6px;
+	// 	line-height: 7px;
+	// 	min-height: 17px;
+	// 	border: 0.4px solid #FF8A00;
+	// }
+}
+.btn-c {
+	background: #FF8A00;
+	color: #FFFFFF;
+	border: none;
+	&:hover {
+		background: #FF961B !important;
+		text-shadow: none !important;
+	}
+	&:active {
+		background: #FF6B00 !important;
+	}
+	.dark-theme & {
+		color: #2D2D2D;
+		background: #FF8A00;
+	}
+}
+.btn-w {
+	color: #000000;
+	border: none;
+	&:hover {
+		border: 2px solid #FF9A0A;
+		text-shadow: none;
+	}
+	&:active {
+		border: 2px solid #FF9A0A;
+	}
+}
+.btn-close {
+	display: block;
+	position: relative;
+	width: 12px;
+	height: 12px;
+	@media (any-hover: none) {
+		cursor: default;
+	}
+	&::before,
+	&::after {
+		content: "";
+		transition: all 0.3s ease 0s;
+		right: 0;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background: #FF8A00;
+	}
+	&::before {
+		top: calc(50% - 1px);
+		transform: rotate(-45deg);
+	}
+	&::after {
+		bottom: calc(50% - 1px);
+		transform: rotate(45deg);
+	}
+}

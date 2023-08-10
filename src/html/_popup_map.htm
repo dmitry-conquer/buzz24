@@ -1,0 +1,53 @@
+<div id="popup-map" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content popup__content-map">
+			<div class="popup__row">
+				<div class="tabs__row tabs__row-map">
+					<div data-dropdown class="tabs__dropdown dropdown">
+						<button type="button" data-dropdown-button class="tabs__dropdown-button dropdown__button _icon-arrow-1"
+							data-value=""><span>Выберите адрес
+								работ или
+								укажите точку на карте</span></button>
+						<ul data-dropdown-list class="tabs__list dropdown__list">
+							<li class="dropdown__item" data-dropdown-item data-value="1">Киевская область</li>
+							<li class="dropdown__item" data-dropdown-item data-value="2">Винницкая область</li>
+							<li class="dropdown__item" data-dropdown-item data-value="3">Сумская область</li>
+							<li class="dropdown__item" data-dropdown-item data-value="4">Одесская область</li>
+							<li class="dropdown__item" data-dropdown-item data-value="5">Днепропетровская область</li>
+							<li class="dropdown__item" data-dropdown-item data-value="6">Черниговская область</li>
+							<li class="dropdown__item" data-dropdown-item data-value="7">Харьковская область</li>
+							<li class="dropdown__item" data-dropdown-item data-value="8">Житомирская область</li>
+							<li class="dropdown__item" data-dropdown-item data-value="9">Полтавская область</li>
+						</ul>
+						<input type="text" id="select-location-popup" name="select-location" value="" data-dropdown-input
+							class="dropdown__input-hidden">
+					</div>
+					<button type="button" class="tabs__row-icon _icon-location">
+						<img src="img/main/location.svg" alt="">
+					</button>
+				</div>
+				<button data-close data-da=".popup__content-map,767.98,5" type="button" class="popup__close">
+					<span class="popup__button-close btn-close">
+						<span></span>
+					</span>
+				</button>
+			</div>
+			<div class="popup__map">
+				<div id="map_container-map" class="map__wrapper">
+					<div class="map__image">
+						<img src="img/main/map-background.png" alt="Карта">
+					</div>
+					<div id="map-map" class="map__iframe">
+						<div id="map__button-map" class="map__button-wrap">
+							<button type="button" id="load_map_button-map" class="map__button btn btn-w">Взаимодействовать</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="popup__buttons">
+				<button data-close type="button" class="popup__button btn popup__button-cancel">Отмена</button>
+				<button type="button" class="popup__button btn btn-c">Подтвердить</button>
+			</div>
+		</div>
+	</div>
+</div>
