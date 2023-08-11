@@ -187,7 +187,7 @@
 						</nav>
 					</div>
 					<form action="#" class="header__search search-header">
-						<input id="search-input" type="text" name="form[]" data-error="Ошибка" placeholder="Что нужно найти?"
+						<input id="search-input" type="text" name="form[]" data-error="Ошибка" data-translate='MAIN_SEARCH_PLACEHOLDER' placeholder="Что нужно найти?"
 							class="search-header__input">
 						<ul id="suggestions-list" class="search-header__suggestions-list"></ul>
 						<button type="submit" class="search-header__button _icon-search-1 btn-c"></button>
@@ -195,7 +195,7 @@
 					</form>
 					<div data-dropdown-hover class="header__lang lang-header dropdown" data-da=".header__body,767.98,3">
 						<button data-dropdown-button class="lang-header__button dropdown__button _icon-arrow f18 _bg _icon-arrow-1"
-							data-value="en">EN | $</button>
+							data-value="ua">UA | ₴</button>
 						<div data-dropdown-list class="lang-header__list dropdown__list">
 							<div class="spollers__arrow"></div>
 							<div class="lang-header__row">
@@ -204,7 +204,7 @@
 							<ul class="lang-header__wrap">
 								<li class="location-header__item dropdown__item">
 									<div class="location-header__radio">
-										<input class="location-header__radio-input" type="radio" id="lang-1" name="lang">
+										<input class="location-header__radio-input" checked type="radio" id="lang-1" name="lang" value="UK_UA">
 										<label for="lang-1">
 											<span data-dropdown-item class="location-header__label" data-value="ua">UA | ₴</span>
 											<span class="location-header__radio-text" data-translate='UK_UA'>Украинский | ₽</span>
@@ -213,7 +213,7 @@
 								</li>
 								<li class="location-header__item dropdown__item">
 									<div class="location-header__radio">
-										<input class="location-header__radio-input" checked type="radio" id="lang-2" name="lang">
+										<input class="location-header__radio-input" type="radio" id="lang-2" name="lang" value="EN">
 										<label for="lang-2">
 											<span data-dropdown-item class="location-header__label" data-value="en">EN | $</span>
 											<span class="location-header__radio-text" data-translate='EN'>Английский | $</span>
@@ -222,7 +222,7 @@
 								</li>
 								<li class="location-header__item dropdown__item">
 									<div class="location-header__radio">
-										<input class="location-header__radio-input" type="radio" id="lang-3" name="lang">
+										<input class="location-header__radio-input" type="radio" id="lang-3" name="lang" value="PL_PL">
 										<label for="lang-3">
 											<span data-dropdown-item class="location-header__label" data-value="pl">PL | zł</span>
 											<span class="location-header__radio-text" data-translate='PL_PL'>Польский | zł</span>
@@ -231,7 +231,7 @@
 								</li>
 								<li class="location-header__item dropdown__item">
 									<div class="location-header__radio">
-										<input class="location-header__radio-input" type="radio" id="lang-4" name="lang">
+										<input class="location-header__radio-input" type="radio" id="lang-4" name="lang" value="RO_RO">
 										<label for="lang-4">
 											<span data-dropdown-item class="location-header__label" data-value="ro">RO | lei</span>
 											<span class="location-header__radio-text" data-translate='RO_RO'>Румынский | lei</span>
@@ -240,8 +240,8 @@
 								</li>
 								<li class="location-header__item dropdown__item">
 									<div class="location-header__radio">
-										<input class="location-header__radio-input" type="radio" id="lang-4" name="lang">
-										<label for="lang-4">
+										<input class="location-header__radio-input" type="radio" id="lang-5" name="lang" value="TR_TR">
+										<label for="lang-5">
 											<span data-dropdown-item class="location-header__label" data-value="tr">TR | ₺</span>
 											<span class="location-header__radio-text" data-translate='TR_TR'>Турецкий | ₺</span>
 										</label>
