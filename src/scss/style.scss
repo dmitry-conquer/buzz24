@@ -4905,10 +4905,11 @@ body {
 			gap: 10px;
 			margin-bottom: 15px;
 			font-size: 14px;
+			color: #727272;
+			.dark-theme & {
 			color: #fff;
-			@media (max-width:rem(991.98)) {
-				color: #000;
 			}
+		
 		}
 		&__list {
 			display: flex;
