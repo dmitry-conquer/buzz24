@@ -1016,54 +1016,54 @@ if (sttElem) {
 
 // ====================================================================================================
 
-// const locationBody = document.querySelector(".location-header__body");
-// if (locationBody) {
-//    const locationButtonAgree = document.querySelector(".location-header__button");
-//    locationButtonAgree.addEventListener("click", () => {
-//       locationBody.classList.add("hide");
-//    });
-// };
+const locationBody = document.querySelector(".location-header__body");
+if (locationBody) {
+   const locationButtonAgree = document.querySelector(".location-header__button");
+   locationButtonAgree.addEventListener("click", () => {
+      locationBody.classList.add("hide");
+   });
+};
 
-// if (window.matchMedia("(min-width: 768px)").matches) {
-//    const loginTitle = document.getElementById('header__title-login');
-//    if (loginTitle) {
-//       document.documentElement.classList.add("login-hide");
-//       setTimeout(function () {
-//          document.documentElement.classList.remove("login-hide");
-//       }, 10000);
-//    };
-
-
-//    const headerTitleLogin = document.querySelector('.login-header__title');
-//    const loginHeaderBody = document.querySelector('.login-header__body');
-
-//    headerTitleLogin.addEventListener('mouseenter', function () {
-//       loginHeaderBody.classList.add('visible');
-//       headerTitleLogin.classList.add('active');
-//       setTimeout(function () {
-//          document.documentElement.classList.remove("login-hide");
-//       }, 10);
-//    });
-
-//    document.addEventListener('keydown', function (e) {
-//       if (e.key === 'Tab' || e.key === 'Escape') {
-//          headerTitleLogin.classList.remove('active');
-//          loginHeaderBody.classList.remove('visible');
-//       }
-//    });
+if (window.matchMedia("(min-width: 768px)").matches) {
+   const loginTitle = document.getElementById('header__title-login');
+   if (loginTitle) {
+      document.documentElement.classList.add("login-hide");
+      setTimeout(function () {
+         document.documentElement.classList.remove("login-hide");
+      }, 10000);
+   };
 
 
-//    const loginHeaderItem = document.querySelector('.login-header__item');
-//    loginHeaderItem.addEventListener('mouseout', event => {
-//       if (!loginHeaderItem.contains(event.relatedTarget)) {
-//          if (loginHeaderBody.classList.contains('visible')) {
-//             headerTitleLogin.classList.remove('active');
-//             loginHeaderBody.classList.remove('visible');
-//             document.documentElement.classList.remove("_bg-body");
-//          }
-//       }
-//    });
-// }
+   const headerTitleLogin = document.querySelector('.login-header__title');
+   const loginHeaderBody = document.querySelector('.login-header__body');
+
+   headerTitleLogin.addEventListener('mouseenter', function () {
+      loginHeaderBody.classList.add('visible');
+      headerTitleLogin.classList.add('active');
+      setTimeout(function () {
+         document.documentElement.classList.remove("login-hide");
+      }, 10);
+   });
+
+   document.addEventListener('keydown', function (e) {
+      if (e.key === 'Tab' || e.key === 'Escape') {
+         headerTitleLogin.classList.remove('active');
+         loginHeaderBody.classList.remove('visible');
+      }
+   });
+
+
+   const loginHeaderItem = document.querySelector('.login-header__item');
+   loginHeaderItem.addEventListener('mouseout', event => {
+      if (!loginHeaderItem.contains(event.relatedTarget)) {
+         if (loginHeaderBody.classList.contains('visible')) {
+            headerTitleLogin.classList.remove('active');
+            loginHeaderBody.classList.remove('visible');
+            document.documentElement.classList.remove("_bg-body");
+         }
+      }
+   });
+}
 
 // ====================================================================================================
 

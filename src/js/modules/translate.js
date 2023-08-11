@@ -3,7 +3,7 @@ export const useTranslate = () => {
    const translationsURL = {
       UK_UA: "https://api.npoint.io/38e0577f8bc9a1ef8354",
       EN: "https://api.npoint.io/69ced25cec9eb8aa2f4c",
-      PL_PL: "https://api.npoint.io/32ad70126c24454d2b61",
+      PL_PL: "",
       RO_RO: "",
       TR_TR: "",
    }
