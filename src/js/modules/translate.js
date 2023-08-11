@@ -19,8 +19,7 @@ export const useTranslate = () => {
 
    function changeLang(item) {
       const translateLang = item.value;
-      getTranlsate(translateLang)
-
+      getTranlsate(translateLang);
    }
 
    async function getTranlsate(translateLang) {
