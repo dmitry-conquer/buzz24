@@ -14,35 +14,35 @@
 					<div class="header__location location-header">
 						<div data-dropdown-hover class="location-header__items">
 							<button data-dropdown-button type="button" data-value=""
-								class="location-header__title f18 _bg _icon-arrow-1">Украина</button>
+								class="location-header__title f18 _bg _icon-arrow-1" data-translate="REG_UK_UA">Украина</button>
 							<div data-dropdown-list class="location-header__list dropdown__list">
 								<div class="spollers__arrow"></div>
 								<div class="lang-header__row">
-									<div class="lang-header__title">Выбор региона</div>
+									<div class="lang-header__title" data-translate="CHOOSE_REGION">Выбор региона</div>
 								</div>
 								<ul class="lang-header__wrap">
 									<li data-dropdown-item class="location-header__item dropdown__item" data-value="1">
 										<div class="location-header__radio">
 											<input class="location-header__radio-input" type="radio" id="location-1" name="location">
-											<label for="location-1">Румыния</label>
+											<label for="location-1" data-translate="REG_RO_RO">Румыния</label>
 										</div>
 									</li>
 									<li data-dropdown-item class="location-header__item dropdown__item" data-value="2">
 										<div class="location-header__radio">
 											<input class="location-header__radio-input" type="radio" id="location-2" name="location">
-											<label for="location-2">Турция</label>
+											<label for="location-2" data-translate="REG_TR_TR">Турция</label>
 										</div>
 									</li>
 									<li data-dropdown-item class="location-header__item dropdown__item" data-value="3">
 										<div class="location-header__radio">
 											<input class="location-header__radio-input" type="radio" id="location-3" name="location">
-											<label for="location-3">Молдавия</label>
+											<label for="location-3" data-translate="REG_PL_PL">Польша</label>
 										</div>
 									</li>
 									<li data-dropdown-item class="location-header__item dropdown__item" data-value="4">
 										<div class="location-header__radio">
 											<input class="location-header__radio-input" checked type="radio" id="location-4" name="location">
-											<label for="location-4">Украина</label>
+											<label for="location-4" data-translate="REG_UK_UA">Украина</label>
 										</div>
 									</li>
 								</ul>
@@ -50,19 +50,19 @@
 							<input type="text" name="select-loc" value="" data-dropdown-input class="dropdown__input-hidden">
 							<div data-da=".wrapper,767.98,1" class="location-header__body">
 								<div class="spollers__arrow"></div>
-								<p class="location-header__text">Мы определили вашу страну как Украина. Вы можете изменить это в
+								<p class="location-header__text" data-translate="LANG_POPUP_INFO">Мы определили вашу страну как Украина. Вы можете изменить это в
 									настройках.
 								</p>
 								<div class="location-header__buttons">
-									<button type="button" class="location-header__button btn">Ок</button>
-									<button type="button" class="location-header__button btn btn-c">Изменить</button>
+									<button type="button" class="location-header__button btn" data-translate='AGREE_BUTTON'>Ок</button>
+									<button type="button" class="location-header__button btn btn-c" data-translate='CHANGE_BUTTON'>Изменить</button>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="header__line hide-mob"></div>
 					<div class="header__category category-header">
-						<button type="button" class="category-header__button f18 icon-close _icon-dots">Вся спецтехника</button>
+						<button type="button" class="category-header__button f18 icon-close _icon-dots" data-translate='ALL_EQUIPMENT'>Вся спецтехника</button>
 						<nav class="category-header__nav">
 							<div class="category-header__row">
 								<div class="category-header__icon-circle">
@@ -199,15 +199,15 @@
 						<div data-dropdown-list class="lang-header__list dropdown__list">
 							<div class="spollers__arrow"></div>
 							<div class="lang-header__row">
-								<div class="lang-header__title">Сменить язык</div>
+								<div class="lang-header__title" data-translate='CHANGE_LANG'>Сменить язык</div>
 							</div>
 							<ul class="lang-header__wrap">
 								<li class="location-header__item dropdown__item">
 									<div class="location-header__radio">
 										<input class="location-header__radio-input" type="radio" id="lang-1" name="lang">
 										<label for="lang-1">
-											<span data-dropdown-item class="location-header__label" data-value="ru">RU | ₽</span>
-											<span class="location-header__radio-text">Русский | ₽</span>
+											<span data-dropdown-item class="location-header__label" data-value="ua">UA | ₴</span>
+											<span class="location-header__radio-text" data-translate='UK_UA'>Украинский | ₽</span>
 										</label>
 									</div>
 								</li>
@@ -216,7 +216,7 @@
 										<input class="location-header__radio-input" checked type="radio" id="lang-2" name="lang">
 										<label for="lang-2">
 											<span data-dropdown-item class="location-header__label" data-value="en">EN | $</span>
-											<span class="location-header__radio-text">Английский | $</span>
+											<span class="location-header__radio-text" data-translate='EN'>Английский | $</span>
 										</label>
 									</div>
 								</li>
@@ -224,8 +224,8 @@
 									<div class="location-header__radio">
 										<input class="location-header__radio-input" type="radio" id="lang-3" name="lang">
 										<label for="lang-3">
-											<span data-dropdown-item class="location-header__label" data-value="de">DE | €</span>
-											<span class="location-header__radio-text">Немецкий | €</span>
+											<span data-dropdown-item class="location-header__label" data-value="pl">PL | zł</span>
+											<span class="location-header__radio-text" data-translate='PL_PL'>Польский | zł</span>
 										</label>
 									</div>
 								</li>
@@ -233,21 +233,30 @@
 									<div class="location-header__radio">
 										<input class="location-header__radio-input" type="radio" id="lang-4" name="lang">
 										<label for="lang-4">
-											<span data-dropdown-item class="location-header__label" data-value="fr">FR | €</span>
-											<span class="location-header__radio-text">Французский | €</span>
+											<span data-dropdown-item class="location-header__label" data-value="ro">RO | lei</span>
+											<span class="location-header__radio-text" data-translate='RO_RO'>Румынский | lei</span>
+										</label>
+									</div>
+								</li>
+								<li class="location-header__item dropdown__item">
+									<div class="location-header__radio">
+										<input class="location-header__radio-input" type="radio" id="lang-4" name="lang">
+										<label for="lang-4">
+											<span data-dropdown-item class="location-header__label" data-value="tr">TR | ₺</span>
+											<span class="location-header__radio-text" data-translate='TR_TR'>Турецкий | ₺</span>
 										</label>
 									</div>
 								</li>
 							</ul>
 							<div class="lang-header__row-bottom">
-								<div class="lang-header__title">Выбрать валюту</div>
+								<div class="lang-header__title" data-translate='CHOOSE_CURRENCY'>Выбрать валюту</div>
 								<div class="lang-header__currencies currencies">
 									<div class="currencies__selected">$ - USD - USD Dollar</div>
-									<a href="" class="currencies__changy">Change </a>
+									<a href="" class="currencies__changy" data-translate='CHANGE_BUTTON'>Change </a>
 								</div>
 							</div>
 							<div class="lang-header__row-bottom">
-								<p class="lang-header__row-text">Change country / lang / currency</p>
+								<p class="lang-header__row-text" data-translate='CHANGE_PARAMS'>Изменить страну / язык / валюту</p>
 							</div>
 						</div>
 						<input data-dropdown-input type="text" name="select-category" value="" class="dropdown__input-hidden">
@@ -257,20 +266,20 @@
 						<div data-dropdown-hover class="login-header__item">
 							<button data-dropdown-button type="button" id="header__title-login"
 								class="login-header__title _bg _icon-arrow-1 f18"><span
-									class="login-header__title-name">Кабинет</span><span class="_icon-user"></span></button>
+									class="login-header__title-name" data-translate='PROFILE_MAIN'>Кабинет</span><span class="_icon-user"></span></button>
 							<div data-dropdown-list class="login-header__body" data-da=".header__wrap,767.98,0">
 								<div data-da=".login-header__item,767.98,2" class="spollers__arrow"></div>
 								<div class="login-header__top">
-									<a href="#" data-popup="#popup-login" class="login-header__button btn btn-c">Sign in</a>
-									<p class="login-header__text">New customer?<a href="#">Start here</a></p>
+									<a href="#" data-popup="#popup-login" class="login-header__button btn btn-c" data-translate='SIGN_IN_BUTTON'>Вход</a>
+									<p class="login-header__text" data-translate='NEW_CUSTOMER'>Новый клиент?<a href="#" data-translate='START_HERE'>Регестрация</a></p>
 								</div>
 								<div class="login-header__bottom">
-									<h6 class="login-header__title-bottom f14">Your account</h6>
+									<h6 class="login-header__title-bottom f14" data-translate='YOUR_ACCOUNT'>Ваш аккаунт</h6>
 									<ul class="login-header__list">
-										<li><a href="" class="login-header__link">Orders</a></li>
-										<li><a href="" class="login-header__link">Offers</a></li>
-										<li><a href="" class="login-header__link">Profile</a></li>
-										<li><a href="" class="login-header__link">Settings</a></li>
+										<li><a href="" class="login-header__link" data-translate='ORDERS'>Заказы</a></li>
+										<li><a href="" class="login-header__link" data-translate='OFFERS'>Предложения</a></li>
+										<li><a href="" class="login-header__link" data-translate='PROFILE'>Профиль</a></li>
+										<li><a href="" class="login-header__link" data-translate='SETTINGS'>Настройки</a></li>
 										<!-- <li><a href="" class="login-header__link"></a></li> -->
 									</ul>
 									<!-- <ul class="login-header__list">

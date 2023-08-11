@@ -14,7 +14,8 @@ export const path = {
 		css: `${buildFolder}/css/`,
 		images: `${buildFolder}/img/`,
 		fonts: `${buildFolder}/fonts/`,
-		files: `${buildFolder}/files/`
+		files: `${buildFolder}/files/`,
+		public: `${buildFolder}/public/`,
 	},
 	src: {
 		html: `${srcFolder}/*.html`,
@@ -26,6 +27,7 @@ export const path = {
 		fonts: `${srcFolder}/fonts/*.*`,
 		files: `${srcFolder}/files/**/*.*`,
 		svgicons: `${srcFolder}/svgicons/*.svg`,
+		public: `${srcFolder}/public/**.*`,
 	},
 	clean: buildFolder,
 	buildFolder: buildFolder,
