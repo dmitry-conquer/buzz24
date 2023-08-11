@@ -301,7 +301,7 @@ if (wrapper) {
                   + '<div class="info-content__price">'
                   + '<button type="submit" class="info-content__button-price info-content__button-hour btn">' + infoHour[0].innerHTML + '</button>'
                   + '<button type="submit" class="info-content__button-price info-content__button-day btn">' + infoDay[0].innerHTML + '</button>'
-                  + '<a href="' + infoOrder[0].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c">' + infoBtnOrder[0].innerHTML + '</a>'
+                  + '<a href="' + infoOrder[0].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c" data-translate="GET_ORDER_BUTTON">' + infoBtnOrder[0].innerHTML + '</a>'
                   + '</div>'
                   + '</div>'],
                ['<div class="info-content">' +
@@ -337,7 +337,7 @@ if (wrapper) {
                   + '<div class="info-content__price">'
                   + '<button type="submit" class="info-content__button-price info-content__button-hour btn">' + infoHour[1].innerHTML + '</button>'
                   + '<button type="submit" class="info-content__button-price info-content__button-day btn">' + infoDay[1].innerHTML + '</button>'
-                  + '<a href="' + infoOrder[1].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c">' + infoBtnOrder[1].innerHTML + '</a>'
+                  + '<a href="' + infoOrder[1].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c" data-translate="GET_ORDER_BUTTON">' + infoBtnOrder[1].innerHTML + '</a>'
                   + '</div>'
                   + '</div>'],
                ['<div class="info-content">' +
@@ -373,7 +373,7 @@ if (wrapper) {
                   + '<div class="info-content__price">'
                   + '<button type="submit" class="info-content__button-price info-content__button-hour btn">' + infoHour[2].innerHTML + '</button>'
                   + '<button type="submit" class="info-content__button-price info-content__button-day btn">' + infoDay[2].innerHTML + '</button>'
-                  + '<a href="' + infoOrder[2].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c">' + infoBtnOrder[2].innerHTML + '</a>'
+                  + '<a href="' + infoOrder[2].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c" data-translate="GET_ORDER_BUTTON">' + infoBtnOrder[2].innerHTML + '</a>'
                   + '</div>'
                   + '</div>'],
                ['<div class="info-content">' +
@@ -409,7 +409,7 @@ if (wrapper) {
                   + '<div class="info-content__price">'
                   + '<button type="submit" class="info-content__button-price info-content__button-hour btn">' + infoHour[3].innerHTML + '</button>'
                   + '<button type="submit" class="info-content__button-price info-content__button-day btn">' + infoDay[3].innerHTML + '</button>'
-                  + '<a href="' + infoOrder[3].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c">' + infoBtnOrder[3].innerHTML + '</a>'
+                  + '<a href="' + infoOrder[3].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c" data-translate="GET_ORDER_BUTTON">' + infoBtnOrder[3].innerHTML + '</a>'
                   + '</div>'
                   + '</div>'],
                ['<div class="info-content">' +
@@ -445,7 +445,7 @@ if (wrapper) {
                   + '<div class="info-content__price">'
                   + '<button type="submit" class="info-content__button-price info-content__button-hour btn">' + infoHour[4].innerHTML + '</button>'
                   + '<button type="submit" class="info-content__button-price info-content__button-day btn">' + infoDay[4].innerHTML + '</button>'
-                  + '<a href="' + infoOrder[4].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c">' + infoBtnOrder[4].innerHTML + '</a>'
+                  + '<a href="' + infoOrder[4].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c" data-translate="GET_ORDER_BUTTON">' + infoBtnOrder[4].innerHTML + '</a>'
                   + '</div>'
                   + '</div>'],
             ];
@@ -776,7 +776,7 @@ if (wrapperMap) {
                   + '<div class="info-content__price">'
                   + '<button type="submit" class="info-content__button-price info-content__button-hour btn">' + infoHour[0].innerHTML + '</button>'
                   + '<button type="submit" class="info-content__button-price info-content__button-day btn">' + infoDay[0].innerHTML + '</button>'
-                  + '<a href="' + infoOrder[0].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c">' + infoBtnOrder[0].innerHTML + '</a>'
+                  + '<a href="' + infoOrder[0].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c" data-translate="GET_ORDER_BUTTON">' + infoBtnOrder[0].innerHTML + '</a>'
                   + '</div>'
                   + '</div>'],
                ['<div class="info-content">' +
@@ -812,7 +812,7 @@ if (wrapperMap) {
                   + '<div class="info-content__price">'
                   + '<button type="submit" class="info-content__button-price info-content__button-hour btn">' + infoHour[1].innerHTML + '</button>'
                   + '<button type="submit" class="info-content__button-price info-content__button-day btn">' + infoDay[1].innerHTML + '</button>'
-                  + '<a href="' + infoOrder[1].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c">' + infoBtnOrder[1].innerHTML + '</a>'
+                  + '<a href="' + infoOrder[1].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c" data-translate="GET_ORDER_BUTTON">' + infoBtnOrder[1].innerHTML + '</a>'
                   + '</div>'
                   + '</div>'],
                ['<div class="info-content">' +
@@ -848,7 +848,7 @@ if (wrapperMap) {
                   + '<div class="info-content__price">'
                   + '<button type="submit" class="info-content__button-price info-content__button-hour btn">' + infoHour[2].innerHTML + '</button>'
                   + '<button type="submit" class="info-content__button-price info-content__button-day btn">' + infoDay[2].innerHTML + '</button>'
-                  + '<a href="' + infoOrder[2].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c">' + infoBtnOrder[2].innerHTML + '</a>'
+                  + '<a href="' + infoOrder[2].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c" data-translate="GET_ORDER_BUTTON">' + infoBtnOrder[2].innerHTML + '</a>'
                   + '</div>'
                   + '</div>'],
                ['<div class="info-content">' +
@@ -884,7 +884,7 @@ if (wrapperMap) {
                   + '<div class="info-content__price">'
                   + '<button type="submit" class="info-content__button-price info-content__button-hour btn">' + infoHour[3].innerHTML + '</button>'
                   + '<button type="submit" class="info-content__button-price info-content__button-day btn">' + infoDay[3].innerHTML + '</button>'
-                  + '<a href="' + infoOrder[3].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c">' + infoBtnOrder[3].innerHTML + '</a>'
+                  + '<a href="' + infoOrder[3].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c" data-translate="GET_ORDER_BUTTON">' + infoBtnOrder[3].innerHTML + '</a>'
                   + '</div>'
                   + '</div>'],
                ['<div class="info-content">' +
@@ -920,7 +920,7 @@ if (wrapperMap) {
                   + '<div class="info-content__price">'
                   + '<button type="submit" class="info-content__button-price info-content__button-hour btn">' + infoHour[4].innerHTML + '</button>'
                   + '<button type="submit" class="info-content__button-price info-content__button-day btn">' + infoDay[4].innerHTML + '</button>'
-                  + '<a href="' + infoOrder[4].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c">' + infoBtnOrder[4].innerHTML + '</a>'
+                  + '<a href="' + infoOrder[4].href + '" target="_blank" class="info-content__button-price info-content__button-order btn btn-c" data-translate="GET_ORDER_BUTTON">' + infoBtnOrder[4].innerHTML + '</a>'
                   + '</div>'
                   + '</div>'],
             ];

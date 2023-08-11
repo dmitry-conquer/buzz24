@@ -3,9 +3,9 @@
 		<div class="popup__content popup__form">
 			<div class="popup__row">
 				<div class="popup__steps">
-					<div class="popup__step popup__step-1 f16"><span>1</span>Заказ</div>
-					<div class="popup__step popup__step-2 color f16"><span>2</span>Детали</div>
-					<div class="popup__step popup__step-3 f16"><span>3</span>Способ оплаты</div>
+					<div class="popup__step popup__step-1 f16" data-translate='POPUP_LINE_ORDER'><span>1</span>Замовлення</div>
+					<div class="popup__step popup__step-2 color f16" data-translate='POPUP_LINE_DETAILS'><span>2</span>Деталі</div>
+					<div class="popup__step popup__step-3 f16" data-translate='POPUP_LINE_PAYMENT'><span>3</span>Оплата</div>
 				</div>
 				<button data-close data-da=".popup__content,767.98,5" type="button" class="popup__close">
 					<span class="popup__button-close btn-close">
@@ -18,7 +18,7 @@
 					<div class="tabs__icon">
 						<img src="img/main/info.svg" alt="">
 					</div>
-					<p class="tabs__text">Выберите дату предполагаемых работ и опишите задачу, прикрепите фотографии.
+					<p class="tabs__text" data-translate='POPUP_DATE_INFO'>Виберіть дату запропонованої роботи та опишіть завдання, додайте фотографії.
 					</p>
 				</div>
 				<div class="popup__body">
@@ -27,23 +27,23 @@
 						<div id="daterangepicker1-container" class="embedded-daterangepicker"></div>
 					</div>
 					<div class="popup__descr">
-						<textarea name="descr" placeholder="Описание" class="popup__textarea"></textarea>
+						<textarea name="descr" data-translate='DESCRIPTION_PLACEHOLDER' placeholder="Опис" class="popup__textarea"></textarea>
 						<div class="popup__upload-file upload-file">
 							<div class="upload-file__icon _icon-clip"></div>
-							<p class="upload-file__text">Прикрепите документы или сделайте фотографии места работ</p>
+							<p class="upload-file__text" data-translate='ATTACH_INFO'>Додайте документи або сфотографуйте місце роботи</p>
 							<div class="upload-file__input-body">
 								<input type="file" name="files[]" id="upload-file__input_1" class="upload-file__input"
 									accept=".jpg, .jpeg, .png">
 								<label class="upload-file__label" for="upload-file__input_1">
-									<span class="upload-file__label-text">Прикрепить</span>
+									<span class="upload-file__label-text" data-translate='ATTACH_BUTTON'>Прикріпити</span>
 								</label>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="popup__buttons">
-					<button data-close type="button" class="popup__button btn popup__button-prev prev-1">Назад</button>
-					<button type="button" class="popup__button btn btn-c popup__button-next next-1">Далее</button>
+					<button data-close type="button" class="popup__button btn popup__button-prev prev-1" data-translate='BACK_BUTTON'>Назад</button>
+					<button type="button" class="popup__button btn btn-c popup__button-next next-1" data-translate='NEXT_BUTTON'>Далі</button>
 				</div>
 			</form>
 			<form action="#" class="popup__form-step popup__form-2">
@@ -51,72 +51,69 @@
 					<div class="tabs__icon">
 						<img src="img/main/info.svg" alt="">
 					</div>
-					<p class="tabs__text">Укажите желаемый бюджет работ или оставьте поле пустым. Бюджет предложат исполнители.
-					</p>
+					<p class="tabs__text" data-translate='BUDGET_INFO'>Вкажіть бажаний бюджет для робіт або залиште поле порожнім. Бюджет запропонують підрядники</p>
 				</div>
 				<div class="popup__body popup__body-step2">
 					<div class="popup__column">
-						<input type="number" class="popup__budget" placeholder="Бюджет работ">
+						<input type="number" class="popup__budget" data-translate='BUDGET_PLACEHOLDER' placeholder="Робочий бюджет">
 						<div class="tabs__top-row">
 							<div class="tabs__icon">
 								<img src="img/main/info.svg" alt="">
 							</div>
-							<p id="text" class="tabs__text">Я знаю, что мне нужно и выберу сам. Пример: нужен автокран</p>
+							<p id="text" class="tabs__text" data-translate='CHOOSE_INFO'>Я знаю, що мені потрібно і виберу сам. Приклад: потрібен автокран</p>
 						</div>
 					</div>
 					<div class="popup__column popup__column-radio">
 						<div class="radio">
-							<h6 class="radio__title">Тип сделки</h6>
+							<h6 class="radio__title" data-translate='TYPE_DEAL_TITLE'>Тип угоди</h6>
 							<div class="radio__item">
 								<input class="radio__input" checked type="radio" id="answer-first-1" name="safe-deal">
 								<label for="answer-first-1" class="radio__label"></label>
-								<p class="radio__label-text"><span
+								<p class="radio__label-text" data-translate='SAVE_DEAL'><span
 										data-text="Работа через безопасную сделку обеспечивает финансовые гарантии сторонам. Вы получите качественный и своевременный результат или мы вернем вам деньги."
-										class="radio__label-icon _icon-star"></span>Безопасная сделка</p>
+										class="radio__label-icon _icon-star"></span>Безпечна угода</p>
 							</div>
 							<div class="radio__item">
 								<input class="radio__input" type="radio" id="answer-first-2" name="safe-deal">
 								<label for="answer-first-2" class="radio__label"></label>
-								<p class="radio__label-text"><span data-text="Прямые расчеты с исполнителем на свой страх и риск."
-										class="radio__label-icon _icon-attention"></span>Прямой
-									расчет с исполнителем</p>
+								<p class="radio__label-text" data-translate='DIRECT_SETTLEMENT'><span data-text="Прямые расчеты с исполнителем на свой страх и риск."
+										class="radio__label-icon _icon-attention"></span>Пряме врегулювання</p>
 							</div>
 						</div>
 						<div class="radio">
-							<h6 class="radio__title">Оплата</h6>
+							<h6 class="radio__title" data-translate='POPUP_LINE_PAYMENT'>Оплата</h6>
 							<div class="radio__item">
 								<input class="radio__input" checked type="radio" id="answer-second-1" name="pay">
 								<label for="answer-second-1" class="radio__label"></label>
-								<p class="radio__label-text">Резервирование суммы на
-									карте</p>
+								<p class="radio__label-text" data-translate='RESERVATION_AMOUNT'>Резервування суми на карті</p>
 							</div>
 							<div class="radio__item">
 								<input class="radio__input" type="radio" id="answer-second-2" name="pay">
 								<label for="answer-second-2" class="radio__label"></label>
-								<p class="radio__label-text">Безналичный расчет с НДС</p>
+								<p class="radio__label-text" data-translate='CASHLESS_WITH_VAT'>Безготівковий розрахунок з ПДВ</p>
 							</div>
 							<div class="radio__item">
 								<input class="radio__input" type="radio" id="answer-second-3" name="pay">
 								<label for="answer-second-3" class="radio__label"></label>
-								<p class="radio__label-text">Безналичный расчет без НДС</p>
+								<p class="radio__label-text" data-translate='CASHLESS_WITHOUT_VAT'>Безготівковий розрахунок без ПДВ</p>
 							</div>
 							<div class="radio__item">
 								<input class="radio__input" disabled type="radio" id="answer-second-4" name="pay">
 								<label for="answer-second-4" class="radio__label"></label>
-								<p class="radio__label-text">Наличный расчет</p>
+								<p class="radio__label-text" data-translate='CASH'>Готівка</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="popup__buttons">
-					<button type="button" class="popup__button btn popup__button-prev prev-2">Назад</button>
-					<button type="button" class="popup__button btn btn-c popup__button-next next-2">Добавить заказ</button>
+					<button type="button" class="popup__button btn popup__button-prev prev-2" data-translate='BACK_BUTTON'>Назад</button>
+					<button type="button" class="popup__button btn btn-c popup__button-next next-2" data-translate='ADD_BUTTON'>Додати</button>
 				</div>
 			</form>
 			<form action="#" class="popup__form-step popup__form-3">
 				<div class="popup__successfully successfully">
-					<h5 class="successfully__title">Поиск исполнителя</h5>
-					<p class="successfully__text">Вы успешно разместили заказ на поиск спецтехники:</p>
+					<h5 class="successfully__title" data-translate=''>Пошук виконавця</h5>
+					<p class="successfully__text" data-translate='RESULT_SUCCESS_MESSAGE'>Ви успішно розмістили замовлення на пошук спецтехніки:</p>
 					<div class="successfully__body">
 						<div class="successfully__info">
 							<p class="successfully__info-text">Автокраны</p>
@@ -125,17 +122,15 @@
 							<p class="successfully__info-text">Наличный расчет</p>
 						</div>
 						<div class="successfully__sms">
-							<p class="successfully__sms-text">Пожалуйста, введите код из смс-сообщения:</p>
+							<p class="successfully__sms-text" data-translate='SEND_CODE_LABEL'>Будь ласка, введіть код із SMS-повідомлення:</p>
 							<input type="tel" class="successfully__sms-code" placeholder="_ _ _ _">
-							<button type="submit" class="successfully__button btn btn-c">Подтвердить</button>
+							<button type="submit" class="successfully__button btn btn-c" data-translate='CONFIRM_BUTTON'>Підтвердити</button>
 						</div>
 					</div>
 					<div class="successfully__footer">
-						<button type="button" class="popup__button btn popup__button-prev prev-3">Назад</button>
-						<div class="successfully__social _icon-telegram">Для получения счета на оплату просим подключить
-							телеграм-бот
-						</div>
-						<button type="submit" class="successfully__footer-button btn btn-w">Подключить</button>
+						<button type="button" class="popup__button btn popup__button-prev prev-3" data-translate='BACK_BUTTON'>Назад</button>
+						<div class="successfully__social _icon-telegram" data-translate='TELEGRAM_BOT_MESSAGE'>Щоб отримати рахунок на оплату, підключіть телеграм-бот</div>
+						<button type="submit" class="successfully__footer-button btn btn-w" data-translate='CONNECT_BUTTON'>Підключитися</button>
 					</div>
 				</div>
 			</form>

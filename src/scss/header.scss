@@ -458,6 +458,7 @@
 	}
 	// .location-header__title
 	&__title {
+		white-space: nowrap;
 		display: flex;
 		align-items: center;
 		position: relative;
