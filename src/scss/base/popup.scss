@@ -1768,6 +1768,65 @@ body::after {
 	&__tabs {
 		position: relative;
 	}
+	&__tel-input {
+		display: flex;
+		button {
+			max-width: 110px;
+		}
+	}
+	&__tel-auth {
+		overflow: hidden;
+		width: 100%;
+	
+	}
+	&__tel-auth-wrapper {
+		white-space: nowrap;
+		display: flex;
+		align-items: flex-start;
+		column-gap: 30px;
+		width: 100%;
+		transform: translateX();
+		transition: all .3s ease;
+		& > * {
+			min-width: 100%;
+		}
+	}
+	&__tel-info {
+		margin-top: 15px;
+		p:first-child {
+			font-size: 16px;
+			margin-bottom: 5px;
+		}
+	}
+	&__auth-result {
+		font-size: 20px;
+		font-weight: bold;
+		white-space: nowrap;
+		text-align: center;
+		#auth-success-message {
+			color: #37aa37;
+			display: none;
+		}
+		#auth-error-message {
+			color: #940000;
+			display: none;
+		}
+		#auth-error-message{
+			flex-direction: column;
+			align-items: center;
+			row-gap: 15px;
+		}
+	}
+	#auth-code-again {
+		display: none;
+		margin-top: 20px;
+	}
+	&__code-title {
+		font-size: 16px;
+		margin-bottom: 15px;
+		max-width: 100%;
+		white-space: wrap;
+	}
 	// .login-popup__navigation
 	&__navigation {
 		display: flex;

@@ -1400,40 +1400,138 @@ clearInputBtn.addEventListener('click', clearInput);
 
 
 
-const loginEmailInput = document.getElementById('login-email');
-const loginTelInput = document.getElementById('login-tel');
-const signEmailInput = document.getElementById('sign-email');
-const signTelInput = document.getElementById('sign-tel');
-const emailLogin = document.querySelector('.login-popup__email-login');
-const telLogin = document.querySelector('.login-popup__tel-login');
-const emailSign = document.querySelector('.login-popup__email-sign');
-const telSign = document.querySelector('.login-popup__tel-sign');
+const loginPopup = document.getElementById('popup-login');
+const getCodeTimer = document.getElementById('get-code-timer');
+const authCurrentTel = document.getElementById('auth-current-tel');
+const telAuthTrigger = document.getElementById('tel-auth-trigger');
+const telAuthWrapper = document.getElementById('tel-auth-wrapper');
+const telAuthInput = document.getElementById('tel-auth-input');
+const telAuthTelConfirm = document.getElementById('tel-auth-tel-confirm');
+const telAuthCodeConfirm = document.getElementById('tel-auth-code-confirm');
+const telAuthCodeInput = document.getElementById('tel-auth-code-input');
+const authSuccessMessage = document.getElementById('auth-success-message');
+const authErrorMessage = document.getElementById('auth-error-message');
+const authTryAgain = document.getElementById('auth-try-again');
+const authResult = document.querySelector('.login-popup__auth-result');
+const codeTryAgain = document.getElementById('auth-code-again');
 
-if (loginEmailInput) {
-   function loginInputs() {
-      if (loginEmailInput.checked) {
-         telLogin.style.display = 'none';
-         emailLogin.style.display = 'block';
-      } else if (loginTelInput.checked) {
-         emailLogin.style.display = 'none';
-         telLogin.style.display = 'block';
-      }
-   }
-   function signInputs() {
-      if (signEmailInput.checked) {
-         telSign.style.display = 'none';
-         emailSign.style.display = 'block';
-      } else if (signTelInput.checked) {
-         emailSign.style.display = 'none';
-         telSign.style.display = 'block';
-      }
-   }
 
-   loginEmailInput.addEventListener('change', loginInputs);
-   loginTelInput.addEventListener('change', loginInputs);
-   signEmailInput.addEventListener('change', signInputs);
-   signTelInput.addEventListener('change', signInputs);
+
+if (loginPopup) {
+
+   let timer;
+
+  telAuthTrigger.addEventListener('click', () => {
+   telAuthWrapper.style.transform = `translateX(calc(-100% - 30px))`;
+  })
+
+  telAuthTelConfirm.addEventListener('click', () => {
+   const currentNumber = telAuthInput.value;
+   if (isTelValid(currentNumber)) {
+      telAuthWrapper.style.transform = `translateX(calc(-200% - 60px))`;
+      authCurrentTel.textContent = currentNumber;
+      startTimer();
+   } else {
+      console.log('Oops');
+   }
+  })
+
+  telAuthCodeConfirm.addEventListener('click', () => {
+   const receivedReservedCode = '1234';
+   if (telAuthCodeInput.value == receivedReservedCode) {
+      authSuccessMessage.style.display = 'block';
+      authErrorMessage.style.display = 'none';
+      telAuthWrapper.style.display = 'none';
+      authResult.style.display = 'block';
+   } else {
+      authErrorMessage.style.display = 'flex';
+      authSuccessMessage.style.display = 'none';
+      telAuthWrapper.style.display = 'none';
+      authResult.style.display = 'block';
+   }
+  })
+
+  authTryAgain.addEventListener('click', () => {
+   clearInterval(timer);
+   codeTryAgain.style.display = 'none';
+   authResult.style.display = 'none';
+   telAuthWrapper.style.display = 'flex';
+   telAuthWrapper.style.transform = `translateX(calc(-100% - 30px))`;
+   telAuthCodeInput.value = ''
+  })
+
+  codeTryAgain.addEventListener('click', () => {
+   codeTryAgain.style.display = 'none';
+   clearInterval(timer);
+   startTimer();
+  })
+
+  function isTelValid(currentNumber) {
+   if (currentNumber.match(/^\+40/)) {
+      return currentNumber.match(/^\+40 [0-9]{3} [0-9]{3} [0-9]{3}$/);
+    } else if (currentNumber.match(/^\+90/)) {
+      return currentNumber.match(/^\+90 [0-9]{3} [0-9]{3} [0-9]{4}$/);
+    } else if (currentNumber.match(/^\+37 3/)) {
+      return currentNumber.match(/^\+37 3[0-9]{2} [0-9]{3} [0-9]{4}$/);
+    } else if (currentNumber.match(/^\+38 0/)) {
+      return currentNumber.match(/^\+38 0[0-9]{2} [0-9]{3} [0-9]{4}$/);
+    } else {
+      return false;
+    }
+  }
+
+  function startTimer() {
+   const timeoutTime = 120000 + Date.now(); // 2 min 120000
+   timer = setInterval(() => {
+   let ms = timeoutTime - Date.now();
+   let secs = Math.round(ms / 1000);
+   let leftMins = Math.floor(secs / 60);
+   let leftSec = secs % 60;
+   let result = secs > 0 ? `${leftMins.toString().padStart(2, 0)}:${leftSec.toString().padStart(2, 0)}` : '00:00';
+   if (secs <= 0) {
+      codeTryAgain.style.display = 'block';
+      clearInterval(timer);
+   }
+   getCodeTimer.textContent = result;
+  }, 1000);
 }
+  
+}
+
+// const loginEmailInput = document.getElementById('login-email');
+// const loginTelInput = document.getElementById('login-tel');
+// const signEmailInput = document.getElementById('sign-email');
+// const signTelInput = document.getElementById('sign-tel');
+// const emailLogin = document.querySelector('.login-popup__email-login');
+// const telLogin = document.querySelector('.login-popup__tel-login');
+// const emailSign = document.querySelector('.login-popup__email-sign');
+// const telSign = document.querySelector('.login-popup__tel-sign');
+
+// if (loginPopup) {
+//    function loginInputs() {
+//       if (loginEmailInput.checked) {
+//          telLogin.style.display = 'none';
+//          emailLogin.style.display = 'block';
+//       } else if (loginTelInput.checked) {
+//          emailLogin.style.display = 'none';
+//          telLogin.style.display = 'block';
+//       }
+//    }
+//    function signInputs() {
+//       if (signEmailInput.checked) {
+//          telSign.style.display = 'none';
+//          emailSign.style.display = 'block';
+//       } else if (signTelInput.checked) {
+//          emailSign.style.display = 'none';
+//          telSign.style.display = 'block';
+//       }
+//    }
+
+//    loginEmailInput.addEventListener('change', loginInputs);
+//    loginTelInput.addEventListener('change', loginInputs);
+//    signEmailInput.addEventListener('change', signInputs);
+//    signTelInput.addEventListener('change', signInputs);
+// }
 
 
 
@@ -1654,17 +1752,21 @@ if (answer1) {
 
 // =======================================================================================================================================================================================================================
 
-const inputElement = document.querySelector('.successfully__sms-code');
-inputElement.addEventListener('input', () => {
-   const inputValue = inputElement.value;
-   const numericValue = inputValue.replace(/\D/g, '');
-   const maxLength = 4;
-   if (numericValue.length > maxLength) {
-      inputElement.value = numericValue.slice(0, maxLength);
-   } else {
-      inputElement.value = numericValue;
-   }
-});
+const inputElements = document.querySelectorAll('.successfully__sms-code');
+
+inputElements.forEach(inputElement => {
+   inputElement.addEventListener('input', () => {
+      const inputValue = inputElement.value;
+      const numericValue = inputValue.replace(/\D/g, '');
+      const maxLength = 4;
+      if (numericValue.length > maxLength) {
+         inputElement.value = numericValue.slice(0, maxLength);
+      } else {
+         inputElement.value = numericValue;
+      }
+   });
+})
+
 
 
 // =======================================================================================================================================================================================================================

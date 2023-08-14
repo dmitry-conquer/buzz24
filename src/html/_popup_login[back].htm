@@ -1,0 +1,128 @@
+<div id="popup-login" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content popup__content-login login-popup">
+			<div data-tabs class="login-popup__tabs">
+				<nav data-tabs-titles class="login-popup__navigation">
+					<button type="button" class="login-popup__title _tab-active" data-translate='SIGNIN_TAB'>Авторизація</button>
+					<button type="button" class="login-popup__title" data-translate='SIGNUP_TAB'>Регистрация</button>
+				</nav>
+				<div data-tabs-body class="login-popup__content">
+					<div class="login-popup__body">
+						<div class="login-popup__wrapper">
+							<form action="#" class="login-popup__column">
+								<h5 class="login-popup__title-first" data-translate='SIGNIN_IN_SYSTEM'>Увійти в систему</h5>
+								<div class="login-popup__row">
+									<div class="login-popup__row-text" data-translate='SIGNIN_BY'>Вхід за допомогою:</div>
+									<div class="login-popup__radio">
+										<input class="login-popup__login-email" checked type="radio" id="login-email" name="login">
+										<label for="login-email">E-mail</label>
+										<input class="login-popup__login-tel" type="radio" id="login-tel" name="login">
+										<label for="login-tel" data-translate='AUTH_TEL'>Телефон</label>
+									</div>
+								</div>
+								<input data-validate data-required="email" type="text" placeholder="E-mail"
+									class="login-popup__input login-popup__email-login">
+								<input data-validate data-required type="tel" placeholder="+__ ___ ___ ____"
+									class="login-popup__input login-popup__tel-login phone-mask">
+								<div class="login-popup__input-body">
+									<input data-validate data-required type="password" data-translate='PASSWORD_PLACEHOLDER' placeholder="Пароль" class="login-popup__input">
+									<button class="login-popup__viewpass _icon-eye" type="button"></button>
+								</div>
+								<div class="login-popup__check">
+									<input id="check-login" type="checkbox" class="login-popup__checkbox-input">
+									<label for="check-login" class="login-popup__checkbox-label"></label>
+									<p class="login-popup__checkbox-text" data-translate='REMEMBER_ME'>Запам'ятати на 2 тижні</p>
+								</div>
+								<div class="login-popup__buttons-login">
+									<button type="submit" class="login-popup__button btn btn-c" data-translate='SIGNIN_BUTTON'>Войти</button>
+									<a href="" class="login-popup__button-forgot" data-translate='FORGOT_PASSWORD'>Забули пароль</a>
+								</div>
+							</form>
+							<div class="login-popup__column">
+								<div class="login-popup__title-second" data-translate='ALT_AUTH_LOGIN'>Ви також можете увійти за допомогою</div>
+								<a href="" class="login-popup__social">
+									<div class="login-popup__icon">
+										<img src="../img/main/icon-telegram.png" alt="Telegram">
+									</div>
+									<span data-translate='SIGNIN_TELEGRAM'>Увійти за допомогою Telegram</span>
+								</a>
+								<a href="" class="login-popup__social">
+									<div class="login-popup__icon">
+										<img src="../img/main/icon-google.png" alt="Google">
+									</div>
+									<span data-translate='SIGNIN_GOOGLE'>Увійти за допомогою Google</span>
+								</a>
+								<a href="" class="login-popup__social">
+									<div class="login-popup__icon">
+										<img src="../img/main/icon-facebook.png" alt="Facebook">
+									</div>
+									<span data-translate='SIGNIN_FACEBOOK'>Увійти за допомогою Facebook</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="login-popup__body">
+						<div class="login-popup__wrapper">
+							<form action="#" class="login-popup__column">
+								<h5 class="login-popup__title-first" data-translate='SIGNUP_IN_SYSTEM'>Реєстрація в системі</h5>
+								<div class="login-popup__row">
+									<div class="login-popup__row-text" data-translate='SIGNUP_BY'>Зареєструватися за допомогою:</div>
+									<div class="login-popup__radio">
+										<input class="login-popup__sign-email" checked type="radio" id="sign-email" name="sign">
+										<label for="sign-email">E-mail</label>
+										<input class="login-popup__sign-tel" type="radio" id="sign-tel" name="sign">
+										<label for="sign-tel" data-translate='AUTH_TEL'>Телефон</label>
+									</div>
+								</div>
+								<input data-validate data-required="email" type="text" placeholder="E-mail"
+									class="login-popup__input login-popup__email-sign">
+								<input data-validate data-required type="tel" placeholder="+__ ___ ___ ____"
+									class="login-popup__input login-popup__tel-sign phone-mask">
+								<div class="login-popup__input-body">
+									<input data-validate data-required type="password" data-translate='PASSWORD_PLACEHOLDER' placeholder="Пароль" class="login-popup__input">
+									<button class="login-popup__viewpass _icon-eye" type="button"></button>
+								</div>
+								<div class="login-popup__check">
+									<input id="check-sign" type="checkbox" class="login-popup__checkbox-input">
+									<label for="check-sign" class="login-popup__checkbox-label"></label>
+									<p class="login-popup__checkbox-text" data-translate='REMEMBER_ME'>Запам'ятати на 2 тижні</p>
+								</div>
+								<div class="login-popup__buttons-login">
+									<button type="submit" class="login-popup__button btn btn-c" data-translate='SIGNUP_BUTTON'>Зареєструватися</button>
+								</div>
+							</form>
+							<div class="login-popup__column">
+								<div class="login-popup__title-second" data-translate='ALT_AUTH_SIGNIN'>Ви також можете зареєструватися за допомогою:</div>
+								<a href="" class="login-popup__social">
+									<div class="login-popup__icon">
+										<img src="../img/main/icon-telegram.png" alt="Telegram">
+									</div>
+									<span data-translate='SIGNUP_TELEGRAM'>Зареєструватися через Telegram</span>
+								</a>
+								<a href="" class="login-popup__social">
+									<div class="login-popup__icon">
+										<img src="../img/main/icon-google.png" alt="Google">
+									</div>
+									<span data-translate='SIGNUP_GOOGLE'>Зареєструватися через Google</span>
+								</a>
+								<a href="" class="login-popup__social">
+									<div class="login-popup__icon">
+										<img src="../img/main/icon-facebook.png" alt="Facebook">
+									</div>
+									<span data-translate='SIGNUP_FACEBOOK'>Зареєструватися через Telegram</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="login-popup__buttons">
+				<button data-close type="button" class="popup__close">
+					<span class="popup__button-close btn-close">
+						<span></span>
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

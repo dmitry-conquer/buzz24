@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 @@include('html/_head.htm',{
 "title":"Поиск и аренда спецтехники в Украине"
 })
@@ -182,37 +182,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="statistics">
-				<div class="statistics__container">
-					<div data-watch class="statistics__inner">
-						<div class="statistics__item">
-							<h2 class="statistics__item-title"><span data-digits-counter>24</span>/<span data-digits-counter>7</span>
-							</h2>
-							<div class="statistics__item-subtitle" data-translate='WORKING_MODE'>
-								режим роботи
-							</div>
-						</div>
-						<div class="statistics__item">
-							<h2 data-digits-counter class="statistics__item-title">526</h2>
-							<div class="statistics__item-subtitle" data-translate='AVARAGE_TIME_ORDER'>
-								середній час обробки заявки
-							</div>
-						</div>
-						<div class="statistics__item">
-							<h2 data-digits-counter class="statistics__item-title">54</h2>
-							<div class="statistics__item-subtitle" data-translate='ORDERS_PER_DAY'>
-								заявок на спецтехніку за добу
-							</div>
-						</div>
-						<div class="statistics__item">
-							<h2 class="statistics__item-title"><span data-digits-counter>92</span>%</h2>
-							<div class="statistics__item-subtitle" data-translate='SUCCESSFUL_TRANSACTIONS'>
-								закриті угоди
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+			@@include('html/_statistics.htm')
 			<section class="map">
 				<div class="map__container">
 					<h3 class="map__title" data-translate='EQUIPMENT_ON_MAP'>ТЕХНІКА НА КАРТІ</h3>
@@ -589,7 +559,7 @@
 								<div  class="catalog-section__filter filter">
 									<button class="open-filter filter__text _icon-filter" data-translate='EQUIPMENT_FILTER'>Фільтри</button>
 									<div data-da=".sidebar__header,991.98,0" class="filter__header filter__text _icon-filter" data-translate='EQUIPMENT_FILTER'>Фільтри</div>
-									<div data-dropdown  class="filter__dropdown filter__dropdown-quantity dropdown">
+									<!-- <div data-dropdown  class="filter__dropdown filter__dropdown-quantity dropdown">
 										<button type="button" data-dropdown-button
 											class="filter__button-dropdown dropdown__button _icon-arrow-1" data-value="">20</button>
 										<ul data-dropdown-list class="dropdown__list">
@@ -601,7 +571,7 @@
 										</ul>
 										<input type="text" name="select-quantity" value="" data-dropdown-input
 											class="dropdown__input-hidden">
-									</div>
+									</div> -->
 									<div  class="filter__block-search">
 										<div  class="filter__grid" id="filter__grid">
 											<button type="submit" id="grid-rows" class="filter__grid-button _icon-rows"></button>
@@ -1123,12 +1093,10 @@
 								<div class="orders__filter filter-orders">
 									<div data-dropdown class="filter-orders__dropdown dropdown">
 										<button type="button" data-dropdown-button
-											class="tabs__dropdown-button dropdown__button _icon-arrow-1" data-value="" data-translate='REGION_LABEL'>Регіон</button>
+											class="tabs__dropdown-button dropdown__button _icon-arrow-1" data-value="1" data-translate='REGION_LABEL'>Регіон</button>
 										<ul data-dropdown-list class="tabs__list dropdown__list">
-											<li data-dropdown-item data-value="2" class="dropdown__item" data-translate='REG_RO_RO'>Румунія</li>
-											<li data-dropdown-item data-value="3" class="dropdown__item" data-translate='REG_TR_TR'>Турція</li>
-											<li data-dropdown-item data-value="4" class="dropdown__item" data-translate='REG_PL_PL'>Польща</li>
-											<li data-dropdown-item data-value="1" class="dropdown__item" data-translate='REG_UK_UA'>Україна</li>
+											<li data-dropdown-item data-value="1" class="dropdown__item" data-translate='REG_PL_PL'>Польща</li>
+											<li data-dropdown-item data-value="2" class="dropdown__item" data-translate='REG_UK_UA'>Україна</li>
 										</ul>
 										<input type="text" name="orders-location" value="" data-dropdown-input
 											class="dropdown__input-hidden">
@@ -1369,8 +1337,8 @@
 						</div>
 						<a href="#"
 						data-da=".filter,767.98,1"
-							class="catalog-section__button-add btn btn-c" data-translate='ADD_EQUIPMENT_BUTTON'><span>+</span>
-							Додати техніку</a>
+							class="catalog-section__button-add btn btn-c" > <span>+</span>
+							<div data-translate='ADD_EQUIPMENT_BUTTON'>Додати техніку</div></a>
 					</div>
 				</div>
 			</section>
