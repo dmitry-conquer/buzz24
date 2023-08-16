@@ -1784,7 +1784,7 @@ body::after {
 		// max-width: 566px;
 	}
 	@media (max-width:$mobile) {
-		height: 470px;
+		// height: 470px;
 		// max-width: 566px;
 	}
 	// .login-popup__tabs
@@ -1844,6 +1844,19 @@ body::after {
 			flex-direction: column;
 			// align-items: center;
 			row-gap: 15px;
+		}
+	
+	}
+	#auth-success-message {
+		color: #009407;
+		display: none;
+		font-size: 17px;
+		font-weight: bold;
+		margin-top: 20px;
+		text-align: center;
+		max-height: 20px;
+		@media (max-width:$mobile) {
+			text-align: center;
 		}
 	}
 	#auth-code-again {
@@ -2266,10 +2279,18 @@ body::after {
 		font-size: 18px;
 		line-height: 22px;
 		color: #424242;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		gap: 15px;
 		padding: 0px 0px 32px 0px;
 		.dark-theme & {
 			color: #FFFFFF;
 		}
+		p {
+				white-space: nowrap;
+		}
+		
 		@media (max-width:rem(1679.98)) {
 			font-size: 14px;
 			line-height: 17px;
@@ -2287,12 +2308,15 @@ body::after {
 		}
 	}
 	&__social-wrapper {
+	
 		& > p {
 			margin-bottom: 10px;
 			@media (max-width:$mobileSmall) {
 				font-size: 12px;
 			}
+			
 		}
+
 	}
 	// .login-popup__social
 	&__social {

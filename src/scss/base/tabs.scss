@@ -50,6 +50,9 @@
 		transition: all 0.2s ease-in-out;
 		position: relative;
 		overflow: hidden;
+		&._tab-active {
+			color: #424242;
+			}
 		&:nth-child(1) {
 			&::before {
 				content: '';

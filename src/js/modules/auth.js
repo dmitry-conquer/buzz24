@@ -7,6 +7,7 @@ const getCodeTimer = document.getElementById('get-code-timer');
 const authCurrentTel = document.getElementById('auth-current-tel');
 const telAuthTrigger = document.getElementById('tel-auth-trigger');
 const telAuthTriggerWrapper = document.querySelector('.login-popup__social-wrapper');
+const telInfo = document.querySelector('.login-popup__tel-info');
 
 const telAuthInput = document.getElementById('tel-auth-input');
 const telAuthTelConfirm = document.getElementById('tel-auth-tel-confirm');
@@ -16,6 +17,7 @@ const telAuthCodeWrapper = document.querySelector('.login-popup__code');
 const telAuthCodeConfirm = document.getElementById('tel-auth-code-confirm');
 const telAuthCodeInput = document.getElementById('tel-auth-code-input');
 const authErrorMessage = document.getElementById('auth-error-message');
+const authSuccessMessage = document.getElementById('auth-success-message');
 const authResult = document.querySelector('.login-popup__auth-result');
 const codeTryAgain = document.getElementById('auth-code-again');
 const repeatMessage = document.querySelector('.login-popup__repeat');
@@ -49,8 +51,10 @@ if (loginPopup) {
   telAuthCodeConfirm.addEventListener('click', () => {
    const receivedCode = '1234';
    if (telAuthCodeInput.value == receivedCode) {
-      MicroModal.show('popup-success-auth');
-      authErrorMessage.style.display = 'none';
+     authErrorMessage.style.display = 'none';
+     telInfo.style.display = 'none';
+     authSuccessMessage.style.display = 'block';
+      
    } else {
       authErrorMessage.style.display = 'flex';
       authResult.style.display = 'block';

@@ -3,14 +3,17 @@
 		<div class="popup__content popup__content-login login-popup">
 			<div data-tabs class="login-popup__tabs">
 				<nav data-tabs-titles class="login-popup__navigation">
-					<button type="button" class="login-popup__title _tab-active" data-translate='SUBMIT_NUMBER_TITLE'>Підтвердіть свій номер телефону</button>
+					<button type="button" class="login-popup__title _tab-active"  data-translate='SIGNIN_TAB'>Авторизація</button>
 				</nav>
 				<div data-tabs-body class="login-popup__content">
 					<div class="login-popup__body">
 						<div class="login-popup__wrapper">
 							<div class="login-popup__column">
 								<!-- повернути data-translate='ALT_AUTH_LOGIN' для login-popup__title-second -->
-								<div class="login-popup__title-second" data-translate='SUBMIT_NUMBER_SUBTITLE'>Скористайтеся месенджером або смс</div>
+								<div class="login-popup__title-second" >
+									<p data-translate='SUBMIT_NUMBER_TITLE'>Підтвердіть номер телефону</p>
+									<p data-translate='SUBMIT_NUMBER_SUBTITLE'>Скористайтеся месенджером або смс</p>
+								</div>
 								<a href="" class="login-popup__social login-popup__social_telegram">
 									<div class="login-popup__icon">
 										<img src="../img/main/icon-telegram.png" alt="Telegram">
@@ -48,6 +51,10 @@
 												<p class="login-popup__code-title" data-translate="SEND_CODE_LABEL">Будь ласка, введіть код із SMS-повідомлення:</p>
 												<input id="tel-auth-code-input" type="tel" class="successfully__sms-code" placeholder="_ _ _ _">
 												<button id="tel-auth-code-confirm" type="submit" class="successfully__button btn btn-c" data-translate="CONFIRM_BUTTON">Підтвердити</button>
+												<div id="auth-success-message">
+													<span data-translate='SUCCESS_AUTH'>Успішна авторизація!</span>
+													<!-- <button id="auth-try-again" class="btn btn-c" type="button">Спробувати ще</button> -->
+												</div>
 												<div class="login-popup__tel-info">
 													<p class="login-popup__tel-number"><span data-translate='WE_SENT'>Ми надіслали код на</span> <span id="auth-current-tel"></span></p>
 													<div class="login-popup__auth-result">
@@ -55,8 +62,9 @@
 															<span data-translate='AUTH_ERROR'>Помилка авторизіції!</span>
 															<!-- <button id="auth-try-again" class="btn btn-c" type="button">Спробувати ще</button> -->
 														</div>
+												
 													</div>
-													<p class="login-popup__repeat"><span data-translate='GET_CODE_BY_SMS'>Повторний запрос коду в СМС через</span> <span id="get-code-timer">01:59</span> <span data-translate='SEC'>сек</span></p>
+													<p class="login-popup__repeat"><span data-translate='REPEAT_CODE_MESSAGE'>Повторний запрос коду в СМС через</span> <span id="get-code-timer">01:59</span> <span data-translate='SEC'>сек</span></p>
 													<button  id="auth-code-again" class="" type="button" data-translate='REPEAT_SEND_CODE'>Відправити ще раз</button>
 												</div>
 											</div>
