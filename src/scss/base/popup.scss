@@ -1763,15 +1763,15 @@ body::after {
 	height: 700px;
 	padding: 0px 0px 0px 0px;
 	&.popup__content {
-		max-width: auto;
+		max-width: 500px;
 		padding: 0;
 			@media (max-width:rem(1679.98)) {
-				max-width: auto;
+				max-width: 500px;
 				padding: 0;
 	}
-			max-width: auto;
+			max-width: 500px;
 			@media (max-width:$tablet) {
-				max-width: auto;
+				max-width: 500px;
 				padding: 0;
 	}
 	}
