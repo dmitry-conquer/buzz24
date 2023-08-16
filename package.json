@@ -74,6 +74,7 @@
 		"@googlemaps/js-api-loader": "^1.15.1",
 		"@googlemaps/markerclusterer": "^2.0.15",
 		"gulp-cheerio": "^1.0.0",
+		"micromodal": "^0.4.10",
 		"resize-observer-polyfill": "^1.5.1",
 		"simplebar": "^6.2.1"
 	}

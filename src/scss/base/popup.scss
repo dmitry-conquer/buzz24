@@ -1356,6 +1356,8 @@ body::after {
 		line-height: 20px;
 		color: #424242;
 		margin: 0px 20px 0px 0px;
+	
+		&_viber{}
 		&::before {
 			font-size: 28px;
 			color: #3A94D5;
@@ -1756,76 +1758,125 @@ body::after {
 	}
 }
 .login-popup {
-	max-width: 893px;
+	// max-width: 893px;
+	max-width: 500px;
+	height: 700px;
 	padding: 0px 0px 0px 0px;
 	@media (max-width:rem(1679.98)) {
-		max-width: 680px;
+		// max-width: 680px;
+		height: 600px;
 	}
 	@media (max-width:$tablet) {
-		max-width: 566px;
+		height: 510px;
+		// max-width: 566px;
+	}
+	@media (max-width:$mobile) {
+		height: 470px;
+		// max-width: 566px;
 	}
 	// .login-popup__tabs
 	&__tabs {
+		height: 100%;
 		position: relative;
 	}
 	&__tel-input {
-		display: flex;
+		// display: flex;
+		display: none;
 		button {
 			max-width: 110px;
 		}
+		& > div {
+			width: 100%;
+		}
 	}
 	&__tel-auth {
+		margin-top: auto;
 		overflow: hidden;
 		width: 100%;
 	
 	}
 	&__tel-auth-wrapper {
-		white-space: nowrap;
-		display: flex;
-		align-items: flex-start;
-		column-gap: 30px;
 		width: 100%;
-		transform: translateX();
 		transition: all .3s ease;
 		& > * {
 			min-width: 100%;
 		}
 	}
-	&__tel-info {
-		margin-top: 15px;
-		p:first-child {
-			font-size: 16px;
-			margin-bottom: 5px;
+	&__tel-number {
+		font-size: 16px;
+		@media (max-width:$mobileSmall) {
+			font-size: 14px;
 		}
 	}
+	&__tel-info {
+		margin-top: 15px;
+	}
+	&__repeat {
+		margin-top: 17px;
+		font-size: 13px;
+	}
 	&__auth-result {
-		font-size: 20px;
+		font-size: 17px;
 		font-weight: bold;
-		white-space: nowrap;
-		text-align: center;
-		#auth-success-message {
-			color: #37aa37;
-			display: none;
-		}
+
 		#auth-error-message {
 			color: #940000;
 			display: none;
+			max-height: 20px;
+			@media (max-width:$mobile) {
+				text-align: center;
+			}
 		}
 		#auth-error-message{
 			flex-direction: column;
-			align-items: center;
+			// align-items: center;
 			row-gap: 15px;
 		}
 	}
 	#auth-code-again {
 		display: none;
-		margin-top: 20px;
+		margin-top: 18px;
+		color: $orangeColor;
+		text-decoration: underline;
+		@media (any-hover: hover) {
+		  &:hover {
+			 color: #2D2D2D;
+			 .dark-theme & {
+				color: #fff;
+			 }
+		  }
+		}
+	}
+	#tel-auth-input {
+		font-size: 16px;
+		@media (max-width:$mobile) {
+				padding: 0px 10px !important;
+		}
+	}
+	#tel-auth-code-confirm{
+		height: 42px;
+	}
+	#tel-auth-code-input {
+		@media (max-width:rem(1679.98)) {
+			width: 270px;
+			margin: 0 auto;
+			height: 50px;
+			font-size: 28px;
+			padding: 10px 22px;
+
+		}
+			@media (max-width:$tablet) {
+				padding: 10px 45px;
+		}
 	}
 	&__code-title {
 		font-size: 16px;
 		margin-bottom: 15px;
 		max-width: 100%;
 		white-space: wrap;
+	}
+	&__code {
+		display: none;
 	}
 	// .login-popup__navigation
 	&__navigation {
@@ -1835,13 +1886,15 @@ body::after {
 	}
 	// .login-popup__title
 	&__title {
+		padding: 30px 10px;
 		display: flex;
+		white-space: nowrap;
 		align-items: center;
 		justify-content: center;
 		flex: 1 1 auto;
 		width: 100%;
 		height: 83px;
-		font-size: 24px;
+		font-size: 20px;
 		line-height: 29px;
 		text-transform: uppercase;
 		color: #4F4F4F;
@@ -1869,7 +1922,7 @@ body::after {
 			}
 		}
 		@media (max-width:$tablet) {
-			font-size: 14px;
+			// font-size: 14px;
 			line-height: 17px;
 			height: 54px;
 			&._tab-active {
@@ -1877,20 +1930,25 @@ body::after {
 			}
 		}
 		@media (max-width:$mobile) {
-			font-size: 11px;
+			font-size: 12px;
 			line-height: 13px;
 			height: 37px;
 		}
 	}
 	// .login-popup__content
-	&__content {}
+	&__content {
+		height: 100%;
+	}
 	// .login-popup__body
-	&__body {}
+	&__body {
+		height: 100%;
+	}
 	// login-popup__wrapper
 	&__wrapper {
+		height: 87%;
 		display: flex;
 		align-items: start;
-		justify-content: space-between;
+		justify-content: center;
 		padding: 45px 70px 70px 65px;
 		.dark-theme & {
 			color: #FFFFFF;
@@ -1902,13 +1960,17 @@ body::after {
 			flex-direction: column;
 			padding: 20px 40px 30px 40px;
 		}
-		@media (max-width:$mobile) {
+		@media (max-width:$mobileSmall) {
 			padding: 15px 15px 18px 15px;
 		}
 	}
 	// .login-popup__column
 	&__column {
-		width: 47%;
+		// width: 47%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
 		@media (max-width:$tablet) {
 			width: 100%;
 			&:not(:last-child) {
@@ -2211,6 +2273,14 @@ body::after {
 			text-align: center;
 		}
 	}
+	&__social-wrapper {
+		& > p {
+			margin-bottom: 10px;
+			@media (max-width:$mobileSmall) {
+				font-size: 12px;
+			}
+		}
+	}
 	// .login-popup__social
 	&__social {
 		display: flex;
@@ -2218,6 +2288,7 @@ body::after {
 		justify-content: center;
 		padding: 10px;
 		height: 55px;
+		width: 100%;
 		border: 1px solid rgba(0, 0, 0, 0.25);
 		transition: all 0.2s ease-in-out;
 		font-weight: 500;
@@ -2225,6 +2296,22 @@ body::after {
 		line-height: 21px;
 		letter-spacing: 0.03em;
 		color: #000000;
+		&_telegram{
+			background-color: #039be5;
+			border: 0 !important;
+			color: #fff;
+			.dark-theme & {
+				color: #2D2D2D;
+			}
+		}
+		&_viber{
+			background-color: #6f3faa;
+			border: 0 !important;
+			color: #fff;
+			.dark-theme & {
+				color: #2D2D2D;
+			}
+		}
 		// filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
 		&:not(:last-child) {
 			margin: 0px 0px 20px 0px;
@@ -2279,10 +2366,10 @@ body::after {
 			}
 		}
 		@media (max-width:$tablet) {
-			img {
-				width: 18.5px;
-				height: 18.5px;
-			}
+			// img {
+			// 	width: 18.5px;
+			// 	height: 18.5px;
+			// }
 		}
 	}
 	// .login-popup__sign-email
@@ -2294,14 +2381,21 @@ body::after {
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		padding: 0px 70px 70px 0px;
+		padding: 0px 20px 20px 0px;
+		button {
+			width: 40px;
+			height: 40px;
+		}
 		@media (max-width:rem(1679.98)) {
-			padding: 0px 50px 45px 0px;
+			// padding: 0px 50px 45px 0px;
 		}
 		@media (max-width:$tablet) {
 			position: relative;
 			margin: 0px auto 10px auto;
 			padding: 0px;
+			.popup__close {
+				margin: 10px auto 0px auto;
+			}
 		}
 		// @media (max-width:$mobile) {
 		// 	padding: 0px 0px 0px 0px;
@@ -2393,5 +2487,56 @@ body::after {
 		// 	font-size: 9px;
 		// 	line-height: 9px;
 		// }
+	}
+}
+.popup-success {
+	z-index: 999;
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #0000007c;
+	display: none;
+	&.is-open {
+		display: block;
+	}
+	&__wrapper {
+		width: 100%;
+		height: 100%;
+		padding: 0 15px;
+		display: grid;
+		place-content: center;
+	}
+	&__content {
+		background-color: #fff;
+		box-shadow: 0px 13px 39px rgba(0, 0, 0, 0.25);
+		padding: 30px;
+		.dark-theme & {
+			background: #2D2D2D;
+		}
+	}
+	&__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 15px;
+	}
+	&__title {
+		text-align: center;
+		color: $blackColor;
+		font-size: 20px;
+	}
+	&__check {
+		width: 50px;
+		stroke: $orangeColor;
+		height: 50px;
+	}
+	&__button {
+		margin-top: 20px;
+		display: block;
+		padding: 10px 15px;
+		@media (max-width:rem(1679.98)) {
+			padding: 10px 15px !important;
+		}
 	}
 }

@@ -37,8 +37,8 @@
 						<div class="main__content">
 							<div data-tabs class="main__tabs tabs">
 								<nav data-tabs-titles class="tabs__navigation">
-									<button type="button" class="tabs__title _tab-active f16" data-translate='CHOOSE_EQUIPMENT'><span class="_icon-truck-2"></span>Підбір техніки</button>
-									<button type="button" class="tabs__title f16" data-translate='JOB_ORDER'><span class="_icon-time_works"></span>Замовити роботу</button>
+									<button type="button" class="tabs__title _tab-active f16" ><span class="_icon-truck-2"></span><span data-translate='CHOOSE_EQUIPMENT'>Підбір техніки</span></button>
+									<button type="button" class="tabs__title f16" ><span class="_icon-time_works"></span><span data-translate='JOB_ORDER'>Замовити роботу</span></button>
 								</nav>
 								<div data-tabs-body class="tabs__content">
 									<!-- <form action="#" data-dev data-popup-message="#popup" class="tabs__body form"> -->
@@ -549,8 +549,8 @@
 				<div class="catalog-section__container">
 					<div data-tabs class="catalog-section__tabs tabs">
 						<nav data-tabs-titles class="tabs__navigation">
-							<button type="button" class="catalog-section__title tabs__title _tab-active f16" data-translate='EQUIPMENT_CATALOG_TAB'>Каталог техніки</button>
-							<button type="button" class="catalog-section__title tabs__title f16" data-translate='EQUIPMENT_ORDER_TAB'>Заявки</button>
+							<button type="button" class="catalog-section__title tabs__title _tab-active f16" ><span class="_icon-truck-2"></span> <span data-translate='EQUIPMENT_CATALOG_TAB'>Каталог техніки</span></button>
+							<button type="button" class="catalog-section__title tabs__title f16" > <span class="_icon-time_works"></span> <span data-translate='EQUIPMENT_ORDER_TAB'>Заявки</span></button>
 						</nav>
 						<div data-tabs-body class="tabs__content">
 							<div class="tabs__body tabs__body-filter">
@@ -1350,6 +1350,7 @@
 	@@include('html/_popup_map.htm',{})
 	@@include('html/_popup_category.htm',{})
 	@@include('html/_popup_login.htm',{})
+	@@include('html/_popup-success-auth.htm',{})
 	@@include('html/_js.htm',{})
 </body>
 

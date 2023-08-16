@@ -913,6 +913,7 @@ body {
 		width: 240px;
 		min-height: 57px;
 		// border: 1px solid #FF8A00;
+		color: #121212 !important;
 		.dark-theme & {
 			background: #FF8900;
 			// border: 1px solid #141414;
@@ -3854,6 +3855,7 @@ body {
 		width: max-content;
 		min-width: 150px;
 		height: 57px;
+
 		@media (max-width:rem(1679.98)) {
 			min-width: 100px;
 			height: 38px;
@@ -4912,7 +4914,9 @@ body {
 			.dark-theme & {
 			color: #fff;
 			}
-		
+			&::before {
+				font-size: 22px;
+			}
 		}
 		&__list {
 			display: flex;
