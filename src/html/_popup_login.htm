@@ -46,15 +46,17 @@
 								
 										</div>
 										
+
+										<div id="auth-success-message">
+											<span data-translate='SUCCESS_AUTH'>Успішна авторизація!</span>
+											<!-- <button id="auth-try-again" class="btn btn-c" type="button">Спробувати ще</button> -->
+										</div>
 										<div class="login-popup__code">
 											<div class="successfully__sms">
 												<p class="login-popup__code-title" data-translate="SEND_CODE_LABEL">Будь ласка, введіть код із SMS-повідомлення:</p>
 												<input id="tel-auth-code-input" type="tel" class="successfully__sms-code" placeholder="_ _ _ _">
 												<button id="tel-auth-code-confirm" type="submit" class="successfully__button btn btn-c" data-translate="CONFIRM_BUTTON">Підтвердити</button>
-												<div id="auth-success-message">
-													<span data-translate='SUCCESS_AUTH'>Успішна авторизація!</span>
-													<!-- <button id="auth-try-again" class="btn btn-c" type="button">Спробувати ще</button> -->
-												</div>
+											
 												<div class="login-popup__tel-info">
 													<p class="login-popup__tel-number"><span data-translate='WE_SENT'>Ми надіслали код на</span> <span id="auth-current-tel"></span></p>
 													<div class="login-popup__auth-result">

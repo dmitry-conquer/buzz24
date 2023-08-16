@@ -52,7 +52,7 @@ if (loginPopup) {
    const receivedCode = '1234';
    if (telAuthCodeInput.value == receivedCode) {
      authErrorMessage.style.display = 'none';
-     telInfo.style.display = 'none';
+     telAuthCodeWrapper.style.display = 'none';
      authSuccessMessage.style.display = 'block';
       
    } else {
