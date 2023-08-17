@@ -2603,16 +2603,34 @@ height: 100%;
 		font-size: 14px;
 		}
 	}
+	.auth-block__tel-info {
+		color: #141414;
+		.dark-theme & {
+			color: #fff;
+		}
+	}
+	.auth-block__repeat{
+		color: #141414 !important;
+		.dark-theme & {
+			color: #fff !important;
+		}
+	}
 	.auth-block__tel-number {
 		@media (max-width:$mobileSmall) {
 			font-size: 13px;
 			}
 	}
 	&__step {
-		background-color: #414141 ;
+		background-color: #dadada;
 		color: #fff ;
+		.dark-theme & {
+			background-color: #414141;
+		}
 		&.popup__step-2 {
-			background-color: #414141 ;
+			background-color: #dadada;
+			.dark-theme & {
+				background-color: #414141;
+			}
 		}
 		&.active-step {
 			background-color: #465F65;
@@ -2660,6 +2678,12 @@ height: 100%;
 	&__button {
 		&_prev {
 			border: transparent !important;
+			background-color: #dddddd !important;
+			color: #fff;
+			.dark-theme & {
+				color: #141414;
+				background-color: #b3b3b3 !important;
+			}
 		}
 		&_next {}
 	}
@@ -2667,6 +2691,10 @@ height: 100%;
 }
 
 .result-popup-add {
+	color: #424242;
+	.dark-theme & {
+		color: #fff;
+	}
 	&__title {
 		font-size: 24px;
 		text-transform: capitalize;
