@@ -268,6 +268,13 @@ body::after {
 	}
 	// .popup__step-2
 	&__step-2 {
+		&.active-step {
+			background-color: #465F65;
+			color: #fff;
+			.dark-theme & {
+					color: #fff ;
+			}
+		}
 		@media (min-width:$mobile) {
 			background: #F8F8F8;
 			color: #414141;
