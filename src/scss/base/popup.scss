@@ -2698,12 +2698,26 @@ body::after {
 		position: relative;
 		z-index: 100;
 		margin-bottom: 15px;
+		color: #141414;
+		.dark-theme & {
+			color: #fff;
+		}
 	}
 	.popup__descr {
 		margin: 0;
 	}
 	&__brand {
 		margin-bottom: 15px;
+			color: #141414;
+		.dark-theme & {
+			color: #fff;
+		}
+	}
+	&__location {
+		color: #141414;
+		.dark-theme & {
+			color: #fff;
+		}
 	}
 	&__footer {}
 	&__buttons {}
