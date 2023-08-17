@@ -1,4 +1,54 @@
 .tabs {
+	.tel-auth-code-input {
+		padding: 20px 160px;
+	}
+	.auth-block {
+		margin-top: 30px;
+	}
+	.auth-block__code-title {
+		color: #fff;
+	}
+	.popup-add__auth-item {
+		&:nth-child(1) {
+			margin-bottom: 35px;
+		}
+	}
+	.order-error-info {
+		display: none;
+		&.error-message {
+			color: #700000;
+			font-weight: 500;
+			font-size: 15px;
+			display: block;
+			text-align: center;
+			margin: 15px 0;
+		}
+	}
+	.auth-block__tel-info {
+		color: #1b1b1b;
+		.dark-theme & {
+			color: #fff;
+		}
+	}
+	.auth-success-message {
+		margin-bottom: 20px !important;
+	}
+	.auth-block__social-wrapper {
+		p {
+			color: #1b1b1b;
+			.dark-theme & {
+				color: #fff;
+			}
+		}
+	}
+	.auth-block__title-second {
+		p {
+			&:nth-child(1) {
+				font-size: 20px;
+			}
+		}
+	}
+
 	width: 100%;
 	position: relative;
 	min-height: 530px;
@@ -487,6 +537,7 @@
 		}
 	}
 	// .tabs__content
+
 	&__content {
 		border: 1px solid #000000;
 		top: -1px;
@@ -653,7 +704,7 @@
 			margin-bottom: 10px;
 		}
 		@media (max-width:$mobile) {
-			margin-bottom: 0;
+			// margin-bottom: 0;
 		}
 	}
 	// .tabs__dropdown
@@ -893,7 +944,7 @@
 			flex: 0 0 34px;
 			width: 34px;
 			height: 32px;
-			margin-left: 0px;
+			margin-left: 10px;
 			&._icon-tow-truck {
 				font-size: 16px;
 			}

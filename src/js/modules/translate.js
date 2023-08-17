@@ -32,7 +32,7 @@ export const useTranslate = () => {
   
          const translation = translations[translateKey];
 
-         if (element.tagName === 'INPUT') {
+         if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
             element.placeholder = translation;
         } else {
             element.textContent = translation;

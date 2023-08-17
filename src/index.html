@@ -50,7 +50,7 @@
 											<p class="tabs__text" data-translate='CHOOSE_INFO'>Я знаю, що мені потрібно і виберу сам. Приклад: потрібен автокран</p>
 										</div>
 										<div class="tabs__row">
-											<div data-dropdown class="tabs__dropdown dropdown">
+											<div data-dropdown class="tabs__dropdown dropdown order-category">
 												<button type="button" data-dropdown-button
 													class="tabs__dropdown-button dropdown__button _icon-arrow-1" data-value="" data-translate='CHOOSE_CATEGORY_PLACEHOLDER'>Виберіть категорію</button>
 												<div data-dropdown-list class="tabs__list dropdown__list">
@@ -131,7 +131,7 @@
 												class="tabs__row-icon _icon-tow-truck"></button>
 										</div>
 										<div class="tabs__row">
-											<div data-dropdown class="tabs__dropdown dropdown">
+											<div data-dropdown class="tabs__dropdown dropdown order-location">
 												<button type="button" data-dropdown-button
 													class="tabs__dropdown-button dropdown__button _icon-arrow-1" data-value="" data-translate='CHOOSE_LOCATION_PLACEHOLDER'>Виберіть адресу робіт</button>
 												<ul data-dropdown-list class="tabs__list dropdown__list">
@@ -152,14 +152,82 @@
 												<img src="img/main/location.svg" alt="">
 											</button>
 										</div>
-										<input data-validate data-required type="text" id="name" name="name" class="tabs__input" data-translate='NAME_PLACEHOLDER'
+										<!-- <input data-validate data-required type="text" id="name" name="name" class="tabs__input" data-translate='NAME_PLACEHOLDER'
 											placeholder="Ваше ім'я">
 										<div>
 											<input data-error="Номер телефона должен начинаться с +40, +90, +373, +380" data-validate
 												data-required type="tel" id="tel" name="tel" class="tabs__input phone-mask"
 												placeholder="+__ ___ ___ ____">
+										</div> -->
+
+
+										<div class="auth-block">
+											<div class="popup-add__auth-item">
+												<div class="login-popup__title-second auth-block__title-second" >
+													<p data-translate='SIGNIN_TAB'>Авторизація</p>
+													<p data-translate='SUBMIT_NUMBER_SUBTITLE'>Скористайтеся месенджером або смс</p>
+												</div>
+												<a href="" class="login-popup__social login-popup__social_telegram auth-block__social auth-block__social_telegram">
+													<div class="login-popup__icon">
+														<img src="../img/main/icon-telegram.png" alt="Telegram">
+													</div>
+													<span data-translate='SIGNIN_TELEGRAM'>Через Telegram</span>
+												</a>
+												<a href="" class="login-popup__social login-popup__social_viber auth-block__social auth-block__social_viber">
+													<div class="login-popup__icon">
+														<img src="../img/main/icon-viber.png" alt="viber">
+													</div>
+													<span data-translate='SIGNIN_VIBER'>Через Viber</span>
+												</a>
+											</div>
+											<div class="login-popup__tel-auth auth-parent auth-block__tel-auth">
+												<div class="tel-auth-wrapper login-popup__tel-auth-wrapper auth-block__tel-auth-wrapper">
+													<div class="login-popup__social-wrapper auth-block__social-wrapper">
+														<p data-translate='OLD_METHOD_SMS'>Застарілий спосіб підтвердження через СМС</p>
+														<button type="button" class="tel-auth-trigger login-popup__social auth-block__social">
+															<div class="login-popup__icon">
+																<!-- <img src="../img/main/icon-facebook.png" alt="Facebook"> -->
+															</div>
+															<span data-translate='GET_CODE_BY_SMS'>Отримати код по SMS</span>
+														</button>
+													</div>
+													<div class="login-popup__tel-input auth-block__tel-input">
+														<div class="_form-error">
+															<input data-validate="" type="tel"  name="tel" class="phone-mask tel-auth-input" placeholder="+__ ___ ___ ____" inputmode="text">
+													</div>
+														<button type="button" class="tel-auth-tel-confirm btn btn-c" data-translate='CONFIRM_BUTTON'>Підтвердити</button>
+													</div>
+													<div class="auth-success-message">
+														<span data-translate='SUCCESS_AUTH'>Успішна авторизація!</span>
+														<!-- <button id="auth-try-again" class="btn btn-c" type="button">Спробувати ще</button> -->
+													</div>
+													<div class="login-popup__code auth-block__code">
+														<div class="successfully__sms">
+															<p class="login-popup__code-title auth-block__code-title" data-translate="SEND_CODE_LABEL">Будь ласка, введіть код із SMS-повідомлення:</p>
+															<input type="tel" class="tel-auth-code-input successfully__sms-code" placeholder="_ _ _ _">
+															<button type="button" class="tel-auth-code-confirm successfully__button btn btn-c" data-translate="CONFIRM_BUTTON">Підтвердити</button>
+															<div class="login-popup__tel-info auth-block__tel-info">
+																<p class="login-popup__tel-number auth-block__tel-number"><span data-translate='WE_SENT'>Ми надіслали код на</span> <span class="auth-current-tel"></span></p>
+																<div class="login-popup__auth-result auth-block__auth-result">
+																	<div class="auth-error-message">
+																		<span data-translate='AUTH_ERROR'>Помилка авторизіції!</span>
+																		<!-- <button id="auth-try-again" class="btn btn-c" type="button">Спробувати ще</button> -->
+																	</div>
+																</div>
+																<p class="login-popup__repeat auth-block__repeat"><span data-translate='REPEAT_CODE_MESSAGE'>Повторний запрос коду в СМС через</span> <span class="get-code-timer">01:59</span> <span data-translate='SEC'>сек</span></p>
+																<button  class="auth-code-again" type="button" data-translate='REPEAT_SEND_CODE'>Відправити ще раз</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
-										<button data-popup="#popup" type="submit" class="tabs__button btn btn-c" data-translate='GET_ORDER_BUTTON'>Замовити</button>
+
+
+										<p class="order-error-info" data-translate='ORDER_ERROR_MESSAGE'>Будь ласка, заповніть усі поля й авторизуйтеся.</p>
+
+
+										<button data-popup="#popup" type="submit" class="tabs__button btn btn-c order-button" data-translate='GET_ORDER_BUTTON'>Замовити</button>
 									</form>
 									<div class="tabs__body">
 										<div class="tabs__top-row">

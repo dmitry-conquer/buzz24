@@ -1762,6 +1762,9 @@ body::after {
 	max-width: 500px;
 	height: 700px;
 	padding: 0px 0px 0px 0px;
+	display: flex;
+	flex-direction: column;
+
 	&.popup__content {
 		max-width: 500px;
 		padding: 0;
@@ -1792,118 +1795,7 @@ body::after {
 		height: 100%;
 		position: relative;
 	}
-	&__tel-input {
-		// display: flex;
-		display: none;
-		button {
-			max-width: 110px;
-		}
-		& > div {
-			width: 100%;
-		}
-	}
-	&__tel-auth {
-		margin-top: auto;
-		overflow: hidden;
-		width: 100%;
-	
-	}
-	&__tel-auth-wrapper {
-		width: 100%;
-		transition: all .3s ease;
-		& > * {
-			min-width: 100%;
-		}
-	}
-	&__tel-number {
-		font-size: 16px;
-		@media (max-width:$mobileSmall) {
-			font-size: 14px;
-		}
-	}
-	&__tel-info {
-		margin-top: 15px;
-	}
-	&__repeat {
-		margin-top: 17px;
-		font-size: 13px;
-	}
-	&__auth-result {
-		font-size: 17px;
-		font-weight: bold;
 
-		#auth-error-message {
-			color: #940000;
-			display: none;
-			max-height: 20px;
-			@media (max-width:$mobile) {
-				text-align: center;
-			}
-		}
-		#auth-error-message{
-			flex-direction: column;
-			// align-items: center;
-			row-gap: 15px;
-		}
-	
-	}
-	#auth-success-message {
-		color: #009407;
-		display: none;
-		font-size: 17px;
-		font-weight: bold;
-		margin-bottom: 80px;
-		text-align: center;
-		max-height: 20px;
-		@media (max-width:$mobile) {
-			text-align: center;
-		}
-	}
-	#auth-code-again {
-		display: none;
-		margin-top: 18px;
-		color: $orangeColor;
-		text-decoration: underline;
-		@media (any-hover: hover) {
-		  &:hover {
-			 color: #2D2D2D;
-			 .dark-theme & {
-				color: #fff;
-			 }
-		  }
-		}
-	}
-	#tel-auth-input {
-		font-size: 16px;
-		@media (max-width:$mobile) {
-				padding: 0px 10px !important;
-		}
-	}
-	#tel-auth-code-confirm{
-		height: 42px;
-	}
-	#tel-auth-code-input {
-		@media (max-width:rem(1679.98)) {
-			width: 270px;
-			margin: 0 auto;
-			height: 50px;
-			font-size: 28px;
-			padding: 10px 22px;
-
-		}
-			@media (max-width:$tablet) {
-				padding: 10px 45px;
-		}
-	}
-	&__code-title {
-		font-size: 16px;
-		margin-bottom: 15px;
-		max-width: 100%;
-		white-space: wrap;
-	}
-	&__code {
-		display: none;
-	}
 	// .login-popup__navigation
 	&__navigation {
 		display: flex;
@@ -2526,6 +2418,8 @@ body::after {
 		// }
 	}
 }
+
+
 .popup-success {
 	z-index: 999;
 	position: fixed;
@@ -2587,29 +2481,52 @@ body::after {
 */
 .popup-add {
 	position: fixed;
+
+	
 	inset: 0;
 	display: none;
-	width: 100%;
-	height: 100%;
 	background-color: #00000094;
 	&.is-open {
 		display: block;
+		
 	}
 	&__wrapper {
-		width: 100%;
-		height: 100%;
 		display: flex;
+	
+width: 100%;
+height: 100%;
+		overflow: auto;
 		align-items: center;
 		justify-content: center;
+		padding: 30px 15px 30px 15px;
+		@media (max-width:rem(767.98)) {
+			align-items: flex-start;
+			
+		}
+		
 	}
 	&__content {
-		min-height: 460px;
+		height: 550px;
+		@media (max-width:rem(1679.98)) {
+			height: 470px;
+		}
+		@media (max-width:rem(767.98)) {
+			height: 730px;
+			
+		}
+		@media (max-width:rem(400)) {
+			// height: 772px;
+			
+		}
 		width: 100%;
 		display: flex;
 		flex-direction: column;
 		max-width: 880px;
 		background-color: #fff;
 		padding: 20px;
+		@media (max-width:rem(767.98)) {
+			padding: 13px;
+		}
 		.dark-theme & {
 			background-color: #2D2D2D;
 		}
@@ -2617,16 +2534,99 @@ body::after {
 	&__header {
 		width: 100%;
 	}
+	&__auth {
+		@media (min-width:rem(768)) {
+			display: flex;
+			align-items: flex-start;
+			width: 100%;
+			gap: 30px;
+			justify-content: space-between;
+			@media (max-width:rem(767.98)) {
+				flex-direction: column;
+				align-items: center;
+				gap: 10px;
+			}
+		}
+		@media (max-width:rem(767.98)) {
+			max-width: 400px;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+		}
+	}
+	&__auth-item {
+		@media (min-width:rem(768)) {
+			flex-basis: 45%;
+		}
+	
+	}
+	&__titles {
+		padding: 0px 0px 15px 0px;
+		gap: 7px;
+		p {
+		white-space: wrap;
+		&:nth-child(1) {
+					font-size: 20px;
+			}
+			&:nth-child(2) {
+				@media (max-width:$mobileSmall) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.auth-block .tel-auth-code-input  {
+		@media (max-width:$mobileSmall) {
+			width: 260px !important;
+		}
+	}
+	.upload-file {
+		padding: 13px 12px;
+	}
+	.popup__textarea {
+		height: 140px;
+		@media (max-width:rem(1679.98)) {
+			font-size: 15px;
+			line-height: 1.3;
+		}
+	}
+	.tabs__search-dropdown  {
+		flex: 0 1 auto;
+	}
+	.auth-block__social-wrapper {
+		text-align: center;
+	}
+	.auth-block__code-title{
+		@media (max-width:$mobileSmall) {
+		font-size: 14px;
+		}
+	}
+	.auth-block__tel-number {
+		@media (max-width:$mobileSmall) {
+			font-size: 13px;
+			}
+	}
+	&__step {
+		background-color: #414141 ;
+		color: #fff ;
+		&.popup__step-2 {
+			background-color: #414141 ;
+		}
+		&.active-step {
+			background-color: #465F65;
+		}
+	}
 	&__body {
-		margin: 20px 0;
+		margin: 30px 0;
 		overflow: hidden;
 		flex-grow: 1;
 	}
 	&__inner {
 		display: flex;
-		gap: 30px;
+		// gap: 30px;
 		width: 100%;
-		transform: translateX(calc(0));
 		transition: all .3s ease;
 	}
 	&__slide {
@@ -2641,12 +2641,19 @@ body::after {
 			display: flex;
 			flex-direction: column;
 			justify-content: start;
-			gap: 30px;
+			gap: 15px;
 		}
 	}
 	&__categories {
 		position: relative;
 		z-index: 100;
+		margin-bottom: 15px;
+	}
+	.popup__descr {
+		margin: 0;
+	}
+	&__brand {
+		margin-bottom: 15px;
 	}
 	&__footer {}
 	&__buttons {}
@@ -2659,3 +2666,50 @@ body::after {
 
 }
 
+.result-popup-add {
+	&__title {
+		font-size: 24px;
+		text-transform: capitalize;
+		margin-bottom: 20px;
+	}
+	&__body {}
+	&__list {
+		overflow: auto;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		@media (max-width:$mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		justify-content: space-between;
+		gap: 20px;
+		@media (max-width:$mobile) {
+			gap: 15px;
+		}
+	}
+	
+	&__item {
+		&_full {
+			grid-column: 1 / span 3;
+			@media (max-width:$mobile) {
+				grid-column: 1 / span 2;
+			}
+			dd {
+				max-height: 117px;
+				@media (max-width:$mobile) {
+					max-height: 140px;
+				}
+				overflow: auto;
+				padding-bottom: 50px;
+			}
+		}
+	}
+	&__term {
+		font-size: 18px;
+		font-weight: 500;
+		margin-bottom: 5px;
+		@media (max-width:$mobile) {
+			font-size: 16px;
+		}
+	}
+	&__desc {}
+}

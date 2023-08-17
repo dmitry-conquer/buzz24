@@ -23,6 +23,7 @@ import "../scss/style.scss";
 import * as flsFunctions from "./files/functions.js";
 import './modules/auth.js'
 import './modules/modals.js'
+import './modules/order.js'
 import {useFilter} from "./modules/filter.js"
 import {useTranslate} from "./modules/translate.js"
 useFilter();
