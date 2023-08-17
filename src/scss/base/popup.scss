@@ -240,6 +240,13 @@ body::after {
 	}
 	// .popup__step-1
 	&__step-1 {
+			&.active-step {
+			background-color: #465F65;
+			color: #fff;
+			.dark-theme & {
+					color: #fff ;
+			}
+		}
 		@media (min-width:$mobile) {
 			background: #F8F8F8;
 			color: #424242;
@@ -302,6 +309,13 @@ body::after {
 	}
 	// .popup__step-3
 	&__step-3 {
+			&.active-step {
+			background-color: #465F65;
+			color: #fff;
+			.dark-theme & {
+					color: #fff ;
+			}
+		}
 		@media (min-width:$mobile) {
 			background: #F8F8F8;
 			color: #424242;
