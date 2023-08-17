@@ -1335,12 +1335,14 @@
 								</div>
 							</div>
 						</div>
-						<a href="#"
+						<button type="button"
+						data-micromodal-trigger="popup_add"
 						data-da=".filter,767.98,1"
 							class="catalog-section__button-add btn btn-c" > <span>+</span>
-							<div data-translate='ADD_EQUIPMENT_BUTTON'>Додати техніку</div></a>
+							<div data-translate='ADD_EQUIPMENT_BUTTON' >Додати техніку</div></button>
 					</div>
 				</div>
+		
 			</section>
 		</main>
 		@@include('html/_footer.htm',{})
@@ -1350,7 +1352,7 @@
 	@@include('html/_popup_map.htm',{})
 	@@include('html/_popup_category.htm',{})
 	@@include('html/_popup_login.htm',{})
-	@@include('html/_popup-success-auth.htm',{})
+	@@include('html/_popup_add.htm',{})
 	@@include('html/_js.htm',{})
 </body>
 

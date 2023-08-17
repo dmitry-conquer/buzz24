@@ -1,6 +1,4 @@
 
-import MicroModal from 'micromodal';
-MicroModal.init();
 
 const loginPopup = document.getElementById('popup-login');
 const getCodeTimer = document.getElementById('get-code-timer');
@@ -54,6 +52,8 @@ if (loginPopup) {
      authErrorMessage.style.display = 'none';
      telAuthCodeWrapper.style.display = 'none';
      authSuccessMessage.style.display = 'block';
+     telAuthInput.value = '';
+     telAuthCodeInput.value = '';
       
    } else {
       authErrorMessage.style.display = 'flex';
@@ -61,21 +61,6 @@ if (loginPopup) {
       numberMessage.style.display = 'none';
         telAuthCodeInput.value = '';
    }
-  })
-
-
-  closeAuthModal.addEventListener('click', () => {
-   popupLogin.classList.remove('popup_show');
-   document.documentElement.classList.remove('popup-show');
-   telAuthTriggerWrapper.style.display = 'block';
-   telAuthCodeWrapper.style.display = 'none';
-   authErrorMessage.style.display = 'none';
-   telAuthInput.value = '';
-   telAuthCodeInput.value = '';
-   clearInterval(timer);
-   console.log('YES');
-   MicroModal.close('popup-success-auth'); // [2]
-
   })
 
 

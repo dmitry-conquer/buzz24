@@ -1289,11 +1289,12 @@ document.addEventListener("DOMContentLoaded", () => {
    const inputFile = document.querySelectorAll(".upload-file__input");
 
    inputFile.forEach(function (el) {
-      let textSelector = document.querySelector(".upload-file__label-text");
+   const inputFileWrapper = el.closest(".upload-file__input-body");
+
+      let textSelector = inputFileWrapper.querySelector(".upload-file__label-text");
       let fileList;
 
       el.addEventListener("change", function (e) {
-
          fileList = [];
          for (let i = 0; i < el.files.length; i++) {
             fileList.push(el.files[i]);
@@ -1319,7 +1320,7 @@ document.addEventListener("DOMContentLoaded", () => {
                textSelector.textContent = `Выбрано ${file.length} файлов`;
             }
          } else {
-            textSelector.textContent = `Загружено`;
+            textSelector.textContent = `Завантажено`;
          }
       }
 

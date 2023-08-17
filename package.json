@@ -51,6 +51,7 @@
 		"load-plugins": "latest",
 		"mini-css-extract-plugin": "2.4.7",
 		"nouislider": "latest",
+		"prettier": "^3.0.2",
 		"pug": "latest",
 		"pug-loader": "latest",
 		"sass": "latest",
