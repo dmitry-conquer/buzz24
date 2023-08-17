@@ -270,7 +270,7 @@ body::after {
 	&__step-2 {
 		@media (min-width:$mobile) {
 			background: #F8F8F8;
-			color: #424242;
+			color: #465f65;
 			-webkit-clip-path: polygon(16px 50%, -0.8% 0%, calc(100% - 20px) 0%, 100% 50%, calc(100% - 20px) 100%, -0.8% 100%);
 			&.color {
 				background: #465F65;
@@ -2637,7 +2637,7 @@ height: 100%;
 		}
 		&.active-step {
 			background-color: #465F65;
-			color: #fff;
+			color: #141414;
 			.dark-theme & {
 					color: #fff ;
 			}
