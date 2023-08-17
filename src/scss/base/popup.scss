@@ -241,8 +241,8 @@ body::after {
 	// .popup__step-1
 	&__step-1 {
 			&.active-step {
-			background-color: #465F65;
-			color: #fff;
+			background-color: #465F65 !important;
+			color: #fff !important;
 			.dark-theme & {
 					color: #fff ;
 			}
@@ -276,8 +276,8 @@ body::after {
 	// .popup__step-2
 	&__step-2 {
 		&.active-step {
-			background-color: #465F65;
-			color: #fff;
+			background-color: #465F65 !important;
+			color: #fff !important;
 			.dark-theme & {
 					color: #fff ;
 			}
@@ -310,8 +310,8 @@ body::after {
 	// .popup__step-3
 	&__step-3 {
 			&.active-step {
-			background-color: #465F65;
-			color: #fff;
+			background-color: #465F65  !important;
+			color: #fff !important;
 			.dark-theme & {
 					color: #fff ;
 			}
