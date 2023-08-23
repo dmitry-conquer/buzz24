@@ -2745,6 +2745,7 @@ body::after {
 	&__categories {
 		position: relative;
 		z-index: 100;
+		width: 100%;
 		color: #141414;
 		.dark-theme & {
 			color: #fff;
