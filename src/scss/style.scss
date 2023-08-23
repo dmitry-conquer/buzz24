@@ -282,7 +282,7 @@ body {
 			width: 455px;
 		}
 		@media (max-width:$tablet) {
-			width: 345px;
+			width: 395px;
 		}
 		@media (max-width:$mobile) {
 			width: 100%;
@@ -393,7 +393,7 @@ body {
 }
 .side-button {
 	position: sticky;
-	top: 31%;
+	top: 66%;
 	right: 0;
 	z-index: 4;
 	// .side-button__wrap
@@ -2243,6 +2243,15 @@ body {
 			// line-height: 11px;
 		}
 		@media (max-width:$tablet) {
+			// border: none;
+			// position: relative;
+			// padding: 17px 48px 17px 20px;
+			// min-width: auto;
+			// width: 100%;
+			// height: 32px;
+			// padding: 15px 13px;
+		}
+		@media (max-width:$mobile) {
 			border: none;
 			position: relative;
 			padding: 17px 48px 17px 20px;
@@ -4962,6 +4971,22 @@ body {
 
 
 .auth-block {
+	
+	&__title-second {
+		gap: 7px !important;
+			p {
+				color: #141414;
+				.dark-theme & {
+					color: #C6C6C6;
+				}
+				&:nth-child(1) {
+					font-size: 16px !important;
+				}
+				&:nth-child(2) {
+					font-size: 14px !important;
+				}
+			}
+	}
 	&__tel-input {
 		// display: flex;
 		display: none;
@@ -5072,11 +5097,68 @@ body {
 		max-width: 100%;
 		white-space: wrap;
 	}
+	&__social-wrapper {
+		p {
+			color: #292929 !important;
+			text-align: center;
+			.dark-theme & {
+				color: #C6C6C6 !important;
+			}
+		}
+	}
 	&__code {
 		display: none;
 	}
 }
 
+
+.tabs__content {
+	.tabs__dropdown-button {
+		@media (max-width:$mobile) {
+			min-height: 40px;
+	}
+	}
+	.tabs__row-icon {
+		@media (max-width:$mobile) {
+			min-height: 42px;
+			flex: 0 0 42px;
+	}
+	}
+}
+.tab-order {
+
+	.popup-add__auth-item {
+		margin-bottom: 20px;
+	}
+	.auth-block__title-second{
+		padding: 0;
+	}
+	.login-popup__social:not(:last-child) {
+		margin: 0;
+	}
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 15px;
+		align-items: end;
+		@media (max-width:rem(450)) {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+.tabs__header {
+	display: flex;
+	justify-content: center;
+	color: #1B1B1B;
+	.dark-theme & {
+			color: #fff;
+	}
+	font-size: 18px; 
+	gap: 10px;
+	text-align: center;
+	margin-bottom: 30px;
+	width: 100%;
+}
 //====================================================================================================
 
 .info_content {

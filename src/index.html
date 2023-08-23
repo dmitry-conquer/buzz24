@@ -35,14 +35,16 @@
 					<h1 class="main__title" data-translate='MAIN_TITLE'>ПОШУК ТА ОРЕНДА СПЕЦТЕХНІКИ</h1>
 					<div class="main__wrapper">
 						<div class="main__content">
-							<div data-tabs class="main__tabs tabs">
-								<nav data-tabs-titles class="tabs__navigation">
-									<button type="button" class="tabs__title _tab-active f16" ><span class="_icon-truck-2"></span><span data-translate='CHOOSE_EQUIPMENT'>Підбір техніки</span></button>
-									<button type="button" class="tabs__title f16" ><span class="_icon-time_works"></span><span data-translate='JOB_ORDER'>Замовити роботу</span></button>
+							<div  class="main__tabs tabs">
+								<nav  class="tabs__navigation">
+									<!-- <button type="button" class="tabs__title _tab-active f16" ><span class="_icon-truck-2"></span><span data-translate='CHOOSE_EQUIPMENT'>Підбір техніки</span></button> -->
+									<!-- <button type="button" class="tabs__title f16" ><span class="_icon-time_works"></span><span data-translate='JOB_ORDER'>Замовити роботу</span></button> -->
 								</nav>
-								<div data-tabs-body class="tabs__content">
+								<div  class="tabs__content">
 									<!-- <form action="#" data-dev data-popup-message="#popup" class="tabs__body form"> -->
 									<form action="#" class="tabs__body form">
+									<button type="button" class="tabs__header _tab-active f16" ><span class="_icon-truck-2"></span><span data-translate='CHOOSE_EQUIPMENT'>Підбір техніки</span></button>
+										
 										<div class="tabs__top-row">
 											<div class="tabs__icon">
 												<img src="img/main/info.svg" alt="">
@@ -161,35 +163,36 @@
 										</div> -->
 
 
-										<div class="auth-block">
+										<div class="auth-block tab-order">
 											<div class="popup-add__auth-item">
 												<div class="login-popup__title-second auth-block__title-second" >
 													<p data-translate='SIGNIN_TAB'>Авторизація</p>
 													<p data-translate='SUBMIT_NUMBER_SUBTITLE'>Скористайтеся месенджером або смс</p>
 												</div>
-												<a href="" class="login-popup__social login-popup__social_telegram auth-block__social auth-block__social_telegram">
-													<div class="login-popup__icon">
-														<img src="../img/main/icon-telegram.png" alt="Telegram">
-													</div>
-													<span data-translate='SIGNIN_TELEGRAM'>Через Telegram</span>
-												</a>
-												<a href="" class="login-popup__social login-popup__social_viber auth-block__social auth-block__social_viber">
-													<div class="login-popup__icon">
-														<img src="../img/main/icon-viber.png" alt="viber">
-													</div>
-													<span data-translate='SIGNIN_VIBER'>Через Viber</span>
-												</a>
+											
 											</div>
 											<div class="login-popup__tel-auth auth-parent auth-block__tel-auth">
 												<div class="tel-auth-wrapper login-popup__tel-auth-wrapper auth-block__tel-auth-wrapper">
-													<div class="login-popup__social-wrapper auth-block__social-wrapper">
-														<p data-translate='OLD_METHOD_SMS'>Застарілий спосіб підтвердження через СМС</p>
-														<button type="button" class="tel-auth-trigger login-popup__social auth-block__social">
-															<div class="login-popup__icon">
-																<!-- <img src="../img/main/icon-facebook.png" alt="Facebook"> -->
+													<div class="tab-order__row">
+														
+															<a href="" class="login-popup__social login-popup__social_telegram auth-block__social auth-block__social_telegram">
+																<div class="login-popup__icon">
+																	<img src="../img/main/icon-telegram.png" alt="Telegram">
+																</div>
+																<span data-translate='SIGNIN_TELEGRAM'>Telegram</span>
+															</a>
+															<a href="" class="login-popup__social login-popup__social_viber auth-block__social auth-block__social_viber">
+																<div class="login-popup__icon">
+																	<img src="../img/main/icon-viber.png" alt="viber">
+																</div>
+																<span data-translate='SIGNIN_VIBER'>Viber</span>
+															</a>
+															<div class="login-popup__social-wrapper auth-block__social-wrapper">
+																<p data-translate='OLD_METHOD_SMS'>Застарілий метод</p>
+																<button type="button" class="tel-auth-trigger login-popup__social auth-block__social">
+																	<span data-translate='GET_CODE_BY_SMS'>SMS</span>
+																</button>
 															</div>
-															<span data-translate='GET_CODE_BY_SMS'>Отримати код по SMS</span>
-														</button>
 													</div>
 													<div class="login-popup__tel-input auth-block__tel-input">
 														<div class="_form-error">
@@ -229,14 +232,14 @@
 
 										<button data-popup="#popup" type="submit" class="tabs__button btn btn-c order-button" data-translate='GET_ORDER_BUTTON'>Замовити</button>
 									</form>
-									<div class="tabs__body">
+									<!-- <div class="tabs__body">
 										<div class="tabs__top-row">
 											<div class="tabs__icon">
 												<img src="img/main/info.svg" alt="">
 											</div>
 											<p class="tabs__text" data-translate='CHOOSE_INFO'>Я знаю, що мені потрібно і виберу сам. Приклад: потрібен автокран</p>
 										</div>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
@@ -250,7 +253,7 @@
 					</div>
 				</div>
 			</section>
-			@@include('html/_statistics.htm')
+			<!-- @@include('html/_statistics.htm') -->
 			<section class="map">
 				<div class="map__container">
 					<h3 class="map__title" data-translate='EQUIPMENT_ON_MAP'>ТЕХНІКА НА МАПІ</h3>
@@ -689,6 +692,204 @@
 										</div>
 										<div class="catalog-section__block">
 											<div class="catalog-section__wrapper">
+												<a href="product.html" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='TYPE_LABEL'>Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='BRAND_LABEL'>Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='REGION_LABEL'>Регион</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2" data-translate='TO_TARGET_BUTTON'>Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="product.html" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='TYPE_LABEL'>Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='BRAND_LABEL'>Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='REGION_LABEL'>Регіон</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2" data-translate='TO_TARGET_BUTTON'>Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="product.html" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='TYPE_LABEL'>Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='BRAND_LABEL'>Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='REGION_LABEL'>Регіон</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2" data-translate='TO_TARGET_BUTTON'>Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="product.html" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='TYPE_LABEL'>Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='BRAND_LABEL'>Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='REGION_LABEL'>Регіон</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2" data-translate='TO_TARGET_BUTTON'>Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="product.html" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='TYPE_LABEL'>Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='BRAND_LABEL'>Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='REGION_LABEL'>Регіон</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2" data-translate='TO_TARGET_BUTTON'>Перейти</div>
+														</div>
+													</div>
+												</a>
+												<a href="product.html" class="catalog-section__items">
+													<div class="catalog-section__image-ibg">
+														<img src="img/catalog/catalog_img-01.png" alt="">
+													</div>
+													<div class="catalog-section__content">
+														<div class="catalog-section__main">
+															<div class="catalog-section__header">
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='TYPE_LABEL'>Тип</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='BRAND_LABEL'>Марка</div>
+																	<div class="catalog-section__descr">Автовышки</div>
+																</div>
+																<div class="catalog-section__row">
+																	<div class="catalog-section__name" data-translate='REGION_LABEL'>Регіон</div>
+																	<div class="catalog-section__descr">г. Яготин</div>
+																</div>
+															</div>
+															<div class="catalog-section__footer">
+																<div class="catalog-section__text">Грузоподъемность - 100 тонн</div>
+																<div class="catalog-section__text">Вылет стрелы - 25 метров</div>
+																<div class="catalog-section__text">Тип проходимости - колесный</div>
+																<div class="catalog-section__text">Длина гуська - 3 метра</div>
+															</div>
+														</div>
+														<div class="catalog-section__bottom">
+															<div class="catalog-section__price">8000 грн</div>
+															<div class="catalog-section__button btn btn-c _icon-arrow-2" data-translate='TO_TARGET_BUTTON'>Перейти</div>
+														</div>
+													</div>
+												</a>
 												<a href="product.html" class="catalog-section__items">
 													<div class="catalog-section__image-ibg">
 														<img src="img/catalog/catalog_img-01.png" alt="">

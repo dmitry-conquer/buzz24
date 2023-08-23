@@ -484,6 +484,7 @@ export function menuClose() {
 // =======================================================================================================================================================================================================================
 export function menuInitCategory() {
   const categoryNav = document.querySelector('.category-header__nav');
+  if (categoryNav) {
 	if (document.querySelector(".icon-close")) {
 		document.addEventListener("click", function (e) {
 			if (bodyLockStatus && e.target.closest('.icon-close')) {
@@ -499,6 +500,8 @@ export function menuInitCategory() {
       }
 		});
 	};
+  }
+
 }
 export function menuOpenC() {
 	bodyLock();

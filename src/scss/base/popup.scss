@@ -2501,6 +2501,24 @@ body::after {
   popup-add
 */
 .popup-add {
+	.tabs__input {
+		margin: 0;
+		@media (max-width:rem(1679.98)) {
+			min-height: 57px;
+		}
+		@media (max-width:$mobile) {
+			min-height: 42px;
+		}
+	}
+	.tabs__dropdown-button {
+		min-height: 57px;
+		@media (max-width:$mobile) {
+			min-height: 42px;
+		}
+	}
+	.tabs__dropdown-search {
+		min-width: auto;
+	}
 	position: fixed;
 	inset: 0;
 	display: none;
@@ -2524,12 +2542,12 @@ body::after {
 		
 	}
 	&__content {
-		height: 550px;
+		// height: 550px;
 		@media (max-width:rem(1679.98)) {
-			height: 470px;
+			// height: 470px;
 		}
 		@media (max-width:rem(767.98)) {
-			height: 730px;
+			// height: 730px;
 			
 		}
 		@media (max-width:rem(400)) {
@@ -2549,13 +2567,22 @@ body::after {
 			background-color: #2D2D2D;
 		}
 	}
+	&__column {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+		width: 50%;
+		@media (max-width:$mobile) {
+			width: 100%;
+		}
+	}
 	&__header {
 		width: 100%;
 	}
 	&__auth {
 		@media (min-width:rem(768)) {
 			display: flex;
-			align-items: flex-start;
+			align-items: center;
 			width: 100%;
 			gap: 30px;
 			justify-content: space-between;
@@ -2599,6 +2626,9 @@ body::after {
 		@media (max-width:$mobileSmall) {
 			width: 260px !important;
 		}
+	}
+	.auth-block__tel-auth {
+		margin-top: 0;
 	}
 	.upload-file {
 		padding: 13px 12px;
@@ -2685,19 +2715,24 @@ body::after {
 		color: #fff;
 		&_row {
 			display: flex;
-			gap: 30px;
+			gap: 25px;
+			align-items: center;
+			@media (max-width:$mobile) {
+				flex-direction: column;
+				align-items: stretch; 
+				width: 100%;
+			}
 		}
 		&_column {
 			display: flex;
 			flex-direction: column;
-			justify-content: start;
+			justify-content: center;
 			gap: 15px;
 		}
 	}
 	&__categories {
 		position: relative;
 		z-index: 100;
-		margin-bottom: 15px;
 		color: #141414;
 		.dark-theme & {
 			color: #fff;
@@ -2723,15 +2758,18 @@ body::after {
 	&__buttons {}
 	&__button {
 		&_prev {
+			margin-right: auto;
 			border: transparent !important;
-			background-color: #dddddd !important;
-			color: #fff;
+			background-color: #797979 !important;
+			color: #ffffff;
 			.dark-theme & {
 				color: #141414;
 				background-color: #b3b3b3 !important;
 			}
 		}
-		&_next {}
+		&_next {
+			margin-left: auto;
+		}
 	}
 
 }

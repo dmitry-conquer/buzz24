@@ -20,15 +20,22 @@ if (addWrapper) {
 
    let i = 0;
 
+   addPrevSlide.style.display = 'none';
    addPrevSlide.addEventListener('click', () => {
+
       i--;
-      if (i <= 0) i = 0;
+      if (i <= 0) {
+         i = 0;
+         addPrevSlide.style.display = 'none';
+      };
       addWrapper.style.transform = `translateX(-${100 * i}%)`;
       activeStep(i);
       addNextSlide.style.display = 'block';
    }
    )
    addNextSlide.addEventListener('click', () => {
+      addPrevSlide.style.display = 'block';
+
       i++;
       if (i >= maxSlides) i = maxSlides - 1;
       addWrapper.style.transform = `translateX(-${100 * i}%)`;
@@ -36,6 +43,7 @@ if (addWrapper) {
       if (i === 3) {
          getResults();
          addNextSlide.style.display = 'none';
+         addPrevSlide.style.display = 'none';
       };
    })
 

@@ -764,7 +764,7 @@
 			border-top: 1px solid #4E4C4C;
 			border-right: 1px solid #4E4C4C;
 			border-left: 1px solid #4E4C4C;
-			border-bottom: none;
+			border-bottom: 1px solid #4E4C4C;
 		}
 	}
 	// .tabs__dropdown-search
@@ -951,8 +951,8 @@
 			&._icon-location {
 				border-top: 1px solid #4E4C4C;
 				border-right: 1px solid #4E4C4C;
-				border-bottom: none;
-				border-left: none;
+				border-bottom: 1px solid #4E4C4C;
+				border-left: 1px solid #4E4C4C;
 			}
 		}
 	}

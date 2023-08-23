@@ -22,12 +22,17 @@ document.addEventListener('click', (e) => {
     const codeTryAgain = authParent.querySelector('.auth-code-again');
     const repeatMessage = authParent.querySelector('.login-popup__repeat');
     const numberMessage = authParent.querySelector('.login-popup__tel-number');
+    const authButtonRow = authParent.querySelector('.tab-order__row');
     // const popupLogin = document.getElementById('popup-login');
 
 
    let timer;
     telAuthConfirmWrapper.style.display = 'flex';
     telAuthTriggerWrapper.style.display = 'none';
+    if (authButtonRow) {
+      authButtonRow.style.display = 'none';
+    }
+    
  
    telAuthTelConfirm.addEventListener('click', () => {
     const currentNumber = telAuthInput.value;
