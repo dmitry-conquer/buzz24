@@ -2503,14 +2503,23 @@ body::after {
 .popup-add {
 	.tabs__input {
 		margin: 0;
-		border-bottom: 1px solid #4e4c4c !important;
+		border-bottom: 1px solid #4e4c4c;
+		.dark-theme & {
+			border-bottom: 1px solid #a2a2a2;
+		}
 		@media (max-width:rem(1679.98)) {
 			min-height: 57px;
-			border-bottom: 1px solid #4e4c4c !important;
+			border-bottom: 1px solid #4e4c4c ;
+			.dark-theme & {
+				border-bottom: 1px solid #a2a2a2;
+			}
 		}
 		@media (max-width:$mobile) {
 			min-height: 42px;
-			border-bottom: 1px solid #4e4c4c !important;
+			border-bottom: 1px solid #4e4c4c ;
+			.dark-theme & {
+				border-bottom: 1px solid #a2a2a2;
+			}
 		}
 	}
 	.tabs__dropdown-button {
